@@ -1,0 +1,33 @@
+.content{
+background-color: #FFEF98;
+    height: 1400px;
+    width: 100%;
+}
+.Heading{
+    position: absolute;
+    font-size: 40px;
+    text-decoration: underline;
+    margin-left: 40%;
+    background-color: transparent;
+}
+.Heading h1{
+    background-color: transparent;
+}
+.LinktoDownload a{
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 42%;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    border: 10px solid #FF6161;
+    background-color: #FF6161;
+}
+.Resume{
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 250px;
+}
+.footer{
+    margin-top: -50px;
+}
