@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/abhishek99singh/Portfolio-Website/issues"
   },
-  "homepage": "https://github.com/abhishek99singh/Portfolio-Website#readme"
+  "homepage": "https://github.com/abhishek99singh/Portfolio-Website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
