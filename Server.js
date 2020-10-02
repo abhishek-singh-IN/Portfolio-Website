@@ -43,3 +43,9 @@ server.get('/Images/logo.png',function (req,res){
 server.get('/Images/20180328_184320.jpg',function (req,res){
     res.sendFile('/Images/20180328_184320.jpg',{root:__dirname})
 });
+server.get('/Images/DSC_0404.JPG',function (req,res){
+    res.sendFile('/Images/DSC_0404.JPG',{root:__dirname})
+});
+server.get('/Images/2597109669_9b40ec947f_o.jpg',function (req,res){
+    res.sendFile('/Images/2597109669_9b40ec947f_o.jpg',{root:__dirname})
+});
