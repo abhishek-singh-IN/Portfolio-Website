@@ -1,12 +1,20 @@
 {
   "name": "singhabhishek",
   "version": "1.0.0",
-  "description": "",
+  "description": "www.singhabhishek.co.in",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Abhishek Singh",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishek99singh/Portfolio-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhishek99singh/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/abhishek99singh/Portfolio-Website#readme"
 }
