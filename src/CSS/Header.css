@@ -8,7 +8,7 @@ h1{
     color: white;
 }
 .logo{
-    position: static;
+    position: page;
     margin-top: 25px;
     margin-left: 30px;
     margin-bottom: 25px;

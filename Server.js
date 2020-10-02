@@ -1,8 +1,12 @@
 var express=require('express');
-var fs=require('fs');
 var server=express();
 
+server.use(express.static('src'))
+
 server.get('/',function (req,res){
+    res.sendFile('src/HTML/Home.html',{root:__dirname})
+});
+server.get('/Home.html',function (req,res){
     res.sendFile('src/HTML/Home.html',{root:__dirname})
 });
 server.get('/About.html',function (req,res){
@@ -28,4 +32,14 @@ server.get('/resume.html',function (req,res){
 });
 server.listen(3000,function (){
     console.log('Server Listening to Port:3000')
+});
+
+server.get('/Images/IMG_8881.jpg',function (req,res){
+    res.sendFile('/Images/IMG_8881.jpg',{root:__dirname})
+});
+server.get('/Images/logo.png',function (req,res){
+    res.sendFile('/Images/logo.png',{root:__dirname})
+});
+server.get('/Images/20180328_184320.jpg',function (req,res){
+    res.sendFile('/Images/20180328_184320.jpg',{root:__dirname})
 });
