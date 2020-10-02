@@ -21,33 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/CSS/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/CSS/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/experience.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/CSS/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/skills.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/project.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/resume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/skills.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/20180328_184320.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/20180328_184320.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/2597109669_9b40ec947f_o.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/2597109669_9b40ec947f_o.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/640px-Football_iu_1996.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/640px-Football_iu_1996.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/DSC_0404.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/DSC_0404.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/IMG_8881.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/IMG_8881.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/football.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/football.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l3.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l3.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/l7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/office.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/office.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/images/payment.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/payment.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +60,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend/Angular" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -119,7 +100,16 @@
       <workItem from="1601603718024" duration="3084000" />
       <workItem from="1601609485830" duration="4152000" />
       <workItem from="1601615108351" duration="2227000" />
+      <workItem from="1601621846666" duration="374000" />
     </task>
+    <task id="LOCAL-00001" summary="Structural Change">
+      <created>1601621932198</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601621932198</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +126,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Structural Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Structural Change" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601614090883">
