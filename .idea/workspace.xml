@@ -21,24 +21,33 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/About.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/Gallery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/experience.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/project.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/resume.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/skills.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/skills.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/CSS/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/CSS/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/experience.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/CSS/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/CSS/skills.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/skills.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/20180328_184320.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/20180328_184320.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/2597109669_9b40ec947f_o.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/2597109669_9b40ec947f_o.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/640px-Football_iu_1996.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/640px-Football_iu_1996.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/DSC_0404.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/DSC_0404.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/IMG_8881.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/IMG_8881.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/football.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/football.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l3.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l3.jfif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/l7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/l7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/office.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/office.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/images/payment.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/payment.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +89,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\HTML" />
+      <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\CSS" />
       <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend" />
       <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\html" />
     </key>
@@ -107,7 +118,7 @@
       <workItem from="1601523830551" duration="36662000" />
       <workItem from="1601603718024" duration="3084000" />
       <workItem from="1601609485830" duration="4152000" />
-      <workItem from="1601615108351" duration="1683000" />
+      <workItem from="1601615108351" duration="2227000" />
     </task>
     <servers />
   </component>
