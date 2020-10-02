@@ -2,7 +2,7 @@
     position: absolute;
     height: 700px;
     width:100%;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/IMG_8881.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/IMG_8881.jpg");
     background-size: 1700px 700px;
     color: red;
     background-position:center;
@@ -97,7 +97,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/office.jpg");
     object-fit: scale-down;
     position: absolute;
     text-align: center;
@@ -132,7 +132,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/football.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/football.jpg");
     object-fit: scale-down;
     position: absolute;
     text-align: center;
@@ -167,7 +167,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/payment.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/payment.jpg");
     position: absolute;
     text-align: center;
     margin-top: 150px;
@@ -226,7 +226,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/l1.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/l1.jpg");
     object-fit: scale-down;
     position: absolute;
     text-align: center;
@@ -259,7 +259,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/l2.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/l2.jpg");
     position: absolute;
     text-align: center;
     margin-top: 100px;
@@ -292,7 +292,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/l4.png");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/l4.png");
     position: absolute;
     text-align: center;
     margin-top: 100px;
@@ -325,7 +325,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/l5.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/l5.jpg");
     position: absolute;
     text-align: center;
     margin-top: 600px;
@@ -358,7 +358,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/l6.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/l6.jpg");
     position: absolute;
     text-align: center;
     margin-top: 600px;
@@ -391,7 +391,7 @@
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/l7.png");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/l7.png");
     position: absolute;
     text-align: center;
     margin-top: 600px;
