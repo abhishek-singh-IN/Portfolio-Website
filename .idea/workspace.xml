@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/Footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/About.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/About.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/experience.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/project.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/resume.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/resume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/skills.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/skills.html" afterDir="false" />
@@ -80,12 +95,23 @@
       <workItem from="1601488138574" duration="2354000" />
       <workItem from="1601521720921" duration="2043000" />
       <workItem from="1601523830551" duration="36662000" />
-      <workItem from="1601603718024" duration="639000" />
+      <workItem from="1601603718024" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601490124078">
