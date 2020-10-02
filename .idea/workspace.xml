@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Server.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -66,6 +63,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\singhabhishek\" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\singhabhishek\" />
       <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\HTML" />
@@ -100,7 +100,7 @@
       <workItem from="1601615108351" duration="2227000" />
       <workItem from="1601621846666" duration="3454000" />
       <workItem from="1601629343478" duration="4856000" />
-      <workItem from="1601634277214" duration="829000" />
+      <workItem from="1601634277214" duration="1297000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
