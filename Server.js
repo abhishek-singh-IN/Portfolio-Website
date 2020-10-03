@@ -36,6 +36,6 @@ server.get('/Gallery',function (req,res){
 server.get('/Resume',function (req,res){
     res.sendFile('src/HTML/resume.html',{root:__dirname})
 });
-server.listen(3000,function (){
-    console.log('Server Listening to Port:3000')
+server.listen(80,function (){
+    console.log('Server Listening to Port:80')
 });
