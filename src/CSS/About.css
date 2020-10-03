@@ -3,7 +3,6 @@
     height: 2050px;
     width: 1519px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/2597109669_9b40ec947f_o.jpg");
-    background-size:cover;
 }
 .formal-pic{
     position: absolute;
@@ -47,7 +46,6 @@
     background-color: transparent;
 }
 .Description{
-    position: absolute;
     margin-top: 850px;
     margin-left: 200px;
     margin-right: 150px;
@@ -57,13 +55,10 @@
     background-color: transparent;
 }
 .Education{
-    position: absolute;
-    margin-top: 1400px;
     margin-left: 500px;
     background-color: transparent;
 }
 .Education h1{
-    position: absolute;
     text-align: center;
     font-size: 60px;
     margin-left: -500px;
@@ -71,6 +66,17 @@
     color: white;
     background-color: transparent;
 }
+.Education year{
+    font-size:15px;
+    background-color: white;
+}
+.Education course{
+    font-size:25px;
+    background-color: white;
+}
+.Education college{background-color: white;}
+.Education cgpa{background-color: white;}
+.Education university{background-color: white;}
 .graduation{
     box-sizing: border-box;
     width: 400px;
@@ -78,22 +84,10 @@
     border: 5px black;
     background-color: white;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: -450px;
     text-align: center;
 }
-.graduation year{
-    font-size:15px;
-    background-color: #ffffff;
-}
-.graduation course{
-    font-size:25px;
-    background-color: white;
-}
-.graduation college{background-color: white;}
-.graduation cgpa{background-color: white;}
-.graduation university{background-color: white;}
-
 .twelth{
     box-sizing: border-box;
     width: 400px;
@@ -101,22 +95,10 @@
     border: 5px black;
     background-color: white;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: 50px;
     text-align: center;
 }
-.twelth year{
-    font-size:15px;
-    background-color: white;
-}
-.twelth course{
-    font-size:25px;
-    background-color: white;
-}
-.twelth college{background-color: white;}
-.twelth cgpa{background-color: white;}
-.twelth university{background-color: white;}
-
 .tenth{
     box-sizing: border-box;
     width: 400px;
@@ -124,23 +106,11 @@
     border: 5px black;
     background-color: white;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: 550px;
     text-align: center;
 }
-.tenth year{
-    font-size:15px;
-    background-color: white;
-}
-.tenth course{
-    font-size:25px;
-    background-color: white;
-}
-.tenth college{background-color: white;}
-.tenth cgpa{background-color: white;}
-.tenth university{background-color: white;}
-
 .footer{
-    position: absolute;
-    margin-top: 2000px;
+    position: static;
+    margin-top: 2050px;
 }
