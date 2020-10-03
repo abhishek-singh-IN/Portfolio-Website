@@ -1,51 +1,40 @@
 var express=require('express');
 var server=express();
+var path=require('path')
 
-server.use(express.static('src'))
+server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
+server.use('/Images',express.static(path.join(__dirname, 'Images')));
 
 server.get('/',function (req,res){
-    res.sendFile('/src/HTML/Home.html',{root:__dirname})
+    res.sendFile('index.html',{root:__dirname})
 });
-server.get('/Home.html',function (req,res){
-    res.sendFile('/src/HTML/Home.html',{root:__dirname})
+server.get('/index',function (req,res){
+    res.sendFile('index.html',{root:__dirname})
 });
-server.get('/About.html',function (req,res){
+server.get('/Home',function (req,res){
+    res.sendFile('index.html',{root:__dirname})
+});
+server.get('/About',function (req,res){
     res.sendFile('src/HTML/About.html',{root:__dirname})
 });
-server.get('/project.html',function (req,res){
-    res.sendFile('src/HTML/project.html',{root:__dirname})
-});
-server.get('/contact.html',function (req,res){
-    res.sendFile('src/HTML/contact.html',{root:__dirname})
-});
-server.get('/experience.html',function (req,res){
-    res.sendFile('src/HTML/experience.html',{root:__dirname})
-});
-server.get('/Gallery.html',function (req,res){
-    res.sendFile('src/HTML/Gallery.html',{root:__dirname})
-});
-server.get('/skills.html',function (req,res){
+server.get('/Skill',function (req,res){
     res.sendFile('src/HTML/skills.html',{root:__dirname})
 });
-server.get('/resume.html',function (req,res){
+server.get('/Project',function (req,res){
+    res.sendFile('src/HTML/project.html',{root:__dirname})
+});
+server.get('/Contact',function (req,res){
+    res.sendFile('src/HTML/contact.html',{root:__dirname})
+});
+server.get('/Experience',function (req,res){
+    res.sendFile('src/HTML/experience.html',{root:__dirname})
+});
+server.get('/Gallery',function (req,res){
+    res.sendFile('src/HTML/Gallery.html',{root:__dirname})
+});
+server.get('/Resume',function (req,res){
     res.sendFile('src/HTML/resume.html',{root:__dirname})
 });
 server.listen(3000,function (){
     console.log('Server Listening to Port:3000')
-});
-
-server.get('/Images/IMG_8881.jpg',function (req,res){
-    res.sendFile('/Images/IMG_8881.jpg',{root:__dirname})
-});
-server.get('/Images/logo.png',function (req,res){
-    res.sendFile('/Images/logo.png',{root:__dirname})
-});
-server.get('/Images/20180328_184320.jpg',function (req,res){
-    res.sendFile('/Images/20180328_184320.jpg',{root:__dirname})
-});
-server.get('/Images/DSC_0404.JPG',function (req,res){
-    res.sendFile('/Images/DSC_0404.JPG',{root:__dirname})
-});
-server.get('/Images/2597109669_9b40ec947f_o.jpg',function (req,res){
-    res.sendFile('/Images/2597109669_9b40ec947f_o.jpg',{root:__dirname})
 });
