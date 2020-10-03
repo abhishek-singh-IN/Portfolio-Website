@@ -4,10 +4,10 @@ var server=express();
 server.use(express.static('src'))
 
 server.get('/',function (req,res){
-    res.sendFile('src/HTML/index.html',{root:__dirname})
+    res.sendFile('/src/HTML/Home.html',{root:__dirname})
 });
-server.get('/index.html',function (req,res){
-    res.sendFile('src/HTML/index.html',{root:__dirname})
+server.get('/Home.html',function (req,res){
+    res.sendFile('/src/HTML/Home.html',{root:__dirname})
 });
 server.get('/About.html',function (req,res){
     res.sendFile('src/HTML/About.html',{root:__dirname})
