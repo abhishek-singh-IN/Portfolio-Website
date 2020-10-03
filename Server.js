@@ -21,6 +21,9 @@ server.get('/About',function (req,res){
 server.get('/Skill',function (req,res){
     res.sendFile('src/HTML/skills.html',{root:__dirname})
 });
+server.get('/Skill/DSA',function (req,res){
+    res.sendFile('src/skills/DSA.html',{root:__dirname})
+});
 server.get('/Project',function (req,res){
     res.sendFile('src/HTML/project.html',{root:__dirname})
 });

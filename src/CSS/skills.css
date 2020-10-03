@@ -5,7 +5,10 @@ p{
     margin-left: 5px;
     margin-right: 5px;
 }
-.h2{
+h2{
+    background-color: transparent;
+}
+h1{
     background-color: transparent;
 }
 .content{
@@ -22,7 +25,6 @@ p{
 }
 .Heading h1{
     width: 1000px;
-    background-color: transparent;
 }
 .Subheading{
     position: absolute;
@@ -32,55 +34,48 @@ p{
     margin-left: 500px;
     background-color: transparent;
 }
-.Subheading h2{
-    background-color: transparent;
-}
-
 .description{
     width: 1200px;
     position: absolute;
-    font-size: 20px;
     text-align: center;
     margin-top: 250px;
     margin-left: 150px;
-    margin-right: 150px;
     background-color: transparent;
 }
 .description p{
-    background-color: transparent;
     font-size: 20px;
+}
+.Skills{
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+.Skills h1{
+    color: #FF6161;
+    margin-top: 50px;
+}
+.Skills p{
+    margin-top: 30px;
+}
+.Skills a{
+    border: 10px solid #FF6161;
+    background-color: #FF6161;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -50px;
 }
 .DSA{
     box-sizing: border-box;
     border-radius: 25px;
     width: 400px;
     height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 400px;
     margin-left: 50px;
-    color: white;
-}
-.DSA h1{
-    color: #FF6161;
-    margin-top: 50px;
-    background-color: transparent;
-}
-.DSA p{
-    margin-top: 30px;
-}
-.DSA a{
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -50px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
 .cybersecurity{
     box-sizing: border-box;
@@ -89,30 +84,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 400px;
     margin-left: 550px;
-    color: white;
-}
-.cybersecurity h1{
-    color: #FF6161;
-    margin-top: 50px;
-    background-color: transparent;
-}
-.cybersecurity p{
-    margin-top: 20px;
-}
-.cybersecurity a{
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -50px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
 .bigdata{
     box-sizing: border-box;
@@ -121,30 +95,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 400px;
     margin-left: 1050px;
-    color: white;
-}
-.bigdata h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.bigdata p{
-    margin-top: 20px;
-}
-.bigdata a{
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -50px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
 .DBMS{
     box-sizing: border-box;
@@ -153,20 +106,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 900px;
     margin-left: 50px;
-    color: white;
-}
-.DBMS h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.DBMS p{
-    margin-top: 20px;
 }
 .WEBD{
     box-sizing: border-box;
@@ -175,20 +117,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 900px;
     margin-left: 550px;
-    color: white;
-}
-.WEBD h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.WEBD p{
-    margin-top: 20px;
 }
 .Android{
     box-sizing: border-box;
@@ -197,22 +128,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 900px;
     margin-left: 1050px;
-    color: white;
-}
-.Android h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.Android p{
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 .Network{
     box-sizing: border-box;
@@ -221,20 +139,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 1400px;
     margin-left: 50px;
-    color: white;
-}
-.Network h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.Network p{
-    margin-top: 20px;
 }
 .ML{
     box-sizing: border-box;
@@ -243,20 +150,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 1400px;
     margin-left: 550px;
-    color: white;
-}
-.ML h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.ML p{
-    margin-top: 20px;
 }
 .DL{
     box-sizing: border-box;
@@ -265,20 +161,9 @@ p{
     height: 400px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
-    object-fit: scale-down;
     position: absolute;
-    text-align: center;
     margin-top: 1400px;
     margin-left: 1050px;
-    color: white;
-}
-.DL h1{
-    margin-top: 50px;
-    color: #FF6161;
-    background-color: transparent;
-}
-.DL p{
-    margin-top: 20px;
 }
 .footer{
     position: absolute;
