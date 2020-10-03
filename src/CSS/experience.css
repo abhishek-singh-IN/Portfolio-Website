@@ -1,7 +1,7 @@
 .content{
     background-color: #FF6161;
     height: 800px;
-    width: 100%;
+    width: 1519px;
 }
 .Heading{
     position: absolute;
@@ -14,6 +14,7 @@
     background-color: transparent;
 }
 .Details{
+    width: 1200px;
     color: white;
     position: absolute;
     font-size: 20px;
@@ -30,7 +31,7 @@
     box-sizing: border-box;
     border-radius: 25px;
     width: 600px;
-    height: 400px;
+    height: 480px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
     object-fit: scale-down;
@@ -75,7 +76,7 @@
     box-sizing: border-box;
     border-radius: 25px;
     width: 600px;
-    height: 400px;
+    height: 480px;
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
     object-fit: scale-down;

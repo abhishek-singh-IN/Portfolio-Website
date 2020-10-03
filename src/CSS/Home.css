@@ -2,7 +2,7 @@
     color: white;
     position: absolute;
     height: 700px;
-    width:100%;
+    width:1519px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/Images/IMG_8881.jpg");
     background-size: 1700px 100%;
     background-position:center;
@@ -34,7 +34,7 @@
     margin-top: 700px;
     background-color: #FFEF98;
     height: 700px;
-    width: 100%;
+    width: 1519px;
 }
 .details-title{
     position: absolute;
@@ -71,7 +71,7 @@
     margin-top: 1400px;
     background-color: #FF6161;
     height: 650px;
-    width: 100%;
+    width: 1519px;
 }
 .Projects h1{
     position: absolute;
@@ -197,7 +197,7 @@
     margin-top: 2050px;
     background-color: #A2CDF2;
     height: 1200px;
-    width: 100%;
+    width: 1519px;
 }
 .Tools h1{
     color: white;

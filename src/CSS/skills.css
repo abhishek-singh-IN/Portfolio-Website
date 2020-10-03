@@ -1,7 +1,17 @@
+p{
+    font-size: 15px;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.h2{
+    background-color: transparent;
+}
 .content{
     background-color: #FF6161;
     height: 1900px;
-    width: 100%;
+    width: 1519px;
 }
 .Heading{
     position: absolute;
@@ -11,6 +21,7 @@
     background-color: transparent;
 }
 .Heading h1{
+    width: 1000px;
     background-color: transparent;
 }
 .Subheading{
@@ -24,7 +35,9 @@
 .Subheading h2{
     background-color: transparent;
 }
+
 .description{
+    width: 1200px;
     position: absolute;
     font-size: 20px;
     text-align: center;
@@ -35,6 +48,7 @@
 }
 .description p{
     background-color: transparent;
+    font-size: 20px;
 }
 .DSA{
     box-sizing: border-box;
@@ -57,10 +71,6 @@
 }
 .DSA p{
     margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .DSA a{
     position: absolute;
@@ -93,10 +103,6 @@
 }
 .cybersecurity p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .cybersecurity a{
     position: absolute;
@@ -129,10 +135,6 @@
 }
 .bigdata p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .bigdata a{
     position: absolute;
@@ -165,10 +167,6 @@
 }
 .DBMS p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .WEBD{
     box-sizing: border-box;
@@ -191,10 +189,6 @@
 }
 .WEBD p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .Android{
     box-sizing: border-box;
@@ -219,8 +213,6 @@
     margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .Network{
     box-sizing: border-box;
@@ -243,10 +235,6 @@
 }
 .Network p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .ML{
     box-sizing: border-box;
@@ -269,10 +257,6 @@
 }
 .ML p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .DL{
     box-sizing: border-box;
@@ -295,10 +279,6 @@
 }
 .DL p{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
 }
 .footer{
     position: absolute;
