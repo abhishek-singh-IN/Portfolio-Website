@@ -21,15 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Document/Abhishek Singh.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Document/Abhishek Singh.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/About.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HTML/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/skills.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +115,7 @@
       <workItem from="1601637987001" duration="3371000" />
       <workItem from="1601641799092" duration="373000" />
       <workItem from="1601714484781" duration="869000" />
-      <workItem from="1601720493533" duration="3809000" />
+      <workItem from="1601720493533" duration="4541000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>

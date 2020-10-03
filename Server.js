@@ -4,6 +4,7 @@ var path=require('path')
 
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
+server.use('/Document',express.static(path.join(__dirname, 'Document')));
 
 server.get('/',function (req,res){
     res.sendFile('index.html',{root:__dirname})
