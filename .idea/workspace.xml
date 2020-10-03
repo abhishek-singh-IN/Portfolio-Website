@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/skills.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/skills.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,8 @@
       <workItem from="1601641799092" duration="373000" />
       <workItem from="1601714484781" duration="869000" />
       <workItem from="1601720493533" duration="10105000" />
-      <workItem from="1601737127221" duration="1690000" />
+      <workItem from="1601737127221" duration="3031000" />
+      <workItem from="1601740973155" duration="2879000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
@@ -245,10 +243,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="478" y="11" width="580" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1601489524989" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601725775610">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601739507756">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601725775610" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601739507756" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history>

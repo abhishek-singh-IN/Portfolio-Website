@@ -10,21 +10,21 @@
     position: absolute;
     font-size: 150px;
     text-align: center;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 250px;
     background-color: transparent;
 }
 .Welcome h2{
     position: absolute;
     font-size: 100px;
-    margin-left: 450px;
+    margin-left: 350px;
     margin-top: 400px;
     background-color: transparent;
 }
 .Welcome p{
     position: absolute;
     font-size: 20px;
-    margin-left: 500px;
+    margin-left: 400px;
     margin-top: 550px;
     background-color: transparent;
 }
@@ -35,28 +35,27 @@
     height: 700px;
     width: 1519px;
 }
+.details{
+    background-color: transparent;
+}
 .details-title{
-    position: absolute;
     color: black;
     margin-top: -650px;
-    margin-left: 600px;
-    font-family: Algerian;
+    margin-left: 300px;
+    font-family: Algerian, Seri;
     font-size: 60px;
     text-align: center;
     background-color: transparent;
 }
 .details p{
     color: black;
-    position: absolute;
-    margin-top: -400px;
     margin-left: 500px;
     width: 800px;
     font-size: 20px;
     background-color: transparent;
 
 }
-.Know-more-about-home a{
-    position: absolute;
+.details a{
     margin-top: -130px;
     margin-left: 700px;
     border-radius: 25px;
@@ -73,10 +72,19 @@
     width: 1519px;
 }
 .Projects h1{
+    margin-top: 50px;
     position: absolute;
     margin-left:550px;
     color: white;
     font-size: 60px;
+    background-color: transparent;
+}
+.Projects h2{
+    margin-top: 150px;
+    background-color: transparent;
+}
+.Projects a{
+    border: 10px solid #FF6161;
     background-color: #FF6161;
 }
 .Project1{
@@ -87,7 +95,7 @@
     border-radius: 25px;
     width: 400px;
     height: 400px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
     background-size: 400px 400px;
     text-align: center;
     color: white;
@@ -96,19 +104,10 @@
     color: #FF6161;
     font-size: 30px;
     margin-left: 50px;
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Project1 h2{
-    margin-top: 150px;
-    background-color: transparent;
 }
 .Project1 a{
     border-radius: 25px;
     color: white;
-    position: absolute;
-    margin-top: 40px;
-    margin-left: -40px;
     text-decoration: none;
     border: 10px solid #FF6161;
     background-color: #FF6161;
@@ -130,23 +129,14 @@
 .Project2 h1{
     color: #FF6161;
     font-size: 30px;
-    margin-left: 0;
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Project2 h2{
-    margin-top: 150px;
-    background-color: transparent;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 300px;
 }
 .Project2 a{
     border-radius: 25px;
     color: white;
-    position: absolute;
-    margin-top: 40px;
-    margin-left: -40px;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
 .Project3{
     box-sizing: border-box;
@@ -165,29 +155,18 @@
     color: #FF6161;
     font-size: 30px;
     margin-left: 0;
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Project3 h2{
-    margin-top: 150px;
-    background-color: transparent;
 }
 .Project3 a{
     border-radius: 25px;
     color: white;
-    position: absolute;
-    margin-top: 40px;
-    margin-left: -40px;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
+
 }
 .ProjectlinkfromHome{
     color: white;
     position: absolute;
-    margin-top: 600px;
-    margin-left: 650px;
-    border-radius: 25px;
+    margin-top: 580px;
+    margin-left: 600px;
     font-size: 20px;
     background-color: transparent;
 }
@@ -205,6 +184,12 @@
     margin-top: 50px;
     background-color: transparent;
     text-decoration: underline;
+}
+.Tools li{
+    font-size: 20px;
+    text-align: left;
+    background-color: transparent;
+    margin-top: 15px;
 }
 .tool1{
     box-sizing: border-box;
@@ -226,18 +211,14 @@
     font-size: 50px;
     background-color: transparent;
     margin-left: -20px;
-    margin-top: 0;
+    margin-top: -20px;
     text-decoration: none;
 }
 .Language{
+    position: absolute;
     background-color: transparent;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: 100px;
-}
-.Language li{
-    margin-top: 15px;
-    background-color: transparent;
-    text-align: left;
 }
 .tool2{
     box-sizing: border-box;
@@ -247,7 +228,6 @@
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l2.jpg");
     position: absolute;
-    text-align: center;
     margin-top: 100px;
     margin-left: 550px;
     color: white;
@@ -256,21 +236,17 @@
     color: #FF6161;
     position: absolute;
     font-size: 50px;
-    background-color: transparent;
-    margin-left: 10px;
-    margin-top: 30px;
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 0px;
     text-decoration: none;
+    text-align: center;
 }
 .OS{
+    position: absolute;
     background-color: transparent;
     margin-top: 150px;
-    margin-left: 100px;
-}
-.OS li{
-    margin-top: 15px;
-    background-color: transparent;
-    text-align: left;
-    font-size: 20px;
+    margin-left: 120px;
 }
 .tool3{
     box-sizing: border-box;
@@ -280,7 +256,6 @@
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l4.png");
     position: absolute;
-    text-align: center;
     margin-top: 100px;
     margin-left: 1050px;
     color: white;
@@ -289,21 +264,14 @@
     color: #FF6161;
     position: absolute;
     font-size: 50px;
-    background-color: transparent;
     margin-left: 50px;
     margin-top: 30px;
     text-decoration: none;
 }
 .DB{
     background-color: transparent;
-    margin-top: 150px;
-    margin-left: 100px;
-}
-.DB li{
-    margin-top: 15px;
-    background-color: transparent;
-    text-align: left;
-    font-size: 20px;
+    margin-top: 120px;
+    margin-left: 120px;
 }
 .tool4{
     box-sizing: border-box;
@@ -313,7 +281,6 @@
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/l5.jpg");
     position: absolute;
-    text-align: center;
     margin-top: 600px;
     margin-left: 50px;
     color: white;
@@ -322,21 +289,14 @@
     color: #FF6161;
     position: absolute;
     font-size: 50px;
-    background-color: transparent;
     margin-left: 10px;
     margin-top: 30px;
     text-decoration: none;
 }
 .framework{
+    margin-top: 120px;
+    margin-left: 120px;
     background-color: transparent;
-    margin-top: 150px;
-    margin-left: 100px;
-}
-.framework li{
-    margin-top: 15px;
-    background-color: transparent;
-    text-align: left;
-    font-size: 20px;
 }
 .tool5{
     box-sizing: border-box;
@@ -346,7 +306,6 @@
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l6.jpg");
     position: absolute;
-    text-align: center;
     margin-top: 600px;
     margin-left: 550px;
     color: white;
@@ -355,21 +314,14 @@
     color: #FF6161;
     position: absolute;
     font-size: 50px;
-    background-color: transparent;
     margin-left: 100px;
     margin-top: 30px;
     text-decoration: none;
 }
 .toolbox{
     background-color: transparent;
-    margin-top: 150px;
-    margin-left: 100px;
-}
-.toolbox li{
-    margin-top: 15px;
-    background-color: transparent;
-    text-align: left;
-    font-size: 20px;
+    margin-top: 120px;
+    margin-left: 120px;
 }
 .tool6{
     box-sizing: border-box;
@@ -379,7 +331,6 @@
     border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l7.png");
     position: absolute;
-    text-align: center;
     margin-top: 600px;
     margin-left: 1050px;
     color: white;
@@ -388,22 +339,14 @@
     color: #FF6161;
     position: absolute;
     font-size: 50px;
-    background-color: transparent;
     margin-left: 150px;
     margin-top: 20px;
-    text-align: center;
     text-decoration: none;
 }
 .IDE{
     background-color: transparent;
     margin-top: 100px;
     margin-left: 80px;
-}
-.IDE li{
-    margin-top: 15px;
-    background-color: transparent;
-    text-align: left;
-    font-size: 20px;
 }
 .footer{
     position: absolute;
