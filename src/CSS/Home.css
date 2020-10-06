@@ -348,7 +348,92 @@
     margin-top: 100px;
     margin-left: 80px;
 }
+.ContactHomePage{
+    position: absolute;
+    margin-top: 4000px;
+    background-color: #FCF8ED;
+}
+.ContactHomePage img{
+    width: 750px;
+    height: 650px;
+}
+.Right_part_of_contactpart{
+    width: 768.8px;
+    height: 650px;
+    position: absolute;
+    margin-top: -654px;
+    margin-left: 750px;
+    background-color: #FCF8ED;
+    background-size: 450px 500px;
+}
+.Contact-Heading{
+    width: 400px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 235px;
+    color: goldenrod;
+    font-size: 30px;
+    background-color: transparent;
+}
+.Contact-Heading h1{
+    background-color: transparent;
+}
+.Adressincontactform{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 220px;
+    background-color: transparent;
+    font-size: 20px;
+}
+.Adressincontactform p{
+    background-color:transparent;
+    text-align: center;
+}
+.formfilling{
+    background-color: transparent;
+    margin-top: 280px;
+    margin-left: 150px;
+    position: absolute;
+    width: 550px;
+}
+.formfilling form{
+    background-color: transparent;
+}
+.formfilling label{
+    background-color: transparent;
+
+}
+.formfilling input{
+    background-color: transparent;
+    margin-bottom: 10px;
+    border: none;
+    padding: 12px 20px;
+}
+.formfilling input#fname{
+    width: 220px;
+    border-bottom: 2px solid black;
+}
+.formfilling input#lname{
+    width: 220px;
+    border-bottom: 2px solid black;
+}
+.formfilling input#subject{
+    width: 485px;
+    height: 30px;
+    border-bottom: 2px solid black;
+}
+.formfilling input#message{
+    width: 485px;
+    height: 100px;
+    border-bottom: 2px solid black;
+}
+.submit{
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 30px;
+}
 .footer{
     position: absolute;
-    margin-top: 3200px;
+    margin-top: 4600px;
 }
