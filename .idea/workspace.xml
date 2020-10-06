@@ -22,13 +22,7 @@
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/body-parser/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mysql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mysql/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nodemon/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/About.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +118,7 @@
       <workItem from="1601740973155" duration="7942000" />
       <workItem from="1601779764068" duration="1319000" />
       <workItem from="1601783888691" duration="1705000" />
-      <workItem from="1602002106857" duration="5936000" />
+      <workItem from="1602002106857" duration="7175000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
