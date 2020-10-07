@@ -2,7 +2,7 @@
     color: white;
     text-align: center;
     position: absolute;
-    margin-left: 420px;
+    margin-left: 100px;
     margin-top: 80px;
 }
 .contact h1{
@@ -14,7 +14,7 @@
 .list{
     width: 200px;
     position: absolute;
-    margin-left: 830px;
+    margin-left: 610px;
     margin-top: 80px;
     margin-bottom: 20px;
     text-align: center;
@@ -28,7 +28,7 @@
     color: white;
     text-align: center;
     position: absolute;
-    margin-left: 1300px;
+    margin-left: 1250px;
     margin-top: 80px;
 }
 .Address h1{
