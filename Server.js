@@ -6,7 +6,7 @@ var path=require('path')
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
 server.use('/Document',express.static(path.join(__dirname, 'Document')));
-server.use('/javascript',express.static(path.join(__dirname,'Javascript')));
+server.use('/Javascript',express.static(path.join(__dirname,'src/Javascript')));
 server.use(bodyParser.urlencoded({ extended: true }));
 
 server.get('/',function (req,res){
