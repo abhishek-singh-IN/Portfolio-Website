@@ -4,6 +4,7 @@ p{
     margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
+    color: white;
 }
 h2{
     background-color: transparent;
@@ -67,7 +68,8 @@ h1{
     border-radius: 25px;
     width: 400px;
     height: 400px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M1.jpg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 400px;
     margin-left: 50px;
@@ -78,7 +80,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M2.jpeg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 400px;
     margin-left: 550px;
@@ -89,7 +92,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M3.jpg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 400px;
     margin-left: 1050px;
@@ -100,7 +104,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M4.jpg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 900px;
     margin-left: 50px;
@@ -111,7 +116,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M5.jpg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 900px;
     margin-left: 550px;
@@ -122,7 +128,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M6.jpg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 900px;
     margin-left: 1050px;
@@ -133,7 +140,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M7.jpg");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 1400px;
     margin-left: 50px;
@@ -144,7 +152,7 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/office.jpg");
     position: absolute;
     margin-top: 1400px;
     margin-left: 550px;
@@ -155,7 +163,8 @@ h1{
     width: 400px;
     height: 400px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../Images/M8.png");
+    background-size: 400px 400px;
     position: absolute;
     margin-top: 1400px;
     margin-left: 1050px;
