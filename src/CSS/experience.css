@@ -1,5 +1,6 @@
 .content{
-    background-color: #FF6161;
+    background-image: linear-gradient(greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8)),url("../../Images/M8.jpg");
+    background-size: 1519px 800px;
     height: 800px;
     width: 1519px;
 }

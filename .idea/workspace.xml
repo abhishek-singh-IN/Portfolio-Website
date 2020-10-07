@@ -21,7 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/skills.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/experience.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/skills.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +128,7 @@
       <workItem from="1602038401158" duration="10008000" />
       <workItem from="1602048505915" duration="1096000" />
       <workItem from="1602052789168" duration="4546000" />
-      <workItem from="1602062933131" duration="2562000" />
+      <workItem from="1602062933131" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
