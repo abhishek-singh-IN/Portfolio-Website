@@ -1,10 +1,13 @@
 var express=require('express');
 var server=express();
+var bodyParser = require('body-parser');
 var path=require('path')
 
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
 server.use('/Document',express.static(path.join(__dirname, 'Document')));
+server.use('/javascript',express.static(path.join(__dirname,'Javascript')));
+server.use(bodyParser.urlencoded({ extended: true }));
 
 server.get('/',function (req,res){
     res.sendFile('index.html',{root:__dirname})
@@ -38,6 +41,9 @@ server.get('/Gallery',function (req,res){
 });
 server.get('/Resume',function (req,res){
     res.sendFile('src/HTML/resume.html',{root:__dirname})
+});
+server.post('/contactform',(req, res) => {
+    res.send(`${req.body.Name}':Your form has been submitted'.`);
 });
 server.listen(80,function (){
     console.log('Server Listening to Port:80')

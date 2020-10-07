@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="CSS/Footer.css" type="text/css">
     <link rel="icon" href="Images/logo.png" type="image/gif" sizes="16*16">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=IBM+Plex+Sans:ital,wght@1,500&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <script src="Javascript/home.js"></script>
     <title>Abhishek Singh | Computer Engineer</title>
 </head>
 <body>
@@ -174,9 +175,9 @@
                 <p>info@singhabhishek.co.in / Tel - 9599638865</p>
             </div>
             <div class="formfilling">
-                <form>
-                    <input type="text" id="fname" placeholder="Name">
-                    <input type="email" id="lname" placeholder="E-mail"><br>
+                <form name="contact1" action="/contactform" onsubmit="return Validatecontactform()" method="post">
+                    <input type="text" id="fname" name="Name" placeholder="Name">
+                    <input type="email" id="email" placeholder="E-mail"><br>
                     <input type="text" id="subject" placeholder="Subject"><br>
                     <input type="text" id="message" placeholder="Type your message here"><br>
                     <input type="submit" value="Submit" class="submit">

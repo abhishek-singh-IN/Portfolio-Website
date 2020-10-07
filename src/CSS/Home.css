@@ -393,7 +393,7 @@
 }
 .Contact-Heading{
     font-family: "Brush Script MT";
-    width: 500px;
+    width: 600px;
     position: absolute;
     margin-left: 180px;
     color: goldenrod;
@@ -438,20 +438,24 @@
 .formfilling input#fname{
     width: 220px;
     border-bottom: 2px solid black;
+    border-radius: 5px;
 }
-.formfilling input#lname{
+.formfilling input#email{
     width: 220px;
     border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 .formfilling input#subject{
     width: 485px;
     height: 30px;
     border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 .formfilling input#message{
     width: 485px;
     height: 100px;
     border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 .submit{
     text-align: center;
