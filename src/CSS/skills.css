@@ -56,16 +56,11 @@ h1{
 }
 .Skills p{
     margin-top: 30px;
+    font-size: 18px;
 }
 .Skills a{
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
     text-decoration: none;
     color: white;
-    border-radius: 25px;
-    position: absolute;
-    margin-top: 50px;
-    margin-left: -50px;
 }
 .DSA{
     box-sizing: border-box;

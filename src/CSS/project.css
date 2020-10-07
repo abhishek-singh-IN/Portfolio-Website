@@ -37,13 +37,13 @@
     text-decoration: none;
     font-size: 20px;
 }
-.Experience h4{
+.Project h4{
     margin-top: -10px;
     font-size: 20px;
     color: goldenrod;
     background-color: transparent;
 }
-.Experience1{
+.Project1{
     box-sizing: border-box;
     border-radius: 25px;
     width: 600px;
@@ -58,34 +58,28 @@
     margin-left: 100px;
     color: white;
 }
-.Experience1 h2{
+.Project1 h2{
     margin-top: 50px;
     background-color: transparent;
 }
-.Experience1 h3{
+.Project1 h3{
     margin-top: 50px;
     background-color: transparent;
     font-size: 40px;
     color: #FF6161;
 }
-.Experience1 p{
+.Project1 p{
     margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
     background-color: transparent;
     font-size: 20px;
 }
-.Experience1 a{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -50px;
-    border-radius: 25px;
+.Project1 a{
     color: white;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
-.Experience2{
+.Project2{
     box-sizing: border-box;
     border-radius: 25px;
     width: 600px;
@@ -100,34 +94,28 @@
     margin-left: 800px;
     color: white;
 }
-.Experience2 h2{
+.Project2 h2{
     margin-top: 50px;
     background-color: transparent;
 }
-.Experience2 h3{
+.Project2 h3{
     margin-top: 50px;
     background-color: transparent;
     font-size: 40px;
     color: #FF6161;
 }
-.Experience2 p{
+.Project2 p{
     margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
     background-color: transparent;
     font-size: 20px;
 }
-.Experience2 a{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -50px;
-    border-radius: 25px;
+.Project2 a{
     color: white;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
-.Experience3{
+.Project3{
     box-sizing: border-box;
     border-radius: 25px;
     width: 600px;
@@ -141,34 +129,28 @@
     margin-left: 100px;
     color: white;
 }
-.Experience3 h2{
+.Project3 h2{
     margin-top: 80px;
     background-color: transparent;
 }
-.Experience3 h3{
+.Project3 h3{
     margin-top: 50px;
     background-color: transparent;
     font-size: 40px;
     color: #FF6161;
 }
-.Experience3 p{
+.Project3 p{
     margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
     background-color: transparent;
     font-size: 20px;
 }
-.Experience3 a{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -50px;
-    border-radius: 25px;
+.Project3 a{
     color: white;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
-.Experience4{
+.Project4{
     box-sizing: border-box;
     border-radius: 25px;
     width: 600px;
@@ -182,32 +164,26 @@
     margin-left: 800px;
     color: white;
 }
-.Experience4 h2{
+.Project4 h2{
     margin-top: 50px;
     background-color: transparent;
 }
-.Experience4 h3{
+.Project4 h3{
     margin-top: 50px;
     background-color: transparent;
     font-size: 40px;
     color: #FF6161;
 }
-.Experience4 p{
+.Project4 p{
     margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
     background-color: transparent;
     font-size: 20px;
 }
-.Experience4 a{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -50px;
-    border-radius: 25px;
+.Project4 a{
     color: white;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
 .footer{
     position: absolute;
