@@ -6,3 +6,10 @@ function Validatecontactform()
         return false;
     }
 }
+let fname=document.getElementById('fname')
+let submit=document.getElementById('submit')
+
+submit.onclick=function (){
+    let name=fname.value
+    alert('Hello'+name)
+}

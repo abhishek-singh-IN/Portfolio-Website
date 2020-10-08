@@ -15,7 +15,8 @@ h1{
 .content{
     background-color: #FF6161;
     height: 1900px;
-    width: 1519px;
+    width: 1515px;
+    margin-left: -4px;
 }
 .Heading{
     position: absolute;
@@ -73,6 +74,18 @@ h1{
     position: absolute;
     margin-top: 400px;
     margin-left: 50px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.DSA:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.DSA:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .cybersecurity{
     box-sizing: border-box;

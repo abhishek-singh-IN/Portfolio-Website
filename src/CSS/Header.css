@@ -6,10 +6,9 @@ h1{
 }
 .header{
     color: white;
-    width: 1519px;
+    width: 1500px;
 }
 .logo{
-    position: page;
     margin-top: 25px;
     margin-left: 30px;
     margin-bottom: 25px;
@@ -25,7 +24,6 @@ h1{
     float: right;
     list-style: none;
     margin-top:-75px;
-    margin-right: 100px;
 }
 .nav-menu li{
     display: inline-block;

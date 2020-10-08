@@ -1,8 +1,9 @@
 .content{
     background-image: linear-gradient( #FF6161,rgba(0,0,0,0.8),#FF6161,rgba(0,0,0,0.8)),url("../../Images/A6.jpeg");
     background-size: 1519px 1600px;
+    margin-left: -9px;
     height: 1600px;
-    width: 1519px;
+    width: 1520px;
 }
 .Heading{
     position: absolute;

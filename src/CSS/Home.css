@@ -1,6 +1,7 @@
 .Welcome{
     color: white;
     position: absolute;
+    margin-left: -8px;
     height: 700px;
     width:1519px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/Images/IMG_8881.jpg");
@@ -34,6 +35,7 @@
 .Introduce{
     position: absolute;
     margin-top: 700px;
+    margin-left: -8px;
     background-color: #FFEF98;
     height: 700px;
     width: 1519px;
@@ -69,6 +71,7 @@
 .Projects{
     position: absolute;
     margin-top: 1400px;
+    margin-left: -8px;
     background-color: #FF6161;
     height: 650px;
     width: 1519px;
@@ -175,6 +178,7 @@
 .Tools{
     position: absolute;
     margin-top: 2050px;
+    margin-left: -8px;
     background-color: #A2CDF2;
     height: 1200px;
     width: 1519px;
@@ -352,6 +356,7 @@
 }
 .Testimonals{
     position: absolute;
+    margin-left: -8px;
     margin-top: 3280px;
     color: white;
 }
@@ -375,6 +380,7 @@
 }
 .ContactHomePage{
     position: absolute;
+    margin-left: -8px;
     margin-top: 4000px;
     background-color: #FCF8ED;
 }
@@ -389,11 +395,10 @@
     margin-top: -654px;
     margin-left: 750px;
     background-color: #FCF8ED;
-    background-size: 450px 500px;
 }
 .Contact-Heading{
     font-family: "Brush Script MT";
-    width: 600px;
+    width: 500px;
     position: absolute;
     margin-left: 180px;
     color: goldenrod;
