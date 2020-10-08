@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/todo - db/commands.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Javascript/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Javascript/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,16 +67,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\singhabhishek\src\HTML" />
+      <recent name="D:\Projects\singhabhishek\" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\singhabhishek\src\" />
       <recent name="D:\Projects\singhabhishek\" />
       <recent name="D:\Projects\singhabhishek\src" />
       <recent name="D:\Projects\singhabhishek\public" />
       <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\HTML" />
-      <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\CSS" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\singhabhishek\src\HTML" />
-      <recent name="D:\Projects\singhabhishek\" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +129,7 @@
       <workItem from="1602062933131" duration="4801000" />
       <workItem from="1602123277457" duration="8625000" />
       <workItem from="1602133961265" duration="39000" />
-      <workItem from="1602134027925" duration="331000" />
+      <workItem from="1602134027925" duration="3399000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
