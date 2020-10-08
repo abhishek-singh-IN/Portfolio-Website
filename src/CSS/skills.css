@@ -98,6 +98,18 @@ h1{
     position: absolute;
     margin-top: 400px;
     margin-left: 550px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.cybersecurity:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.cybersecurity:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .bigdata{
     box-sizing: border-box;
@@ -110,6 +122,18 @@ h1{
     position: absolute;
     margin-top: 400px;
     margin-left: 1050px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.bigdata:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.bigdata:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .DBMS{
     box-sizing: border-box;
@@ -122,6 +146,18 @@ h1{
     position: absolute;
     margin-top: 900px;
     margin-left: 50px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.DBMS:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.DBMS:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .WEBD{
     box-sizing: border-box;
@@ -134,6 +170,18 @@ h1{
     position: absolute;
     margin-top: 900px;
     margin-left: 550px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.WEBD:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.WEBD:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .Android{
     box-sizing: border-box;
@@ -146,6 +194,18 @@ h1{
     position: absolute;
     margin-top: 900px;
     margin-left: 1050px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.Android:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.Android:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .Network{
     box-sizing: border-box;
@@ -158,6 +218,18 @@ h1{
     position: absolute;
     margin-top: 1400px;
     margin-left: 50px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.Network:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.Network:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .ML{
     box-sizing: border-box;
@@ -169,6 +241,18 @@ h1{
     position: absolute;
     margin-top: 1400px;
     margin-left: 550px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.ML:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.ML:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .DL{
     box-sizing: border-box;
@@ -181,6 +265,18 @@ h1{
     position: absolute;
     margin-top: 1400px;
     margin-left: 1050px;
+    box-shadow: 15px 15px 10px grey;
+    transition: 1s;
+}
+.DL:hover{
+    transform: translate(-15px,-15px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.DL:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .footer{
     position: absolute;
