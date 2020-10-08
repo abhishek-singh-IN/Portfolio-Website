@@ -2,7 +2,7 @@
 www.singhabhishek.co.in <br>
 ## Build a Portfolio ##
 I have build a responsive website that will display images. links and description. This is my first portfolio project. <br>
-![](Images/SS/home.png)
+<img src="https://github.com/abhishek99singh/Portfolio-Website/tree/master/Images/SS/home.png" >
 ![](Images/SS/home1.png)
 ![](Images/SS/home2.png)
 ![](Images/SS/home3.png)
