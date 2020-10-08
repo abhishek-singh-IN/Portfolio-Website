@@ -20,16 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9eb8fea9-9206-4fd2-a0b1-985593ac9032.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9eb8fea9-9206-4fd2-a0b1-985593ac9032.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/experience.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/home1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/home2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/home3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/home4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/project.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/SS/skill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/l3.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <workItem from="1602133961265" duration="39000" />
       <workItem from="1602134027925" duration="4471000" />
       <workItem from="1602149870463" duration="6011000" />
-      <workItem from="1602156287017" duration="1211000" />
+      <workItem from="1602156287017" duration="2083000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
