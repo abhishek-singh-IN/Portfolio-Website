@@ -1,7 +1,24 @@
 var express=require('express');
-var server=express();
+var mysql =require("mysql")
 var bodyParser = require('body-parser');
-var path=require('path')
+var path=require('path');
+
+var server=express();
+
+const mysqlConnection=mysql.createConnection({
+    host:"localhost",
+    user:"singhabhishek",
+    password:"singhabhishek",
+    database:"singhabhishek",
+    multipleStatement:true
+});
+mysqlConnection.connect((err)=> {
+    if (!err) {
+        console.log("Connected MySQL Database");
+    } else {
+        console.log("Connection failed to MYSQL");
+    }
+})
 
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
