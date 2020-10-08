@@ -20,6 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/experience.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/home1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/home2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/home3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/home4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SS/home4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SS/skill.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +136,7 @@
       <workItem from="1602133961265" duration="39000" />
       <workItem from="1602134027925" duration="4471000" />
       <workItem from="1602149870463" duration="6011000" />
-      <workItem from="1602156287017" duration="683000" />
+      <workItem from="1602156287017" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
