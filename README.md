@@ -1,8 +1,8 @@
 # Portfolio-Website link
 www.singhabhishek.co.in <br>
 ## Build a Portfolio ##
-I have build a responsive website that will display images. links and description. This is my first portfolio project.
-![alt text](https://github.com/abhishek99singh/Portfolio-Website/tree/master/Images/SS/home.png)
+I have build a responsive website that will display images. links and description. This is my first portfolio project. <br>
+https://github.com/abhishek99singh/Portfolio-Website/tree/master/Images/SS/home.png <br>
 ## Files Included ##
 index.html<br>
 CSS Folder<br>
