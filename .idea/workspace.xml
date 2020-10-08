@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Routes/connection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routes/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +130,7 @@
       <workItem from="1602133961265" duration="39000" />
       <workItem from="1602134027925" duration="4471000" />
       <workItem from="1602149870463" duration="6011000" />
-      <workItem from="1602156287017" duration="3301000" />
+      <workItem from="1602156287017" duration="5164000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
