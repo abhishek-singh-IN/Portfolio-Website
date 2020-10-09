@@ -41,7 +41,7 @@ submit.onclick=function (){
                 document.getElementById("demo").innerHTML = myJSON;
             }
         };
-        xmlhttp.open("GET", "/contactform", true);
+        xmlhttp.open("GET", "/contact1", true);
         xmlhttp.send();
         window.location.href = ""
         alert('Hello :'+name+". You Details have been submitted succesfully")

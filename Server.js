@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path=require('path');
 
 const mysqlConnection=require("./src/Routes/connection")
-const PeopleRoutes=require("./src/Routes/contact");
+const PeopleRoutes=require("./src/Routes" + "/contact");
 
 var server=express();
 
