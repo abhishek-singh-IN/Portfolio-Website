@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/abhishek99singh/Portfolio-Website#readme",
   "dependencies": {
+    "@angular/core": "^10.1.6",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
