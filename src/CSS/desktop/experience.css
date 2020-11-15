@@ -1,5 +1,5 @@
 .content{
-    background-image: linear-gradient(greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8)),url("../../Images/M8.jpg");
+    background-image: linear-gradient(greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8)),url("../../../Images/M8.jpg");
     background-size: 1519px 850px;
     height: 850px;
     width: 1519px;
@@ -35,7 +35,7 @@
     width: 600px;
     height: 480px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/office.jpg");
     object-fit: scale-down;
     position: absolute;
     text-align: center;
@@ -80,7 +80,7 @@
     width: 600px;
     height: 480px;
     border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/office.jpg");
     object-fit: scale-down;
     position: absolute;
     text-align: center;

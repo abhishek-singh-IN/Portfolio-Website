@@ -108,14 +108,14 @@
 }
 .Project1{
     margin-left: 50px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/office.jpg");
 }
 .Project2{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/football.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/football.jpg");
     margin-left: 550px;
 }
 .Project3{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/payment.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/payment.jpg");
     margin-left: 1050px;
 }
 .ProjectlinkfromHome{
@@ -162,7 +162,7 @@
     margin-top: 15px;
 }
 .tool1{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l1.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/l1.jpg");
     margin-left: 50px;
 }
 .tool1 h1{
@@ -181,7 +181,7 @@
     margin-left: 100px;
 }
 .tool2{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l2.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/l2.jpg");
     margin-left: 550px;
 }
 .tool2 h1{
@@ -201,7 +201,7 @@
     margin-left: 120px;
 }
 .tool3{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l4.png");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/l4.png");
     margin-left: 1050px;
 }
 .tool3 h1{
@@ -218,7 +218,7 @@
     margin-left: 120px;
 }
 .tool4{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/l5.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../../Images/l5.jpg");
     margin-left: 50px;
 }
 .tool4 h1{
@@ -235,7 +235,7 @@
     background-color: transparent;
 }
 .tool5{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l6.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/l6.jpg");
     margin-left: 550px;
 }
 .tool5 h1{
@@ -252,7 +252,7 @@
     margin-left: 120px;
 }
 .tool6{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l7.png");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/l7.png");
     margin-left: 1050px;
 }
 .tool6 h1{

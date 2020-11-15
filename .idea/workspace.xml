@@ -21,6 +21,26 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/Gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/Gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/experience.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/project.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/resume.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/skills.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/Gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/skills.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skills/DSA.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skills/DSA.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -63,16 +83,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\singhabhishek\src\HTML" />
-      <recent name="D:\Projects\singhabhishek\" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\singhabhishek\src\CSS\desktop" />
       <recent name="D:\Projects\singhabhishek\src\" />
       <recent name="D:\Projects\singhabhishek\" />
       <recent name="D:\Projects\singhabhishek\src" />
       <recent name="D:\Projects\singhabhishek\public" />
-      <recent name="D:\Projects\WebstormProjects\singhabhishek\Frontend\HTML" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\singhabhishek\src\HTML" />
+      <recent name="D:\Projects\singhabhishek\" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,7 +157,8 @@
       <workItem from="1603510506878" duration="13000" />
       <workItem from="1605244837835" duration="388000" />
       <workItem from="1605245233356" duration="93000" />
-      <workItem from="1605414793057" duration="6785000" />
+      <workItem from="1605414793057" duration="6928000" />
+      <workItem from="1605421932223" duration="1693000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>

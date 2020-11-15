@@ -10,6 +10,7 @@ var server=express();
 server.use("/contact1",PeopleRoutes)
 
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
+server.use('/desktop',express.static(path.join(__dirname, 'src/CSS/desktop')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
 server.use('/Document',express.static(path.join(__dirname, 'Document')));
 server.use('/Javascript',express.static(path.join(__dirname,'src/Javascript')));
