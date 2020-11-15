@@ -1,9 +1,6 @@
 .Welcome{
     color: white;
-    position: absolute;
-    margin-left: -8px;
     height: 700px;
-    width:1519px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/Images/IMG_8881.jpg");
     background-size: 1700px 100%;
 }
@@ -33,9 +30,6 @@
     font-family: 'Sansita Swashed', cursive;
 }
 .Introduce{
-    position: absolute;
-    margin-top: 700px;
-    margin-left: -8px;
     background-color: #FFEF98;
     height: 700px;
     width: 1519px;
@@ -59,9 +53,10 @@
     font-size: 20px;
     background-color: transparent;
 }
-.details a{
-    margin-top: -130px;
-    margin-left: 700px;
+#aboutbutton{
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 50px;
     border-radius: 25px;
     color: white;
     text-decoration: none;
@@ -69,12 +64,9 @@
     background-color: black;
 }
 .Projects{
-    position: absolute;
-    margin-top: 1400px;
-    margin-left: -8px;
     background-color: #FF6161;
     height: 650px;
-    width: 1519px;
+    width: 100%;
 }
 .Projects h1{
     margin-top: 50px;
@@ -92,80 +84,39 @@
     border: 10px solid #FF6161;
     background-color: #FF6161;
 }
-.Project1{
+.backgroundproject{
     position: absolute;
     margin-top: 150px;
-    margin-left: 50px;
     box-sizing: border-box;
     border-radius: 25px;
     width: 400px;
     height: 400px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
     background-size: 400px 400px;
     text-align: center;
     color: white;
 }
-.Project1 h1{
-    color: #FF6161;
-    font-size: 30px;
-    margin-left: 50px;
-}
-.Project1 a{
-    border-radius: 25px;
+.projectbutton{
     color: white;
+    border-radius: 25px;
     text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
-.Project2{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/football.jpg");
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 150px;
-    margin-left: 550px;
-    color: white;
-}
-.Project2 h1{
+.projectbox h1{
     color: #FF6161;
     font-size: 30px;
-    margin-top: 20px;
     margin-left: 50px;
     width: 300px;
 }
-.Project2 a{
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
+.Project1{
+    margin-left: 50px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/office.jpg");
+}
+.Project2{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/football.jpg");
+    margin-left: 550px;
 }
 .Project3{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/payment.jpg");
-    position: absolute;
-    text-align: center;
-    margin-top: 150px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/payment.jpg");
     margin-left: 1050px;
-    color: white;
-}
-.Project3 h1{
-    color: #FF6161;
-    font-size: 30px;
-    margin-left: 0;
-}
-.Project3 a{
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-
 }
 .ProjectlinkfromHome{
     color: white;
@@ -176,14 +127,27 @@
     background-color: transparent;
 }
 .Tools{
-    position: absolute;
-    margin-top: 2050px;
-    margin-left: -8px;
     background-color: #A2CDF2;
     height: 1200px;
-    width: 1519px;
+}
+.backgroundtool{
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+    border: 5px;
+    text-align: center;
+    color: white;
+}
+.row1tool{
+    margin-top: 200px;
+}
+.row2tool{
+    margin-top: 700px;
 }
 .Tools h1{
+    position: absolute;
     color: white;
     font-size: 60px;
     margin-left: 400px;
@@ -198,18 +162,8 @@
     margin-top: 15px;
 }
 .tool1{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l1.jpg");
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 100px;
     margin-left: 50px;
-    color: white;
 }
 .tool1 h1{
     color: #FF6161;
@@ -227,16 +181,8 @@
     margin-left: 100px;
 }
 .tool2{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l2.jpg");
-    position: absolute;
-    margin-top: 100px;
     margin-left: 550px;
-    color: white;
 }
 .tool2 h1{
     color: #FF6161;
@@ -255,16 +201,8 @@
     margin-left: 120px;
 }
 .tool3{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l4.png");
-    position: absolute;
-    margin-top: 100px;
     margin-left: 1050px;
-    color: white;
 }
 .tool3 h1{
     color: #FF6161;
@@ -280,16 +218,8 @@
     margin-left: 120px;
 }
 .tool4{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../Images/l5.jpg");
-    position: absolute;
-    margin-top: 600px;
     margin-left: 50px;
-    color: white;
 }
 .tool4 h1{
     color: #FF6161;
@@ -305,16 +235,8 @@
     background-color: transparent;
 }
 .tool5{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l6.jpg");
-    position: absolute;
-    margin-top: 600px;
     margin-left: 550px;
-    color: white;
 }
 .tool5 h1{
     color: #FF6161;
@@ -330,16 +252,8 @@
     margin-left: 120px;
 }
 .tool6{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../Images/l7.png");
-    position: absolute;
-    margin-top: 600px;
     margin-left: 1050px;
-    color: white;
 }
 .tool6 h1{
     color: #FF6161;
@@ -355,10 +269,9 @@
     margin-left: 80px;
 }
 .Testimonals{
-    position: absolute;
-    margin-left: -8px;
-    margin-top: 3280px;
+    margin-top: 50px;
     color: white;
+    height: 600px;
 }
 .Testimonals h1{
     color: white;
@@ -379,9 +292,6 @@
     margin-left: 400px;
 }
 .ContactHomePage{
-    position: absolute;
-    margin-left: -8px;
-    margin-top: 4000px;
     background-color: #FCF8ED;
 }
 .ContactHomePage img{
@@ -468,8 +378,4 @@
     margin-top: 20px;
     font-size: 30px;
     font-family: 'Sansita Swashed', cursive;
-}
-.footer{
-    position: absolute;
-    margin-top: 4600px;
 }
