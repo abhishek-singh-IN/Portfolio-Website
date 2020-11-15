@@ -1,12 +1,9 @@
 .content{
     position: absolute;
-    margin-left: -8px;
-    height: 2050px;
-    width: 1519px;
+    height: 2000px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../../Images/2597109669_9b40ec947f_o.jpg");
 }
 .formal-pic{
-    position: absolute;
     margin-left: 550px;
     margin-top: 100px;
     background-color: transparent;
@@ -17,37 +14,31 @@
     object-fit: scale-down;
     border-radius:50%;
     background-color: white;
-
 }
 .Name{
-    position: absolute;
-    margin-top: 500px;
+    margin-top: 50px;
     margin-left: 550px;
     color: white;
     font-size: 30px;
     text-decoration: underline;
     background-color: transparent;
 }
-.Name h1{
+h1{
+    background-color: transparent;
+}
+h2{
     background-color: transparent;
 }
 .Headline{
-    position: absolute;
-    margin-top: 650px;
-    margin-left: 300px;
+    margin-top: 50px;
     color: white;
     font-size: 20px;
     text-align: center;
     background-color: transparent;
 }
-.Headline h1{
-    background-color: transparent;
-}
-.Headline h2{
-    background-color: transparent;
-}
+
 .Description{
-    margin-top: 850px;
+    margin-top: 50px;
     margin-left: 200px;
     margin-right: 150px;
     color: white;
@@ -62,10 +53,18 @@
 .Education h1{
     text-align: center;
     font-size: 60px;
+    margin-top: 50px;
+    text-decoration: underline;
     margin-left: -500px;
-    width: 1519px;
     color: white;
-    background-color: transparent;
+}
+.educationbox{
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    border: 5px black;
+    background-color: white;
+    text-align: center;
 }
 .Education year{
     font-size:15px;
@@ -79,39 +78,18 @@
 .Education cgpa{background-color: white;}
 .Education university{background-color: white;}
 .graduation{
-    box-sizing: border-box;
-    width: 400px;
-    height: 400px;
-    border: 5px black;
-    background-color: white;
-    position: absolute;
+
     margin-top: 50px;
     margin-left: -450px;
-    text-align: center;
 }
 .twelth{
-    box-sizing: border-box;
-    width: 400px;
-    height: 400px;
-    border: 5px black;
-    background-color: white;
-    position: absolute;
-    margin-top: 50px;
+    margin-top: -400px;
     margin-left: 50px;
-    text-align: center;
 }
 .tenth{
-    box-sizing: border-box;
-    width: 400px;
-    height: 400px;
-    border: 5px black;
-    background-color: white;
-    position: absolute;
-    margin-top: 50px;
+    margin-top: -400px;
     margin-left: 550px;
-    text-align: center;
 }
 .footer{
-    position: static;
-    margin-top: 2050px;
+    margin-top: 2040px;
 }
