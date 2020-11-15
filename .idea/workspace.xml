@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/desktop/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTML/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +139,7 @@
       <workItem from="1605244837835" duration="388000" />
       <workItem from="1605245233356" duration="93000" />
       <workItem from="1605414793057" duration="6928000" />
-      <workItem from="1605421932223" duration="2713000" />
+      <workItem from="1605421932223" duration="3028000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
