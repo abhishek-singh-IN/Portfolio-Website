@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +49,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
@@ -140,6 +138,7 @@
       <workItem from="1605245233356" duration="93000" />
       <workItem from="1605414793057" duration="6928000" />
       <workItem from="1605421932223" duration="3028000" />
+      <workItem from="1607919460822" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>

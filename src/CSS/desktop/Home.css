@@ -1,8 +1,10 @@
 .Welcome{
+    position: relative;
+    top: 40px;
     color: white;
     height: 700px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/Images/IMG_8881.jpg");
-    background-size: 1700px 100%;
+    background-size: 1500px 100%;
 }
 .Welcome h1{
     position: absolute;
@@ -32,7 +34,6 @@
 .Introduce{
     background-color: #FFEF98;
     height: 700px;
-    width: 1519px;
 }
 .details{
     background-color: transparent;
@@ -49,13 +50,12 @@
 .details p{
     color: black;
     margin-left: 500px;
-    width: 800px;
     font-size: 20px;
     background-color: transparent;
 }
 #aboutbutton{
     position: absolute;
-    margin-left: 850px;
+    right: 500px;
     margin-top: 50px;
     border-radius: 25px;
     color: white;
