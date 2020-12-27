@@ -1,5 +1,5 @@
 create database singhabhishek;
-create user singhabhishek identified with mysql_native_password by 'singhabhishek';
+create user singhabhishek identified by 'Singh@abhishek#123';
 grant all privileges on singhabhishek.* to singhabhishek;
 flush privileges ;
 

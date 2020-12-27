@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="" />
+    <list default="true" id="4120bf8f-e4e9-4a48-b960-9f24937b2a65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/CSS/desktop/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/desktop/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,8 +55,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.50" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -139,6 +143,7 @@
       <workItem from="1605414793057" duration="6928000" />
       <workItem from="1605421932223" duration="3028000" />
       <workItem from="1607919460822" duration="43000" />
+      <workItem from="1608956387902" duration="94000" />
     </task>
     <task id="LOCAL-00001" summary="Structural Change">
       <created>1601621932198</created>
