@@ -11,6 +11,7 @@ server.use("/contact1",PeopleRoutes)
 
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
 server.use('/desktop',express.static(path.join(__dirname, 'src/CSS/desktop')));
+server.use('/ico',express.static(path.join(__dirname, 'ico')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
 server.use('/Document',express.static(path.join(__dirname, 'Document')));
 server.use('/Javascript',express.static(path.join(__dirname,'src/Javascript')));
@@ -52,6 +53,6 @@ server.get('/Resume',function (req,res){
 server.post('/contactform',(req, res) => {
     res.send(`${req.body.Name}':Your form has been submitted'.`);
 });
-server.listen(80,function (){
-    console.log('Server Listening to Port:80')
+server.listen(3000,function (){
+    console.log('Server Listening to Port:3000')
 });
