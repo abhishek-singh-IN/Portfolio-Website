@@ -1,10 +1,9 @@
 .Welcome{
     position: relative;
-    top: 40px;
     color: white;
     height: 700px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/Images/IMG_8881.jpg");
-    background-size: 1500px 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/Images/IMG_8881.jpg");
+    background-size: 100% 100%;
 }
 .Welcome h1{
     position: absolute;
