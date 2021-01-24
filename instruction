@@ -1,0 +1,2 @@
+docker run -dt --name=www.singhabhishek.live --restart=always -p 50000:80 abhishek99singh/portfolio
+

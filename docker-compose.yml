@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  server:
+     image: node
+     restart: always  
+     ports:
+      - "5555:80"
+    volumes:
+      - /home/abhishek/Data/portfolio:/usr/src/app
