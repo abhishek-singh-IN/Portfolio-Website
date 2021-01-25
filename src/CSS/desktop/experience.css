@@ -1,125 +1,24 @@
 .content{
     background-image: linear-gradient(greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8),greenyellow,rgba(0,0,0,0.8)),url("../../../Images/M8.jpg");
-    background-size: 1519px 850px;
-    height: 850px;
-    width: 1519px;
-    margin-left: -8px;
 }
-.Heading{
-    position: absolute;
-    font-size: 40px;
-    text-decoration: underline;
-    margin-left: 550px;
-    background-color: transparent;
+.experience-box{
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 5px;
+  object-fit: scale-down;
+  text-align: center;
+  color: white;
 }
-.Heading h1{
-    background-color: transparent;
-}
-.Details{
-    width: 1200px;
-    color: white;
-    position: absolute;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 200px;
-    margin-left: 150px;
-    margin-right: 150px;
-    background-color: transparent;
-}
-.Details p{
-    background-color: transparent;
+.experience a{
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  border: 10px solid #FF6161;
+  background-color: #FF6161;
 }
 .Experience1{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 600px;
-    height: 480px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/office.jpg");
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 300px;
-    margin-left: 100px;
-    color: white;
-}
-.Experience1 h2{
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Experience1 h3{
-    margin-top: 50px;
-    background-color: transparent;
-    font-size: 40px;
-    color: #FF6161;
-}
-.Experience1 h4{
-    font-size: 20px;
-    background-color: transparent;
-}
-.Experience1 p{
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
-}
-.Experience1 a{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -50px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
 }
 .Experience2{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 600px;
-    height: 480px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/office.jpg");
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 300px;
-    margin-left: 800px;
-    color: white;
-}
-.Experience2 h2{
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Experience2 h3{
-    margin-top: 50px;
-    background-color: transparent;
-    font-size: 40px;
-    color: #FF6161;
-}
-.Experience2 h4{
-    font-size: 20px;
-    background-color: transparent;
-}
-.Experience2 p{
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
-}
-.Experience2 a{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -50px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    border: 10px solid #FF6161;
-    background-color: #FF6161;
-}
-.footer{
-    position: absolute;
-    margin-top: -50px;
 }
