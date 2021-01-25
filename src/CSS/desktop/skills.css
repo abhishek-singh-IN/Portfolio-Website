@@ -1,284 +1,59 @@
-p{
-    font-size: 15px;
-    background-color: transparent;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: white;
-}
-h2{
-    background-color: transparent;
-}
-h1{
-    background-color: transparent;
-}
 .content{
     background-color: #FF6161;
-    height: 1900px;
-    width: 1515px;
-    margin-left: -4px;
-}
-.Heading{
-    position: absolute;
-    font-size: 40px;
-    text-decoration: underline;
-    margin-left: 400px;
-    background-color: transparent;
 }
 .Heading h1{
     width: 1000px;
 }
-.Subheading{
-    position: absolute;
-    font-size: 20px;
-    text-decoration: underline;
-    margin-top: 150px;
-    margin-left: 500px;
-    background-color: transparent;
-}
-.description{
-    width: 1200px;
-    position: absolute;
-    text-align: center;
-    margin-top: 250px;
-    margin-left: 150px;
-    background-color: transparent;
-}
+
 .description p{
     font-size: 20px;
 }
-.Skills{
-    position: absolute;
-    color: white;
-    text-align: center;
+a:link {
+text-decoration: none;
 }
-.Skills h1{
-    color: #FF6161;
-    margin-top: 50px;
+.skill-sub-heading{
+  color: #FF6161;
 }
-.Skills p{
-    margin-top: 30px;
-    font-size: 18px;
+.skill-box{
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-size: 100% 100%;
+  box-shadow: 10px 10px 5px grey;
 }
-.Skills a{
-    text-decoration: none;
-    color: white;
+.skill-box:hover{
+    transform: translate(-10px,-10px);
+    transition: 0.8s;
+    box-shadow: 30px 30px 25px grey;
+}
+.skill-box:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
 }
 .DSA{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M1.jpg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 400px;
-    margin-left: 50px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.DSA:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.DSA:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .cybersecurity{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M2.jpeg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 400px;
-    margin-left: 550px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.cybersecurity:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.cybersecurity:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .bigdata{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M3.jpg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 400px;
-    margin-left: 1050px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.bigdata:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.bigdata:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .DBMS{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M4.jpg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 900px;
-    margin-left: 50px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.DBMS:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.DBMS:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .WEBD{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M5.jpg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 900px;
-    margin-left: 550px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.WEBD:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.WEBD:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .Android{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M6.jpg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 900px;
-    margin-left: 1050px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.Android:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.Android:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .Network{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M7.jpg");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 1400px;
-    margin-left: 50px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.Network:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.Network:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .ML{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/office.jpg");
-    position: absolute;
-    margin-top: 1400px;
-    margin-left: 550px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.ML:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.ML:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
 }
 .DL{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
-    border: 5px;
     background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("../../../Images/M8.png");
-    background-size: 400px 400px;
-    position: absolute;
-    margin-top: 1400px;
-    margin-left: 1050px;
-    box-shadow: 15px 15px 10px grey;
-    transition: 1s;
-}
-.DL:hover{
-    transform: translate(-15px,-15px);
-    transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
-}
-.DL:active{
-    transform: translate(5px,5px);
-    transition: 0.2s;
-    box-shadow: 10px 10px 5px grey;
-}
-.footer{
-    position: absolute;
-    margin-top: -50px;
 }
