@@ -47,11 +47,11 @@ server.get('/Gallery',function (req,res){
     res.sendFile('src/HTML/Gallery.html',{root:__dirname})
 });
 server.get('/Resume',function (req,res){
-    res.sendFile('Document/Resume.pdf',{root:__dirname})
+    res.sendFile('Document/Abhishek Singh.pdf',{root:__dirname})
 });
 server.post('/contactform',(req, res) => {
     res.send(`${req.body.Name}':Your form has been submitted'.`);
 });
-server.listen(3000,function (){
-    console.log('Server Listening to Port:3000')
+server.listen(80,function (){
+    console.log('Server Listening to Port:80')
 });

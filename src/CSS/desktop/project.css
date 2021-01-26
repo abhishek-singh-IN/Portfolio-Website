@@ -1,192 +1,50 @@
-.content{
-    background-image: linear-gradient( #FF6161,rgba(0,0,0,0.8),#FF6161,rgba(0,0,0,0.8)),url("../../../Images/A6.jpeg");
-    background-size: 1519px 1600px;
-    margin-left: -9px;
-    height: 1600px;
-    width: 1520px;
+.content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../../Images/2597109669_9b40ec947f_o.jpg");
 }
-.Heading{
-    position: absolute;
-    font-size: 40px;
-    text-decoration: underline;
-    margin-left: 600px;
-    background-color: transparent;
+
+.project-box {
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 5px;
+  background-size: 600px 550px;
+  object-fit: scale-down;
+  text-align: center;
+  color: white;
 }
-.Heading h1{
-    background-color: transparent;
+.project-box h2 {
+  margin-top: 50px;
 }
-.Details{
-    width: 1200px;
-    color: white;
-    position: absolute;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 150px;
-    margin-left: 150px;
-    margin-right: 150px;
-    background-color: transparent;
+
+.project-box h3 {
+  margin-top: 50px;
+  font-size: 40px;
+  color: #FF6161;
 }
-.Details p{
-    background-color: transparent;
-    margin-bottom: 40px;
+.project-box h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: goldenrod;
+  background-color: transparent;
 }
-.Details a{
-    background-color: black;
-    color: white;
-    border: 10px solid black;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 20px;
+.project-box p {
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-.Project h4{
-    margin-top: -10px;
-    font-size: 20px;
-    color: goldenrod;
-    background-color: transparent;
+.project-box a {
+  color: white;
+  text-decoration: none;
 }
-.Project1{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 600px;
-    height: 550px;
-    border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../../../Images/A1.jpg");
-    background-size: 600px 550px;
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 350px;
-    margin-left: 100px;
-    color: white;
+.Project1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../../Images/A1.jpg");
 }
-.Project1 h2{
-    margin-top: 50px;
-    background-color: transparent;
+.Project2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../../Images/A2.jpg");
 }
-.Project1 h3{
-    margin-top: 50px;
-    background-color: transparent;
-    font-size: 40px;
-    color: #FF6161;
+.Project3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../../Images/A3.jpg");
 }
-.Project1 p{
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
-}
-.Project1 a{
-    color: white;
-    text-decoration: none;
-}
-.Project2{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 600px;
-    height: 550px;
-    border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../../../Images/A2.jpg");
-    background-size: 600px 550px;
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 350px;
-    margin-left: 800px;
-    color: white;
-}
-.Project2 h2{
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Project2 h3{
-    margin-top: 50px;
-    background-color: transparent;
-    font-size: 40px;
-    color: #FF6161;
-}
-.Project2 p{
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
-}
-.Project2 a{
-    color: white;
-    text-decoration: none;
-}
-.Project3{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 600px;
-    height: 550px;
-    border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../../../Images/A3.jpg");
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 970px;
-    margin-left: 100px;
-    color: white;
-}
-.Project3 h2{
-    margin-top: 80px;
-    background-color: transparent;
-}
-.Project3 h3{
-    margin-top: 50px;
-    background-color: transparent;
-    font-size: 40px;
-    color: #FF6161;
-}
-.Project3 p{
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
-}
-.Project3 a{
-    color: white;
-    text-decoration: none;
-}
-.Project4{
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 600px;
-    height: 550px;
-    border: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../../../Images/A4.jpg");
-    object-fit: scale-down;
-    position: absolute;
-    text-align: center;
-    margin-top: 970px;
-    margin-left: 800px;
-    color: white;
-}
-.Project4 h2{
-    margin-top: 50px;
-    background-color: transparent;
-}
-.Project4 h3{
-    margin-top: 50px;
-    background-color: transparent;
-    font-size: 40px;
-    color: #FF6161;
-}
-.Project4 p{
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-    font-size: 20px;
-}
-.Project4 a{
-    color: white;
-    text-decoration: none;
-}
-.footer{
-    position: absolute;
-    margin-top: -50px;
+.Project4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../../Images/A4.jpg");
 }
