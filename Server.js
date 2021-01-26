@@ -11,8 +11,8 @@ server.use("/contact1",PeopleRoutes)
 
 server.use('/css',express.static(path.join(__dirname, 'src/CSS')));
 server.use('/desktop',express.static(path.join(__dirname, 'src/CSS/desktop')));
+server.use('/ico',express.static(path.join(__dirname, 'ico')));
 server.use('/Images',express.static(path.join(__dirname, 'Images')));
-server.use('/Document',express.static(path.join(__dirname, 'Document')));
 server.use('/Javascript',express.static(path.join(__dirname,'src/Javascript')));
 server.use(bodyParser.urlencoded({ extended: true }));
 
@@ -47,7 +47,7 @@ server.get('/Gallery',function (req,res){
     res.sendFile('src/HTML/Gallery.html',{root:__dirname})
 });
 server.get('/Resume',function (req,res){
-    res.sendFile('src/HTML/resume.html',{root:__dirname})
+    res.sendFile('Document/Abhishek Singh.pdf',{root:__dirname})
 });
 server.post('/contactform',(req, res) => {
     res.send(`${req.body.Name}':Your form has been submitted'.`);
