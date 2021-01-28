@@ -15,8 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="CSS/desktop/Home.css" type="text/css">
-  <link rel="stylesheet" href="CSS/desktop/Footer.css" type="text/css">
+  <link rel="stylesheet" href="css/Home.css" type="text/css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png">
@@ -30,6 +29,17 @@
   <!-- Javascript -->
   <script async defer src="Javascript/home.js"></script>
 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+  <!-- header and footer -->
+  <script>
+    $(function() {
+      $("#header").load("/header");
+      $("#footer").load("/footer");
+    });
+  </script>
+
 </head>
 
 <body>
@@ -37,63 +47,7 @@
   <div class="Welcome">
 
     <!-- Header -->
-    <div class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark ">
-        <div class="container-fluid">
-          <a class="navbar-brand " href="Home">
-            <img src="Images/logo.png" alt="" width="100" height="100" class="d-inline-block align-center">
-          </a>
-          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse ml-auto text-center" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="About">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Skill">Skills</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" href="Project" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Project
-                </a>
-                <ul class="dropdown-menu bg-dark text-center" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item bg-dark fs-3 text-white text-center text-decoration-underline fw-bold" href="Project">
-                      All Projects
-                    </a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item bg-light" href="Project/VAI"> Voice Assistant</a></li>
-                  <li><a class="dropdown-item bg-light" href="Project/IR-Bot">Image Recognition</a></li>
-                  <li><a class="dropdown-item bg-light" href="Project/FBMS">Football Management System</a></li>
-                  <li><a class="dropdown-item bg-light" href="Project/SMMS">Shopping Mall Management System</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Experience">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Resume">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Contact">Contact</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <div id="header"></div>
 
     <div class="">
       <br><br><br><br><br><br><br><br>
@@ -286,43 +240,8 @@
   </div>
 
   <!-- Footer -->
-  <div class="Footer">
-    <div class="container-fluid bg-dark text-white">
-      <div class="row">
-        <div class="col-sm-4 d-none d-sm-block text-center">
-          <div class=""><br /></div>
-          <div class="fs-5">info@singhabhishek.co.in</div>
-          <div class="fs-6">+91 9599638865</div>
-          <div class="mt-1"></div>
-          <a href="https://www.facebook.com/abhishek99singh"><i class="fab fa-facebook-square fa-2x mx-1" style="color:white;"></i></a>
-          <a href="https://www.instagram.com/abhishek99singh/"><i class="fab fa-instagram fa-2x mx-1" style="color:white"></i></a>
-          <a href="https://www.twitter.com/abhi0507singh"><i class="fab fa-twitter-square fa-2x mx-1" style="color:white"></i></a>
-          <!-- <a href="https://www.youtube.com/channel/UCPIQM08odj6Lce68gc0MPZw"><i class="fab fa-youtube-square fa-2x" style="color:white"></i></a> -->
-          <!-- <a href="https://www.snapchat.com/add/abhishek99singh"><i class="fab fa-snapchat-square fa-2x" style="color:white"></i></a> -->
-          <!-- <a href="https://in.pinterest.com/abhishek99singh"><i class="fab fa-pinterest-square fa-2x" style="color:white"></i></a> -->
-          <!-- <a href="skype:abhishek734891singh"><i class="fab fa-skype fa-2x" style="color:white"></i></a>
-          <a href="https://t.me/abhishek99singh"><i class="fab fa-telegram fa-2x" style="color:white"></i></a> -->
-          <a href="https://wa.me/qr/KJGVABMTB2BZI1"><i class="fab fa-whatsapp-square fa-2x mx-1" style="color:white"></i></a>
-          <a href="mailto:abhisheksingh.nsut@gmail.com"><i class="fas fa-envelope fa-2x mx-1" style="color:white"></i></a>
-          <a href="https://github.com/abhishek99singh"><i class="fab fa-github-square fa-2x mx-1" style="color:white"></i></a>
-          <a href="https://www.linkedin.com/in/abhishek99singh"><i class="fab fa-linkedin fa-2x mx-1" style="color:white"></i></a>
-
-
-        </div>
-        <ul class="text-center list col-sm-4 ">
-          <br />
-          <li><a class="link-light" href="https://blog.singhabhishek.tech">Technology Blog</a> </li>
-          <li><a class="link-light" href="https://https:www.github.com/abhishek99singh">Github</a> </li>
-          <li><a class="link-light" href="Gallery">Gallery</a> </li>
-          <li><a class="link-light" href="https://mail.singhabhishek.tech">E-mail</a></li>
-        </ul>
-        <div class="col-sm-4 col-6 text-center d-none d-sm-block">
-          <div class=""><br /><br /></div>
-          <div class="fs-5">New Delhi</div>
-          <div class="fs-6">India</div>
-        </div>
-      </div>
-    </div>
+  <div class="bg-dark">
+    <div id="footer"></div>
   </div>
 
 </body>
