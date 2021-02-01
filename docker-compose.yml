@@ -5,9 +5,6 @@
       restart: always
       networks:
         - docker_101
-      ports:
-        - "3306"
-        - "33060"
       environment:
         - MYSQL_ROOT_PASSWORD=my-secret-pw
         - MYSQL_DATABASE=singhabhishek
@@ -15,6 +12,7 @@
         - MYSQL_PASSWORD=singh@abhishek#123
       volumes:
       - /home/abhishek/Data/MySQL-Portfolio/datadir:/var/lib/mysql
+
     node:
       build: ./
       restart: always
@@ -27,12 +25,11 @@
       networks:
         - docker_101
       environment:
-        - PORT=33060
+        - PORT=3306
         - DATABASE_HOST=db
         - DATABASE_PASSWORD=my-secret-pw
         - EGG_SERVER_ENV=local
         - NODE_ENV=development
-      # command: ["./wait-for-it.sh", "db:3306", "--", "npm run docker"]
 
   networks:
     docker_101:
