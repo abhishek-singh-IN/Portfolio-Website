@@ -1,13 +1,6 @@
-.content{
+body{
   background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/public/img/2597109669_9b40ec947f_o.jpg");
   color: white;
-}
-.Heading h1{
-    width: 1000px;
-}
-
-.description p{
-    font-size: 20px;
 }
 a:link {
 text-decoration: none;
@@ -16,6 +9,7 @@ text-decoration: none;
   color: #FF6161;
 }
 .skill-box{
+  background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/skill-bg.jpeg");
   box-sizing: border-box;
   border-radius: 25px;
   background-size: 100% 100%;
@@ -30,31 +24,4 @@ text-decoration: none;
     transform: translate(5px,5px);
     transition: 0.2s;
     box-shadow: 10px 10px 5px grey;
-}
-.DSA{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M1.jpg");
-}
-.cybersecurity{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M2.jpeg");
-}
-.bigdata{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M3.jpg");
-}
-.DBMS{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M4.jpg");
-}
-.WEBD{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M5.jpg");
-}
-.Android{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M6.jpg");
-}
-.Network{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M7.jpg");
-}
-.ML{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/office.jpg");
-}
-.DL{
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/M8.png");
 }
