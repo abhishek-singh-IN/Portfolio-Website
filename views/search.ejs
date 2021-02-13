@@ -35,15 +35,6 @@
       function hndlr(response) {
         for (var i = 0; i < response.items.length; i++) {
           var item = response.items[i];
-
-          // var a = document.createElement('a');
-          // a.href = 'https://www.techiedelight.com/';
-          // a.innerText = 'Techie Delight';
-          //
-          // var content = document.getElementById('content');
-          // content.appendChild(a);
-          // content.appendChild(document.createElement('br'));
-
         document.getElementById("content").innerHTML += "<br>" + item.title + "<br>" + item.snippet + "<br>" + item.link +"<br><br />";
         }
       }
@@ -51,13 +42,6 @@
     <script src="<%= url %>">
     </script>
   </div>
-
-  <!-- Main content -->
-  <!-- <div class="container mt-5">
-    <h1 class="mt-5 px-5 display-4 fw-bold fst-italic text-decoration-underline text-center">Search</h1>
-    <script async src="https://cse.google.com/cse.js?cx=257c47cf4ad1f9e82"></script>
-    <div class="gcse-search"></div>
-  </div> -->
 
   <!-- Footer -->
   <hr style="color:white" class="dropdown-divider">
