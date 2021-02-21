@@ -1,10 +1,36 @@
-version: '3'
+  version: '3.2'
+  services:
+    db:
+      image: mysql
+      restart: always
+      networks:
+        - docker_101
+      environment:
+        - MYSQL_ROOT_PASSWORD=my-secret-pw
+        - MYSQL_DATABASE=singhabhishek
+        - MYSQL_USER=singhabhishek
+        - MYSQL_PASSWORD=singh@abhishek#123
+      volumes:
+      - /home/abhishek/Data/MySQL-Portfolio/datadir:/var/lib/mysql
 
-services:
-  server:
-     image: node
-     restart: always  
-     ports:
-      - "5555:80"
-    volumes:
-      - /home/abhishek/Data/portfolio:/usr/src/app
+    node:
+      build: ./
+      restart: always
+      ports:
+        - "50000:80"
+      depends_on:
+        - db
+      links:
+        - db
+      networks:
+        - docker_101
+      environment:
+        - PORT=3306
+        - DATABASE_HOST=db
+        - DATABASE_PASSWORD=my-secret-pw
+        - EGG_SERVER_ENV=local
+        - NODE_ENV=development
+
+  networks:
+    docker_101:
+      driver: bridge
