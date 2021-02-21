@@ -1,7 +1,7 @@
 const express=require("express");
 const Router=express.Router();
 const mongoose = require("mongoose")
-
+const path = require('path');
 const ProjectSchema = {
   link: String,
   year: String,
@@ -27,6 +27,12 @@ Router.get('/Age-Calculator',function (req,res){
 Router.get('/AI-Voice-Assistant',function (req,res){
     res.render('project/AI-Voice-Assistant')
 });
+Router.get('/AI-Voice-Assistant/thesis', function(req, res) {
+  res.sendFile(path.resolve('static/docs/project/Vai_thesis.pdf'))
+});
+Router.get('/Project/AI-Voice-Assistant/ppt', function(req, res) {
+  res.sendFile(path.resolve('static/docs/project/Vai_ppt.pptx'))
+});
 Router.get('/Calculator',function (req,res){
     res.render('project/Calculator')
 });
@@ -35,6 +41,12 @@ Router.get('/Football-Management-System',function (req,res){
 });
 Router.get('/Image-Captioning-Bot',function (req,res){
     res.render('project/Image-Captioning-Bot')
+});
+Router.get('/Image-Captioning-Bot/document', function(req, res) {
+  res.sendFile(path.resolve('static/docs/project/Caption.docx'))
+});
+Router.get('/Image-Captioning-Bot/ppt', function(req, res) {
+  res.sendFile(path.resolve('static/docs/project/Caption.pdf'))
 });
 Router.get('/Portfolio-Website',function (req,res){
     res.render('project/Portfolio-Website')
