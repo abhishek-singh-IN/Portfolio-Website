@@ -1,0 +1,15 @@
+{
+  "testimonals": [{
+      "name": "Kamakshee Bhardwaj",
+      "designation": "Human resource , Peacock Solar",
+      "image": "/public/img/peacock.jpeg",
+      "data":"Abhishek Singh has excellent communication skills.In addition, he is extremely organized, reliable and computer literate.He can work independently and is able to follow through to ensure that the work gets done.He is flexible and willing to work on any project that is assigned to him.He was quick to volunteer to assist in other areas of company operations as well."
+    },
+    {
+        "name": "Neha Kumari",
+        "designation": "Sr. Manager - HR & Internship Coordinator ,Vardhan Consulting Engineers",
+        "image": "https://techvardhan.com/wp-content/uploads/2020/07/vce_logo.svg",
+        "data":"Abhishek Singh is sincere, meticulous and result oriented"
+      }
+  ]
+}

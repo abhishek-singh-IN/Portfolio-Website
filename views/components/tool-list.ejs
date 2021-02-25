@@ -1,0 +1,19 @@
+<div class="Tools container-fluid">
+  <div class="row">
+    <div class="col-12 text-center text-capitalize display-1 mt-5 mb-5 text-decoration-underline" style="font-family: 'Lobster', cursive;">Technical Skills<br /></div>
+    <% listoftools.forEach(function(tool){ %>
+    <div class="px-2 col-lg-4">
+      <div class="text-center mb-5 text-capitalize <%=tool.color%> card text-white">
+        <div class="card-header">
+          <h1><%=tool.title%></h1>
+        </div>
+        <ul class="list-inline card-body">
+          <% tool.list.forEach(function(toollist){ %>
+          <li><%=toollist%></li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>

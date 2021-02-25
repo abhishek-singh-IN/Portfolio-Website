@@ -1,0 +1,19 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/public/img/2597109669_9b40ec947f_o.jpg");
+}
+.formal-pic{
+    width:400px;
+    height:400px;
+    object-fit: scale-down;
+    border-radius:50%;
+    background-color: white;
+}
+.Name{
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.Headline{
+    color: white;
+    font-size: 20px;
+}

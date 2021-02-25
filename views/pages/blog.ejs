@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Daily Journal</title>
+  <%- include('../templates/head'); -%>
+  <link rel="stylesheet" href="/public/css/blog.css">
+</head>
+
+<body>
+  <%- include('../templates/header'); -%>
+  <div class="container">
+    <h1 class="mt-5 px-5 display-4 fw-bold fst-italic text-decoration-underline" style="text-align: center;">BLOG</h1>
+    <p><%= startingContent %></p>
+
+    <% posts.forEach(function(post){ %>
+    <h1 class="mt-5"><%=post.title%></h1>
+    <p class="mt-5">
+      <%=post.content.substring(0,100)+" ... "%>
+      <a href="/blog/posts/<%=post.title%>">Read More</a>
+    </p>
+    <% }); %>
+  </div>
+  <%- include('../templates/footer'); -%>
+</body>
+
+</html>
