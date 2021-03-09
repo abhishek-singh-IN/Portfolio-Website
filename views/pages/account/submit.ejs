@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Secrets</title>
+  <link rel="stylesheet" href="/public/css/account.css">
+  <%- include('../../templates/head'); -%>
+  <link rel="stylesheet" href="/public/css/bootstrap-social.css">
+</head>
+
+<body onload="startTime()">
+  <%- include('../../templates/header'); -%>
+
+  <div class="container main-content">
+    <div class="jumbotron centered">
+      <i class="fas fa-key fa-6x"></i>
+      <h1 class="display-3">Secrets</h1>
+      <p class="secret-text">Don't keep your secrets, share them anonymously!</p>
+
+      <form action="/account/submit" method="POST">
+
+        <div class="form-group">
+          <input type="text" class="form-control text-center" name="secret" placeholder="What's your secret?">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+  </div>
+  <%- include('../../templates/footer'); -%>
+</body>
+
+</html>

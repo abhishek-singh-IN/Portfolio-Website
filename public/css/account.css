@@ -1,0 +1,18 @@
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/public/img/2597109669_9b40ec947f_o.jpg");
+}
+.main-content{
+  color: white;
+}
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}

@@ -15,6 +15,7 @@ Router.use("/Project", require("./userRoutes" + "/project"));
 Router.use("/search", require("./userRoutes" + "/search"));
 Router.use("/Skill", require("./userRoutes" + "/skill"));
 Router.use("/chat-message", require("./userRoutes" + "/chat-message"));
+Router.use("/account", require("./userRoutes" + "/account"));
 
 Router.get('/Resume', function (req, res) {
   res.sendFile(path.resolve('public/docs/ABHISHEK SINGH.pdf'));
