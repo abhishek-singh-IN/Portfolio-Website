@@ -2,11 +2,13 @@
 www.singhabhishek.tech <br>
 ## Build a Portfolio ##
 I have build a responsive website that will display images. links and description. This is my first portfolio project. <br>
-![](public/img/SS/home.png) <br>
+
 ![](public/img/SS/home1.png) <br>
 ![](public/img/SS/home2.png) <br>
 ![](public/img/SS/home3.png) <br>
 ![](public/img/SS/home4.png) <br>
+![](public/img/SS/home5.png) <br>
+![](public/img/SS/home6.png) <br>
 
 ## Installation ##
 * Nodejs<br>
