@@ -1,0 +1,18 @@
+<button class="open-button" onclick="openForm()"><i class="fas fa-comments fa-3x"><br /><h5>Chat</h5></i></button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/chat-message" method="post" class="form-container">
+    <h2>Hii!! I am Abhishek</h2>
+    <h6>How Can I help You ?</h6>
+
+    <label for="contactMail" class="mt-3"><b>E-mail</b></label>
+    <input class="form-control email" type="email" id="contactMail" name="contactMail" placeholder="Enter your e-mail id" required>
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script src="/public/js/chat.js"></script>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <%- include('../templates/head'); -%>
   <title>Abhishek Singh | Computer Engineer</title>
   <meta name="description" content="Abhishek Singh is one of the top Software Developer in the industry. Here is the glimpses of his Complete profile and work in the IT industry as a Software Engineer , Data Analyst,etc" />
   <link rel="canonical" href="https://singhabhishek.tech" />
@@ -14,9 +13,10 @@
   <meta property="og:url" content="https://singhabhishek.tech" />
   <meta name="keywords" content="Abhishek, Singh, Abhishek Singh,abhishek99singh, software, Engineer,software Developer , Freelancer , Data Analyst,Cyber Security Expert" />
   <link rel="stylesheet" href="/public/css/Home.css" type="text/css">
+  <%- include('../templates/head'); -%>
 </head>
 
-<body>
+<body onload="startTime()">
   <div class="Welcome">
     <%- include('../templates/header'); -%>
     <div class=""><br><br><br><br></div>
@@ -28,13 +28,12 @@
         <div class="d-inline-block text-truncate fw-bold fst-italic" style="font-size:8vw;font-family: 'IBM Plex Sans', sans-serif;">Welcomes You<br></div>
       </div>
       <div class="text-center ">
-        <div class="d-inline-block text-truncate" style="font-size:3vw;font-family: 'Sansita Swashed', cursive;">The things we know the best are the things we haven't been taught<br><br><br><br></div>
+        <div class="d-inline-block text-truncate" style="font-size:3vw;font-family: 'Sansita Swashed', cursive;">The things we know the best are the things we haven't been taught<br><br></div>
       </div>
     </div>
   </div>
   <%- include('../components/introduce-basic'); -%>
   <%- include('../components/tool-list'); -%>
-  <%- include('../components/education'); -%>
   <%- include('../components/testimonals'); -%>
   <%- include('../templates/footer'); -%>
 </body>

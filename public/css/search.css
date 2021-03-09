@@ -1,4 +1,10 @@
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/public/img/2597109669_9b40ec947f_o.jpg");
+}
+.main-content{
   color: white;
+}
+.searchresult a{
+text-decoration: none;
+color: white;
 }

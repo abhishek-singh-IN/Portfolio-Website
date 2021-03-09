@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <%- include('../templates/head'); -%>
   <link rel="stylesheet" href="/public/css/contact.css" type="text/css">
   <title>Connect to Abhishek Singh</title>
+  <%- include('../templates/head'); -%>
 </head>
 
-<body>
+<body onload="startTime()">
   <%- include('../templates/header'); -%>
-  <div class="container">
+  <div class="container main-content">
     <h1 class="text-center display-1 text-capitalize fw-bold fst-italic text-decoration-underline">Contact Form</h1>
     <form class="" action="/Contact" method="post">
       <div class="form-group">

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <%- include('../templates/head'); -%>
   <title>About | Abhishek Singh</title>
   <meta name="description" content="This page provide basic details abbout abhishek singh and his eduacational profile" />
   <link rel="canonical" href="https://singhabhishek.tech/about" />
@@ -11,9 +10,10 @@
   <meta property="og:url" content="https://singhabhishek.tech/about" />
   <meta name="keywords" content="Abhishek, Singh,software, Engineer,software Developer , Freelancer , Data Analyst,Cyber Security Expert" />
   <link rel="stylesheet" href="/public/css/About.css" type="text/css">
+  <%- include('../templates/head'); -%>
 </head>
 
-<body>
+<body onload="startTime()">
   <%- include('../templates/header'); -%>
   <div class="container-fluid">
     <div class="row">

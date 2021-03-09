@@ -3,13 +3,13 @@
 
 <head>
   <title>Daily Journal</title>
-  <%- include('../templates/head'); -%>
   <link rel="stylesheet" href="/public/css/blog.css">
+  <%- include('../templates/head'); -%>
 </head>
 
-<body>
+<body onload="startTime()">
   <%- include('../templates/header'); -%>
-  <div class="container">
+  <div class="container main-content">
     <h1 class="mt-5 px-5 display-4 fw-bold fst-italic text-decoration-underline" style="text-align: center;">BLOG</h1>
     <p><%= startingContent %></p>
 

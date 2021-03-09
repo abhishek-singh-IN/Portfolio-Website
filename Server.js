@@ -4,6 +4,10 @@ const config = require('./config/config.js');
 server.set('view engine', 'ejs');
 const database_connection = require("./api-routes" + "/connection")
 
+server.get('/sitemap.xml', function(req, res) {
+res.sendFile("sitemap.xml", { root: '.' });
+});
+
 server.use("/", require("./api-routes" + "/routes"));
 server.use(require("./api-routes" + "/error"));
 

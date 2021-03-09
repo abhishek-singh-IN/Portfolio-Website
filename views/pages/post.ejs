@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <%- include('../templates/head'); -%>
   <title><%=title%> | Daily Journal</title>
   <link rel="stylesheet" href="/public/css/post.css">
+  <%- include('../templates/head'); -%>
 </head>
 
-<body>
+<body onload="startTime()">
   <%- include('../templates/header'); -%>
   <div class="container">
     <h1 class="mt-5 px-5 display-4 fw-bold fst-italic text-decoration-underline text-center"><%=title%></h1>
