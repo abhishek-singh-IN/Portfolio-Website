@@ -3,6 +3,7 @@ var path = require('path');
 var Router = express.Router();
 
 Router.use('/public', express.static(path.join(path.resolve('public'))));
+Router.use('/build', express.static(path.join(path.resolve('build'))));
 Router.use('/logo', express.static(path.join(path.resolve('public/img/logo.png'))));
 
 Router.use("/", require("./userRoutes" + "/home"));
@@ -15,7 +16,7 @@ Router.use("/Project", require("./userRoutes" + "/project"));
 Router.use("/search", require("./userRoutes" + "/search"));
 Router.use("/Skill", require("./userRoutes" + "/skill"));
 Router.use("/chat-message", require("./userRoutes" + "/chat-message"));
-Router.use("/account", require("./userRoutes" + "/account"));
+Router.use("/account", require("./accounts"));
 
 Router.get('/Resume', function (req, res) {
   res.sendFile(path.resolve('public/docs/ABHISHEK SINGH.pdf'));

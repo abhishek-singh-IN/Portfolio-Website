@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Projects | Abhishek Singh</title>
+  <link rel="stylesheet" href="/public/css/admin.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <%- include('../templates/header'); -%>
+
+  <div class="container-fluid">
+
+    <div class="box">
+
+      <% userlist.forEach(function(user){ %>
+      <form action="/delete" method="post">
+        <div class="item">
+          <input type="checkbox" name="checkbox" value="<%=item._id %>" onchange="this.form.submit()">
+          <p> <%= item.name %> </p>
+        </div>
+        <input type="hidden" name="listName" value="<%= ListTitle %>"></input>
+      </form>
+      <% }) %>
+
+    </div>
+
+  </div>
+
+  <%- include('../templates/footer'); -%>
+
+</body>
+
+</html>

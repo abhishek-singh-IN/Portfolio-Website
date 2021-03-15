@@ -1,5 +1,11 @@
 package-lock.json
 node_modules/
 secrets/
-dockerignore
-gitignore
+log/
+build/
+.dockerignore
+.gitignore
+public/sitemap.xml
+public/robots.txt
+views/templates/google-analytics.ejs
+config/microsoft-identity-association.json

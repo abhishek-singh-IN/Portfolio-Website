@@ -3,14 +3,8 @@ var Router = express.Router();
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var alert = require('alert');
-
-var ContactSchema = {
-  name: String,
-  email: String,
-  telephone: String,
-  message: String
-};
-var Contact = mongoose.model("Contact", ContactSchema);
+var path=require('path');
+var Contact = require(path.resolve("src/Schema/")+"/Contact.js");
 
 Router.use(bodyParser.urlencoded({
   extended: true

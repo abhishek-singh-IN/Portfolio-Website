@@ -1,9 +1,9 @@
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/public/img/2597109669_9b40ec947f_o.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/build/img/2597109669_9b40ec947f_o.jpg");
 }
 
 .project-box {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/public/img/A1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/build/img/A1.jpg");
   box-sizing: border-box;
   border-radius: 25px;
   border: 5px;

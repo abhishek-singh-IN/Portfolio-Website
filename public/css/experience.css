@@ -1,5 +1,5 @@
 body {
-      background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/public/img/2597109669_9b40ec947f_o.jpg");
+      background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/build/img/2597109669_9b40ec947f_o.jpg");
 }
 .experience-box{
   box-sizing: border-box;
@@ -17,8 +17,8 @@ body {
   background-color: #FF6161;
 }
 .Experience1{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/public/img/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/office.jpg");
 }
 .Experience2{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/public/img/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/office.jpg");
 }

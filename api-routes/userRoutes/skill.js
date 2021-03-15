@@ -3,12 +3,7 @@ var Router = express.Router();
 var path = require('path');
 var mongoose = require("mongoose");
 
-var SkillSchema = {
-    name: String,
-    description: String,
-    url: String
-};
-var Skill = mongoose.model("Skill", SkillSchema);
+var Skill = require(path.resolve("src/Schema/")+"/Skill.js");
 
 Router.get("/", function (req, res) {
     Skill.find({}, function (err, foundSkills) {

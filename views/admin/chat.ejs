@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat summary</title>
+  <%- include('../templates/head'); -%>
+  <link rel="stylesheet" href="/public/css/admin.css" type="text/css">
+</head>
+
+<body onload="startTime()">
+  <%- include('../templates/header'); -%>
+  <h1 class="text-center display-1 text-capitalize fw-bold fst-italic text-decoration-underline text-white">Messages received</h1>
+  <div class="container">
+    <div class="row mt-5 mb-5">
+      <% listofmessages.slice().reverse().forEach(function(message){ %>
+      <div class="mt-5 project-box border border-5 border-success">
+        <h3><%=message.email%></h3>
+        <p><%=message.message%></p>
+        <br />
+      </div>
+      <% }); %>
+    </div>
+  </div>
+  <%- include('../templates/footer'); -%>
+
+</body>
+
+</html>

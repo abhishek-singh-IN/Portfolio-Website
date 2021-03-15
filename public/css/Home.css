@@ -1,8 +1,8 @@
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/public/img/2597109669_9b40ec947f_o.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/build/img/2597109669_9b40ec947f_o.jpg");
 }
 .Welcome{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/public/img/IMG_8881.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/IMG_8881.jpg");
     background-size: 100% 100%;
 }
 .details-title{
@@ -53,14 +53,14 @@ body{
 }
 .Project1{
     margin-left: 50px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/office.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/office.jpg");
 }
 .Project2{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/football.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/football.jpg");
     margin-left: 550px;
 }
 .Project3{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../../../Images/payment.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/payment.jpg");
     margin-left: 1050px;
 }
 .ProjectlinkfromHome{

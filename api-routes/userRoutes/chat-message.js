@@ -3,12 +3,8 @@ var Router = express.Router();
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var alert = require('alert');
-
-var ChatSchema = {
-  email: String,
-  message: String
-};
-var Chat = mongoose.model("Chat", ChatSchema);
+var path = require('path');
+var Chat = require(path.resolve("src/Schema/")+"/Chat.js");
 
 Router.use(bodyParser.urlencoded({
   extended: true

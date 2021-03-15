@@ -1,5 +1,5 @@
 body{
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/public/img/2597109669_9b40ec947f_o.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/build/img/2597109669_9b40ec947f_o.jpg");
 }
 .heading{
   color: white;
@@ -11,7 +11,7 @@ text-decoration: none;
   color: #FF6161;
 }
 .skill-box{
-  background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/public/img/skill-bg.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/build/img/skill-bg.jpeg");
   box-sizing: border-box;
   border-radius: 25px;
   background-size: 100% 100%;

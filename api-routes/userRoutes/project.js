@@ -2,15 +2,7 @@ var express = require("express");
 var Router = express.Router();
 var mongoose = require("mongoose");
 var path = require('path');
-var ProjectSchema = {
-  link: String,
-  year: String,
-  title: String,
-  technology: String,
-  projectDiscription1: String,
-  projectDiscription2: String
-};
-var Project = mongoose.model("Project", ProjectSchema);
+var Project = require(path.resolve("src/Schema/")+"/Project.js");
 
 Router.get("/", function (req, res) {
   Project.find({}, function (err, foundProjects) {
