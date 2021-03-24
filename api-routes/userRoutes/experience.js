@@ -2,22 +2,24 @@ var express = require("express");
 var Router = express.Router();
 var mongoose = require("mongoose");
 var path = require('path');
-var ExperienceSchema = {
-  company_name: String,
-  duration: String,
-  profile: String,
-  description: String,
-  link: String
-};
-var Experience = mongoose.model("Experience", ExperienceSchema);
+const {
+  clearKey
+} = require(path.resolve("src") + "/cache.js");
 
-Router.get('/', function (req, res) {
+var Experience = require(path.resolve("src/Schema/") + "/Experience.js");
 
-  Experience.find({}, function (err, foundProjects) {
-    res.render("pages/experience", {
-      listofexperiences: foundProjects
+Router.get("/", async (req, res) => {
+  let foundexperience = await Experience.find({}).cache();
+  try {
+    if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
+    res.render("admin/experience", {
+      listofexperiences: foundexperience
     });
-  });
-});
+  } catch (err) {
+    res.render("guest/experience", {
+      listofexperiences: foundexperience
+    });
+  }
+})
 
 module.exports = Router;

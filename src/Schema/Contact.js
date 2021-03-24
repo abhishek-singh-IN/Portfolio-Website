@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var ContactSchema = {
+  timestamp:String,
   name: String,
   email: String,
   telephone: String,

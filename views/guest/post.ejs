@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title><%=title%> | Daily Journal</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid color-combo-7">
+    <br>
+    <div class="container">
+      <div class="gap-in-between-content">
+        <h1 class="mt-5 px-5 display-4 fw-bold fst-italic text-decoration-underline text-center"><%=title%></h1>
+        <p class="gap-in-between-content"><%=content%></p>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

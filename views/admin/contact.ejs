@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Contact summary</title>
-    <%- include('../templates/head'); -%>
-    <link rel="stylesheet" href="/public/css/admin.css" type="text/css">
-  </head>
-  <body onload="startTime()">
-    <%- include('../templates/header'); -%>
-    <h1 class="text-center display-1 text-capitalize fw-bold fst-italic text-decoration-underline text-white" >Messages received</h1>
-    <div class="container">
-      <div class="row mt-5 mb-5">
-        <% listofmessages.slice().reverse().forEach(function(message){ %>
-        <div class="mt-5 project-box border border-5 border-success">
-            <h2><%=message.name%></h2>
-            <h3><%=message.email%></h3>
-            <h4><%=message.telephone%></h4>
-            <p><%=message.message%></p>
-            <br />
-        </div>
-        <% }); %>
-      </div>
-    </div>
-    <%- include('../templates/footer'); -%>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Contact summary</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid color-combo-6">
+    <br>
+    <div class="container">
+      <h1 class="text-center display-1 text-capitalize fw-bold fst-italic text-decoration-underline">Messages received</h1>
+      <% listofmessages.slice().reverse().forEach(function(message){ %>
+      <div class="d-flex justify-content-center gap-in-between-content">
+        <div class="mx-md-5 my-md-5 mt-5 box border border-5 border-success text-center">
+          <h2><%=message.name%></h2>
+          <h3><%=message.email%></h3>
+          <h4><%=message.telephone%></h4>
+          <p class="mx-md-5 my-md-5"><%=message.message%></p>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
 </html>

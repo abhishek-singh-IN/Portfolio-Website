@@ -1,0 +1,121 @@
+.designer-main-content{
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+}
+.main-content{
+  color: white;
+}
+.box {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+a:link {
+text-decoration: none;
+}
+/* div formating  */
+.gap-in-between-content div{
+  white-space: pre-line;
+}
+/* background */
+.color-combo-1{
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+}
+.color-combo-2{
+  background-color: #9f5f80;
+  background-image: -webkit-linear-gradient(35deg, #9f5f80 25%, #E4E9FD 75%);
+}
+.color-combo-3{
+    background-color: #ff8e71;
+    background-image: -webkit-linear-gradient(45deg, #ffd66b 25%, #ff8e71 75%);
+}
+.color-combo-4{
+    background-color: #e84545;
+    background-image: -webkit-linear-gradient(45deg, #903749 25%, #e84545 75%);
+}
+.color-combo-5{
+  background-color: #26001b;
+  background-image: -webkit-linear-gradient(35deg, #26001b 25%, #810034 75%);
+}
+.color-combo-6{
+  background-color: #4a3933;
+  background-image: -webkit-linear-gradient(35deg, #4a3933 25%, #f0a500 75%);
+}
+.color-combo-7{
+  background-color: #fed049;
+  background-image: -webkit-linear-gradient(35deg, #007580 25%, #fed049 75%);
+}
+/* Chat Screen */
+.open-button {
+  background: none;
+  color: #ff8080;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 80px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

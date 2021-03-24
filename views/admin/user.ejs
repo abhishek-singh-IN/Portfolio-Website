@@ -2,34 +2,58 @@
 <html lang="en">
 
 <head>
-  <title>Projects | Abhishek Singh</title>
-  <link rel="stylesheet" href="/public/css/admin.css" type="text/css">
+  <title>All Users</title>
+  <link rel="stylesheet" href="/public/css/todolist.css" type="text/css">
   <%- include('../templates/head'); -%>
 </head>
 
 <body onload="startTime()">
-  <%- include('../templates/header'); -%>
-
-  <div class="container-fluid">
-
-    <div class="box">
-
-      <% userlist.forEach(function(user){ %>
-      <form action="/delete" method="post">
-        <div class="item">
-          <input type="checkbox" name="checkbox" value="<%=item._id %>" onchange="this.form.submit()">
-          <p> <%= item.name %> </p>
-        </div>
-        <input type="hidden" name="listName" value="<%= ListTitle %>"></input>
-      </form>
-      <% }) %>
-
-    </div>
-
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
   </div>
 
-  <%- include('../templates/footer'); -%>
-
+  <div class="container-fluid designer-main-content">
+    <br>
+    <div class="container mt-5 mb-5">
+      <div class="box mt-5 mb-5" id="heading">
+        <h1>User Details</h1>
+      </div>
+      <div class="box px-2 mt-1">
+        <% userlist.forEach(function(user){ %>
+        <form action="/account/admin/user" method="post">
+          <div class="row">
+            <div class="item col-md-3">
+              <p class="px-5"> <%= user.firstName %> <%= user.lastName %></p>
+            </div>
+            <div class="item col-md-3">
+              <p> <%= user.username %> </p>
+            </div>
+            <div class="item col-md-1">
+              <p> <%= user.type %> </p>
+            </div>
+            <input type="hidden" name="username" value="<%=user.username %>"></input>
+            <div class="item col-md-5">
+              <button class="mx-2 btn btn-warning" type="submit" name="Button" id="Button" value="profile">Profile</button>
+              <% if(user.type!="admin"){ %>
+              <button class="mx-2 btn btn-danger" type="submit" name="Button" id="Button" value="delete">Delete</button>
+              <% } %>
+              <% if(user.type=="Standard"){ %>
+              <button class="mx-2 btn btn-secondary" type="submit" name="Button" id="Button" value="admin">Admin</button>
+              <% } else{ %>
+              <button class="mx-2 btn btn-success" type="submit" name="Button" id="Button" value="standard">Standard</button>
+              <% } %>
+              <button class="mx-2 btn btn-info" type="submit" name="Button" id="Button" value="log">Logs</button>
+            </div>
+          </div>
+        </form>
+        <% }) %>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
 </body>
 
 </html>

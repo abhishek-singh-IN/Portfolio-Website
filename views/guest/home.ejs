@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Abhishek Singh | Computer Engineer</title>
+  <meta name="description" content="Abhishek Singh is one of the top Software Developer in the industry. Here is the glimpses of his Complete profile and work in the IT industry as a Software Engineer , Data Analyst,etc" />
+  <link rel="canonical" href="https://singhabhishek.tech" />
+  <meta property="og:title" content="Abhishek Singh | Computer Engineer" />
+  <meta property="og:description" content="Abhishek Singh is one of the top Software Developer in the industry. Here is the glimpses of his Complete profile and work in the IT industry as a Software Engineer , Data Analyst,etc" />
+  <meta property="og:image" content="https://singhabhishek.tech/logo" />
+  <meta property="og:image:width" content="498" />
+  <meta property="og:image:height" content="497" />
+  <meta property="og:url" content="https://singhabhishek.tech" />
+  <meta name="keywords" content="Abhishek, Singh, Abhishek Singh,abhishek99singh, software, Engineer,software Developer , Freelancer , Data Analyst,Cyber Security Expert" />
+  <link rel="stylesheet" href="/public/css/Home.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="Welcome">
+    <%- include('../templates/header'); -%>
+    <div class=""><br><br><br><br></div>
+    <div class="container-fluid text-white ">
+      <div class="text-center ">
+        <div class="d-inline-block text-truncate fw-bold fst-italic" style="font-size:10vw;font-family: 'Dancing Script', cursive;">Abhishek Singh<br></div>
+      </div>
+      <div class="text-center ">
+        <div class="d-inline-block text-truncate fw-bold fst-italic" style="font-size:8vw;font-family: 'IBM Plex Sans', sans-serif;">Welcomes You<br></div>
+      </div>
+      <div class="text-center ">
+        <div class="d-inline-block text-truncate" style="font-size:3vw;font-family: 'Sansita Swashed', cursive;">The things we know the best are the things we haven't been taught<br><br></div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid color-combo-2">
+    <br>
+      <div class="row">
+        <img src="/build/img/20180328_184320.jpg" class="col-md-3 d-none d-md-block rounded-pill p-1 bg-dark mx-5" alt="Abhishek Singh">
+        <div class="col-md-8">
+          <div class="col-12 "><br /></div>
+          <div class="container">
+          <div class="details-title display-3 fw-bold fst-italic text-decoration-underline text-center mt-5">
+            Freelancer , Software Developer & Data Analyst<br><br>
+          </div>
+          <div class="text-center mx-md-5">
+            A Future Ready Computer Engineer From NSIT Delhi<br><br><br>
+            Hi!! I am Abhishek Singh. I am a final year B.E. Computer Engineering undergraduate at NSIT, Delhi.<br><br>
+            I have experience of working with Data Structures and Algorithms (C++,Java), Web Development (NodeJs, MySQL), Linux OS (Ubuntu ,Kali)
+            & Machine Learning (Python). What I might lack in skills I make up for with my determination to learn.<br><br>
+            I am open to exploring new things and new opportunities!<br><br><br>
+          </div>
+          <div class="text-center"> <a class="btn btn-secondary btn-lg" href="About">Know More</a></div>
+          </div>
+          <div class="col-12 mb-5"><br /></div>
+        </div>
+      </div>
+
+    <br>
+  </div>
+
+  <div class="container-fluid color-combo-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-capitalize display-1 mt-5 mb-5 fw-bold fst-italic text-decoration-underline" style="font-family: 'Lobster', cursive;">Technical Skills<br /></div>
+        <% listoftools.forEach(function(tool){ %>
+        <div class="px-5 col-lg-4 ">
+          <div class="text-center mb-5 text-capitalize <%=tool.color%> card text-white border border-5 border-danger rounded">
+            <div class="card-header">
+              <h1><%=tool.title%></h1>
+            </div>
+            <ul class="list-inline card-body">
+              <% tool.list.forEach(function(toollist){ %>
+              <li><%=toollist%></li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+
+    <div class="container-fluid color-combo-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-5 mt-5 text-center display-1 fw-bold text-decoration-underline fst-italic">Testimonals<br /></div>
+          <% listoftestimonals.forEach(function(testimonal){ %>
+          <div class="col-md-4 col-lg-5 mb-5 mx-lg-5 text-center">
+            <img class="rounded-circle mb-5 img-thumbnail rounded-sm" style="height:100px" src="<%=testimonal.image%>" alt="logo"/>
+            <p><%=testimonal.data%></p>
+            <h2><%=testimonal.name%></h2>
+            <h3><%=testimonal.designation%></h3>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

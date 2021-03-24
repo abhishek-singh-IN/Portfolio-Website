@@ -8,18 +8,21 @@
 </head>
 
 <body onload="startTime()">
-  <%- include('../templates/header'); -%>
-
-  <div class="container text-white">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+<div class="designer-main-content">
+  <br>
+  <div class="container mt-5 mb-5">
     <div class="row px-5">
-      <div class="col-12 text-center text-white">
+      <div class="col-12 text-center">
         <div class="display-1 fw-bold text-decoration-underline">User Profiles</div>
       </div>
     </div>
     <div class="text-center mt-5 mb-5">
       <img class="rounded-circle text-center" src="<%=  user.icon %>" alt="<%=  user.firstName %>">
     </div>
-    <div class="row">
+    <div class="row box">
       <p class="mt-3 col-md-6 display-5">First Name: <%=  user.firstName %></p>
       <p class="mt-3 col-md-6 display-5">Last Name: <%=  user.lastName %> </p>
     </div>
@@ -59,98 +62,15 @@
       <p class="col-md-6  mt-3 display-5">Occupation</p>
       <p class="col-md-6 mt-3 display-5"><%=  user.occupation %> </p>
     </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Google ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.googleId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Facebook ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.facebookId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Microsoft ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.microsoftId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Instagram ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.instagramId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Twitter ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.twitterId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Telegram ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.telegramId %> </p>
-    </div>
-    <!-- <div class="row">
-      <p class="mx-5  mt-3 col-md-5 display-5">First Name &ensp;<%=  user.firstName %></p>
-      <p class="mx-5 mt-3 col-md-5 display-5">Last Name &ensp;<%=  user.lastName %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Username</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.username %> </p>
-    </div>
-    <div class="row">
-      <p class="mx-5  mt-3 display-5 col-md-5">Account Type </p>
-      <p class="mx-5 mt-3 display-5 col-md-5"><%=  user.type %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Birthday</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.birthday %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Mobile No</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.mobile %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Gender</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.gender %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5 mt-3 display-5">Email</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.emailId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Alternate Email ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.emailIdAlternate %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Alternate Mobile Number</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.mobileNoAlternateNumber %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Occupation</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.occupation %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Google ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.googleId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Facebook ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.facebookId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Microsoft ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.microsoftId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Instagram ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.instagramId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Twitter ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.twitterId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-5 mx-5  mt-3 display-5">Telegram ID</p>
-      <p class="col-md-5 mx-5 mt-3 display-5"><%=  user.telegramId %> </p>
-    </div> -->
+  </div>
+  <br>
+</div>
 
+
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
   </div>
 
-  <%- include('../templates/footer'); -%>
 
 </body>
 

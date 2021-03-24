@@ -1,43 +1,69 @@
-var express = require("express");
-var Router = express.Router();
-var path = require('path');
-var mongoose = require("mongoose");
+const express = require("express");
+const Router = express.Router();
+const path = require('path');
+const mongoose = require("mongoose");
+const {
+  clearKey
+} = require(path.resolve("src") + "/cache.js");
+const Skill = require(path.resolve("src/Schema/") + "/Skill.js");
 
-var Skill = require(path.resolve("src/Schema/")+"/Skill.js");
-
-Router.get("/", function (req, res) {
-    Skill.find({}, function (err, foundSkills) {
-        res.render("pages/skills", {
-            listofSkills: foundSkills
-        });
+Router.get("/", async (req, res) => {
+  let foundSkills = await Skill.find({}).cache();
+  try {
+    if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
+    res.render("admin/skills", {
+      listofSkills: foundSkills
     });
-});
+  } catch (err) {
+    res.render("guest/skills", {
+      listofSkills: foundSkills
+    });
+  }
+})
+Router.post("/", async (req, res) => {
+  try {
+    if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
+    var skill = {
+      name: req.body.projectName,
+      description: req.body.description,
+      url: _.lowerCase(req.body.projectName)
+    };
+    try {
+      await Skill.insertMany(skill);
+      res.redirect("/skill");
+    } catch (err) {
+      res.send(400, err);
+    }
+  } catch (err) {
+    res.redirect("/account");
+  }
+})
 
-Router.get('/android', function (req, res) {
-    res.render("pages/skill/android");
+Router.get('/android', function(req, res) {
+  res.render("guest/skill/android");
 });
-Router.get('/bigdata', function (req, res) {
-    res.render('pages/skill/bigdata');
+Router.get('/bigdata', function(req, res) {
+  res.render('guest/skill/bigdata');
 });
-Router.get('/cyber-security', function (req, res) {
-    res.render('pages/skill/cyber_security');
+Router.get('/cyber-security', function(req, res) {
+  res.render('guest/skill/cyber_security');
 });
-Router.get('/dbms', function (req, res) {
-    res.render('pages/skill/dbms');
+Router.get('/dbms', function(req, res) {
+  res.render('guest/skill/dbms');
 });
-Router.get('/dl', function (req, res) {
-    res.render('pages/skill/dl');
+Router.get('/dl', function(req, res) {
+  res.render('guest/skill/dl');
 });
-Router.get('/dsa', function (req, res) {
-    res.render('pages/skill/dsa');
+Router.get('/dsa', function(req, res) {
+  res.render('guest/skill/dsa');
 });
-Router.get('/ml', function (req, res) {
-    res.render('pages/skill/ml');
+Router.get('/ml', function(req, res) {
+  res.render('guest/skill/ml');
 });
-Router.get('/networking', function (req, res) {
-    res.render('pages/skill/networking');
+Router.get('/networking', function(req, res) {
+  res.render('guest/skill/networking');
 });
-Router.get('/web-development', function (req, res) {
-    res.render('pages/skill/web-development');
+Router.get('/web-development', function(req, res) {
+  res.render('guest/skill/web-development');
 });
 module.exports = Router;

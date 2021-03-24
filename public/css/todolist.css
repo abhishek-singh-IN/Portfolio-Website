@@ -1,12 +1,8 @@
-body{
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/build/img/2597109669_9b40ec947f_o.jpg");
-}
 .todolist {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
   font-family: 'helvetica neue';
 }
-
 h1 {
   color: #fff;
   padding: 10px;

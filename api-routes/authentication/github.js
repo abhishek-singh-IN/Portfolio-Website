@@ -9,7 +9,6 @@ Router.get("/",
   passport.authenticate('github', { scope: ['email']})
 );
 
-
 Router.get(
   "/secrets",
   passport.authenticate("github", {

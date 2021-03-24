@@ -5,7 +5,9 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 var path = require('path');
 
-const User = require(path.resolve("src/Schema/") + "/User.js");
+const userdetailschema = require(path.resolve("src/Schema") + "/User.js");
+const google = userdetailschema.Google;
+const User = userdetailschema.User;
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -31,35 +33,62 @@ fs.readFile(path.resolve("secrets/google-auth.json"), function(err, data) {
     },
     function(accessToken, refreshToken, profile, cb) {
 
+      const googleid = new google({
+        timestamp:new Date(),
+        id: profile.id,
+        displayName: profile.displayName,
+        familyName: profile.name.familyName,
+        givenName: profile.name.givenName,
+        email: profile.emails[0].value,
+        photos: profile.photos[0].value,
+        locale: profile._json.locale,
+      });
+
       User.findOne({
         username: profile.emails[0].value
-      }, function(err, user) {
+      }, function(err, founduser) {
 
-        if (user == null) {
-          User.findOrCreate({
-            firstName: profile.name.givenName,
-            lastName: profile.name.familyName,
-            icon: profile._json.picture,
+        if (founduser == null) {
+
+          const record = new User({
             username: profile.emails[0].value,
-            googleId: profile.id
-          }, function(err, user) {
-            return cb(err, user);
+            google: googleid,
+            icon: profile.photos[0].value
+          })
+          User.insertMany(record, function(err, founduser) {
+            return cb(err, founduser)
           });
+
         } else {
-          if (user.googleId == null && profile.id) {
-            user.googleId = profile.id;
+          const checkuser = founduser.google.slice().reverse();
+          try{
+            if (checkuser[0].id != profile.id || checkuser[0].displayName != profile.displayName ||
+              checkuser[0].familyName != profile.name.familyName || checkuser[0].givenName != profile.name.givenName ||
+              checkuser[0].photos != profile.photos[0].value || checkuser[0].locale != profile._json.locale) {
+              founduser.google.push(googleid);
+            }
+          }catch(err){
+            founduser.google.push(googleid);
           }
-          if (user.firstName == null && profile.name.givenName) {
-            user.firstName = profile.name.givenName;
+
+          if (founduser.firstName == null && profile.name.givenName) {
+            founduser.firstName = profile.name.givenName;
           }
-          if (user.lastName == null && profile.name.familyName) {
-            user.lastName = profile.name.familyName;
+          if (founduser.lastName == null && profile.name.familyName) {
+            founduser.lastName = profile.name.familyName;
           }
-          if (user.icon == null && profile._json.picture) {
-            user.icon = profile._json.picture;
+          try{
+            if ((checkuser[0].photos != profile.photos) || (founduser.icon == null && profile.photos[0].value)) {
+              founduser.icon = profile.photos[0].value;
+            }
+          }catch(err){
+            if (founduser.icon == null && profile.photos[0].value) {
+              founduser.icon = profile.photos[0].value;
+            }
           }
-          user.save();
-          return cb(err, user);
+
+          founduser.save();
+          return cb(err, founduser);
         }
 
       });

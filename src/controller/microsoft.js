@@ -5,7 +5,9 @@ const MicrosoftStrategy = require('passport-microsoft').Strategy;
 
 var path = require('path');
 
-const User = require(path.resolve("src/Schema/") + "/User.js");
+const userdetailschema = require(path.resolve("src/Schema") + "/User.js");
+const microsoft = userdetailschema.Microsoft;
+const User = userdetailschema.User;
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -31,32 +33,67 @@ fs.readFile(path.resolve("secrets/microsoft-auth.json"), function(err, data) {
     },
     function(accessToken, refreshToken, profile, cb) {
 
+      const tempProfileData = new microsoft({
+        timestamp: new Date(),
+        id: profile.id,
+        displayName: profile.displayName,
+        familyName: profile.name.familyName,
+        givenName: profile.name.givenName,
+        emails: profile.emails[0].value,
+        businessPhones: profile._json.businessPhones,
+        jobTitle: profile._json.jobTitle,
+        mobilePhone: profile._json.mobilePhone,
+        officeLocation: profile._json.officeLocation,
+        preferredLanguage: profile._json.preferredLanguage
+      });
       User.findOne({
         username: profile.emails[0].value
-      }, function(err, user) {
-
-        if (user == null) {
-          User.findOrCreate({
-            firstName: profile.name.givenName,
-            lastName: profile.name.familyName,
+      }, function(err, founduser) {
+        if (founduser == null) {
+          const record = new User({
             username: profile.emails[0].value,
-            microsoftId: profile.id
-          }, function(err, user) {
-            return cb(err, user);
+            microsoft: tempProfileData,
+          })
+
+          User.insertMany(record, function(err, founduser) {
+            return cb(err, founduser)
           });
+
         } else {
-          if (user.microsoftId == null && profile.id) {
-            user.microsoftId = profile.id;
+          const checkuser = founduser.microsoft.slice().reverse();
+          try {
+            if (checkuser[0].id != profile.id || checkuser[0].displayName != profile.displayName ||
+              checkuser[0].familyName != profile.name.familyName || checkuser[0].givenName != profile.name.givenName ||
+              checkuser[0].photos != profile.photos[0].value || checkuser[0].businessPhones != profile._json.businessPhones ||
+              checkuser[0].jobTitle != profile._json.jobTitle || checkuser[0].officeLocation != profile._json.officeLocation ||
+              checkuser[0].preferredLanguage != profile._json.preferredLanguage) {
+              founduser.microsoft.push(tempProfileData);
+            }
+          } catch (err) {
+            founduser.microsoft.push(tempProfileData);
           }
-          if (user.firstName == null && profile.name.givenName) {
-            user.firstName = profile.name.givenName;
+          try {
+            if (founduser.firstName == null && profile.name.givenName) {
+              founduser.firstName = profile.name.givenName;
+            }
+          } catch (err) {
+            console.log(err);
           }
-          if (user.lastName == null && profile.name.familyName) {
-            user.lastName = profile.name.familyName;
+          try {
+            if (founduser.lastName == null && profile.name.familyName) {
+              founduser.lastName = profile.name.familyName;
+            }
+          } catch (err) {
+            console.log(err);
           }
-          if (user.icon == null && profile._json.picture) {
-            user.icon = profile.photos[0].value;
+          try {
+            if (founduser.icon == null && profile.photos[0].value) {
+              founduser.icon = profile.photos[0].value;
+            }
+          } catch (err) {
+            founduser.icon = profile.photos[0].value;
           }
+
           user.save();
           return cb(err, user);
         }

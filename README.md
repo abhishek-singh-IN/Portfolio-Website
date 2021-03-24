@@ -9,6 +9,8 @@ I have build a responsive website that will display images. links and descriptio
 ![](public/img/SS/home4.png) <br>
 ![](public/img/SS/home5.png) <br>
 ![](public/img/SS/home6.png) <br>
+![](public/img/SS/home7.png) <br>
+![](public/img/SS/home8.png) <br>
 
 ## Installation ##
 * Nodejs<br>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Experience | Abhishek Singh</title>
+  <link rel="stylesheet" href="/public/css/experience.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+      <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid experience-page-background">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <div class="Heading text-center display-1 text-decoration-underline fw-bold fst-italic">Experience</div>
+        </div>
+        <div class="px-lg-5">
+          <div class="Details text-center display-7 px-lg-5 mt-5 text-white">
+            Check out my professional history to learn more about my experience and career milestones.
+            Throughout the years, I’ve developed critical skills that have led me to partner with leading industry professionals and work on exceptional projects.
+            For more information about my work or to discuss a collaboration, simply get in touch.
+          </div>
+        </div>
+        <% listofexperiences.forEach(function(experience){ %>
+        <div class="col-md-6 mt-5 mb-5">
+          <div class="experience-box Experience1 text-center mt-5 border border-5 border-info">
+            <a class="text-decoration-none" href="<%=experience.link%>">
+              <div class=""><br></div>
+              <div class="fs-2 mt-5 text-white"><%=experience.duration%></div>
+              <div class="display-4 mt-2" style="color: #FF6161;"><%=experience.profile%></div>
+              <div class="fs-3 mt-3 text-white"><%=experience.company_name%></div>
+              <div class="fs-5 mt-5 mb-5 mx-lg-5 text-white"><%=experience.description%></div>
+              <div class=""> <br></div>
+            </a>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

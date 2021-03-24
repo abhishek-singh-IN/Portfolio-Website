@@ -1,7 +1,7 @@
-body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/build/img/2597109669_9b40ec947f_o.jpg");
+.Project-Page-Background{
+  background-color: #af0069;
+  background-image: -webkit-linear-gradient(45deg, #af0069 25%, #55b3b1 75%);
 }
-
 .project-box {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/build/img/A1.jpg");
   box-sizing: border-box;

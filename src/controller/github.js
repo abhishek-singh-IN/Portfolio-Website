@@ -5,7 +5,9 @@ const GithubStrategy = require('passport-github2').Strategy;
 
 var path = require('path');
 
-const User = require(path.resolve("src/Schema/") + "/User.js");
+const userdetailschema = require(path.resolve("src/Schema/") + "/User.js");
+const github = userdetailschema.Github;
+const User = userdetailschema.User;
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -26,42 +28,73 @@ fs.readFile(path.resolve("secrets/github-auth.json"), function(err, data) {
   passport.use(new GithubStrategy({
       clientID: details.app_id,
       clientSecret: details.app_secret,
-      callbackURL: details.call_back,
-      profileFields: ["email", "name", 'id', 'displayName', 'gender', 'picture.type(large)']
+      callbackURL: details.call_back
     },
     function(accessToken, refreshToken, profile, cb) {
 
+      const git = new github({
+        timestamp:new Date(),
+        login: profile._json.login,
+        id: profile.id,
+        node_id: profile.node_id,
+        avatar_url: profile._json.avatar_url,
+        gravatar_id: profile._json.gravatar_id,
+        url: profile._json.url,
+        html_url: profile._json.html_url,
+        followers_url: profile._json.followers_url,
+        following_url: profile._json.following_url,
+        gists_url: profile._json.gists_url,
+        starred_url: profile._json.starred_url,
+        subscriptions_url: profile._json.subscriptions_url,
+        organizations_url: profile._json.organizations_url,
+        repos_url: profile._json.repos_url,
+        events_url: profile._json.events_url,
+        received_events_url: profile._json.received_events_url,
+        type: profile._json.type,
+        site_admin: profile._json.site_admin,
+        name: profile._json.name,
+        company: profile._json.company,
+        blog: profile._json.blog,
+        location: profile._json.location,
+        email: profile.emails[0].value,
+        hireable: profile._json.Boolean,
+        bio: profile._json.bio,
+        twitter_username: profile._json,
+        public_repos: profile._json.public_repos,
+        public_gists: profile._json.public_gists,
+        followers: profile._json.followers,
+        following: profile._json.following,
+        created_at: profile._json.created_at,
+        updated_at: profile._json.updated_at,
+        photos: profile.photos[0].value
+      });
       User.findOne({
         username: profile.emails[0].value
-      }, function(err, user) {
+      }, function(err, founduser) {
 
-        if (user == null) {
-          User.findOrCreate({
-            icon: profile.photos[0].value,
+        if (founduser == null) {
+
+          const record = new User({
             username: profile.emails[0].value,
-            githubId: profile.id,
-            firstName: profile._json.first_name,
-            lastName: profile._json.last_name
-          }, function(err, user) {
-            return cb(err, user);
+            github: git,
+            icon: profile.photos[0].value
+          })
+
+          User.insertMany(record, function(err, founduser) {
+            return cb(err, founduser)
           });
+
         } else {
-          if (user.githubId == null && profile.id) {
-            user.githubId = profile.id;
+          if (founduser.github == null) {
+            founduser.github.push(git);
           }
-          if (user.icon == null && profile.photos[0].value) {
-            user.icon = profile.photos[0].value;
+          if (founduser.icon == null && profile.photos[0].value) {
+            founduser.icon = profile.photos[0].value;
           }
-          if (user.firstName == null && profile._json.first_name) {
-            user.firstName = profile._json.first_name;
-          }
-          if (user.lastName == null && profile._json.last_name) {
-            user.lastName = profile._json.last_name;
-          }
-          user.save();
-          return cb(err, user);
+          founduser.save();
+          return cb(err, founduser);
         }
-      });
+      })
 
     }
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Daily Journal</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid designer-main-content">
+    <br>
+    <div class="container mt-5">
+      <div class=" d-flex justify-content-center">
+        <div class="col-md-10">
+          <div class="text-center text-decoration-underline fw-bold fst-italic">
+            <h1 class="display-1">Compose</h1>
+          </div>
+          <form action="/blog/compose" method="post">
+            <div class="form-group">
+              <label>Title</label>
+              <input class="form-control border border-3 border-success" type="text" name="postTitle">
+            </div>
+            <div class="form-group mt-3">
+              <label>Post</label>
+              <textarea class="form-control border border-3 border-danger" name="postBody" rows="15" cols="30"></textarea>
+            </div>
+            <div class="text-center mt-3 mb-5">
+              <button class="btn btn-primary text-center" type="submit" name="button">Publish</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
-body {
-      background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/build/img/2597109669_9b40ec947f_o.jpg");
+.experience-page-background{
+    background-color: #30475e;
+    background-image: -webkit-linear-gradient(45deg, #30475e 25%, #f05454 75%);
 }
 .experience-box{
   box-sizing: border-box;

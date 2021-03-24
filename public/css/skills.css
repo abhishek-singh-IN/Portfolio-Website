@@ -1,14 +1,6 @@
-body{
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("/build/img/2597109669_9b40ec947f_o.jpg");
-}
-.heading{
-  color: white;
-}
-a:link {
-text-decoration: none;
-}
-.skill-sub-heading{
-  color: #FF6161;
+body {
+  background-color: #eb596e;
+  background-image: -webkit-linear-gradient(35deg, #eb596e 25%, #4d375d 75%);
 }
 .skill-box{
   background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/build/img/skill-bg.jpeg");
@@ -20,7 +12,7 @@ text-decoration: none;
 .skill-box:hover{
     transform: translate(-10px,-10px);
     transition: 0.8s;
-    box-shadow: 30px 30px 25px grey;
+    box-shadow: 20px 20px 15px grey;
 }
 .skill-box:active{
     transform: translate(5px,5px);

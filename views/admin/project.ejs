@@ -3,24 +3,25 @@
 
 <head>
   <title>Projects | Abhishek Singh</title>
-  <link rel="stylesheet" href="/public/css/admin.css" type="text/css">
+  <link rel="stylesheet" href="/public/css/project.css" type="text/css">
   <%- include('../templates/head'); -%>
 </head>
 
 <body onload="startTime()">
-  <%- include('../templates/header'); -%>
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-12 text-center text-white">
-        <div class="display-1 fw-bold text-decoration-underline">
-          Add New Projects
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid Project-Page-Background">
+    <br>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <div class="display-1 fw-bold text-decoration-underline">
+            Projects
+          </div>
         </div>
-      </div>
 
-      <div class="row mt-5 mb-5">
-
-        <div class="col-lg-5 mt-5 mx-lg-5 project-box border border-5 border-success">
+        <div class="col-12 mt-5 px-5 project-box border border-5 border-success">
           <h1 class="mt-3 display-4 fw-bold fst-italic text-decoration-underline">Add New Project</h1>
           <form class="text-white" action="/account/admin/project" method="post">
             <div class="form-group">
@@ -56,14 +57,12 @@
         </div>
         <% }); %>
       </div>
-
     </div>
-
-
-
+    <br>
   </div>
-  <%- include('../templates/footer'); -%>
-
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
 </body>
 
 </html>

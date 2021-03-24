@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Skills of Abhishek Singh</title>
+  <link rel="stylesheet" href="/public/css/skills.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid row mb-5 row text-center d-flex justify-content-center">
+    <div class="display-1 fw-bold fst-italic text-decoration-underline text-white mt-5">Skills of Abhishek Singh</div>
+    <div class="fs-4 mt-5 px-5" style="color: #c0e218">
+      No matter what your needs are, you can count on my skills for the guidance and support necessary to produce a highly successful project.
+    </div>
+    <% listofSkills.forEach(function(skill){ %>
+    <a class="col-md-5 mt-5 mx-md-5 skill-box border border-5 border-primary" href="/Skill/<%=skill.url%>">
+      <div class="display-4 fw-bold fst-italic text-decoration-underline mt-5" style="color: #FF6161;"><%=skill.name%></div>
+      <div class="fs-5 mt-5 mb-5 text-white"><%=skill.description%></div>
+    </a>
+    <% }); %>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

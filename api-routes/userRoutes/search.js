@@ -19,11 +19,7 @@ Router.post("/", function (req, res) {
     var details = JSON.parse(data);
     var url = "https://www.googleapis.com/customsearch/v1?key=" + details.googlesearchkey + "&cx=" + details.cx + "&q=" + content + "&callback=hndlr";
 
-    https.get(url, function (resposne) {
-      // console.log(resposne.statusCode);
-    });
-
-    res.render("pages/search", {
+    res.render("guest/search", {
       url: url
     });
   });
