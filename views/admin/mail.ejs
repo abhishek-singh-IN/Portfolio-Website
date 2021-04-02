@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Mail by Abhishek Singh</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark border-bottom border-secondary">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid">
+    <div class="row color-combo-4">
+      <br>
+      <div class="col-md-3 bg-dark text-center d-none d-md-block">
+        <br>
+        <div class="mt-5">
+          <%- include('../templates/mail-navbar'); -%>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <br>
+        <div class=" d-flex justify-content-center">
+          <div class="col-md-10">
+            <div class="text-center text-decoration-underline fw-bold fst-italic mb-5">
+              <h1 class="display-1 fw-bold">Compose</h1>
+            </div>
+            <form action="/application/mail" method="post" class="row">
+              <div class="form-group col-md-4">
+                <label>Senders Name</label>
+                <input class="form-control border border-3 border-success" type="text" name="senderName" autocomplete="off">
+              </div>
+              <div class="form-group col-md-5">
+                <label>Senders Email ID</label>
+                <input class="form-control border border-3 border-success" type="text" name="senderMailId" autocomplete="off">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="domain">Domain:</label>
+                <select name="domain" id="domain" class="form-control border border-3 border-primary">
+                  <option value="singhabhishek.tech">singhabhishek.tech</option>
+                  <option value="singhabhishek.co.in">singhabhishek.co.in</option>
+                  <option value="singhabhishek.me">singhabhishek.me</option>
+                  <option value="singhabhishek.live">singhabhishek.live</option>
+                  <option value="singhabhishek.email">singhabhishek.email</option>
+                  <option value="abhisheksingh.online">abhisheksingh.online</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Receivers Email ID</label>
+                <input class="form-control border border-3 border-primary" type="email" name="receiverMailId" required>
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <input class="form-control border border-3 border-warning" type="text" name="subject" autocomplete="off" required>
+              </div>
+              <div class="form-group mt-3">
+                <label>Message</label>
+                <textarea class="form-control border border-3 border-danger" name="mailBody" rows="5" cols="30" required></textarea>
+              </div>
+              <div class="text-center mt-3 mb-5">
+                <button class="btn btn-primary text-center" type="submit" name="button">Send Mail</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark border-top border-secondary">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

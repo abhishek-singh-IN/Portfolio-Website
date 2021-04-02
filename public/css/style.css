@@ -49,8 +49,20 @@ text-decoration: none;
   background-image: -webkit-linear-gradient(35deg, #4a3933 25%, #f0a500 75%);
 }
 .color-combo-7{
+  background-color: #ff005c;
+  background-image: -webkit-linear-gradient(35deg, #ff005c 25%, #fff600 75%);
+}
+.color-combo-8{
   background-color: #fed049;
   background-image: -webkit-linear-gradient(35deg, #007580 25%, #fed049 75%);
+}
+.color-combo-9{
+    background-color: #2c061f;
+    background-image: -webkit-linear-gradient(45deg, #2c061f 25%, #374045 75%);
+}
+.color-combo-10{
+    background-color: #29bb89;
+    background-image: -webkit-linear-gradient(15deg, #1e6f5c 35%, #29bb89 75%);
 }
 /* Chat Screen */
 .open-button {

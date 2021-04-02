@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 
 const Tool = require(path.resolve("src/Schema/") + "/Tool.js");
 const Testimonal = require(path.resolve("src/Schema/") + "/Testimonal.js");
+const Project = require(path.resolve("src/Schema/") + "/Project.js");
 
 INPUT_path_to_your_images = "public/img/**/*.{jpg,JPG,jpeg,JPEG,png,svg,gif}";
 OUTPUT_path = "build/img/";
@@ -59,7 +60,7 @@ compress_images(INPUT_path_to_your_images, OUTPUT_path, {
   }
 );
 
-const database_connection = require("./api-routes" + "/connection")
+const database_connection = require("./routes" + "/connection")
 
 app.use(session({
   secret: "Our little secret.",
@@ -73,10 +74,12 @@ app.use(passport.session());
 app.get("/", async (req, res) => {
   let tooldetails = await Tool.find({}).cache();
   let testimonaldetails = await Testimonal.find({}).cache();
+  let foundProjects = await Project.find({}).cache();
   try {
     res.render("guest/home", {
       listoftools: tooldetails,
-      listoftestimonals: testimonaldetails
+      listoftestimonals: testimonaldetails,
+      listofprojects: foundProjects
     });
   } catch (err) {
     console.log(err);
@@ -102,23 +105,22 @@ app.get('/.well-known/microsoft-identity-association.json', function(req, res) {
 app.use('/public', express.static(path.join(path.resolve('public'))));
 app.use('/build', express.static(path.join(path.resolve('build'))));
 app.use('/logo', express.static(path.join(path.resolve('build/img/logo.png'))));
-app.use("/About", require("./api-routes/userRoutes" + "/about"));
-app.use("/blog", require("./api-routes/userRoutes" + "/blog"));
-app.use("/Contact", require("./api-routes/userRoutes" + "/contact"));
-app.use("/Experience", require("./api-routes/userRoutes" + "/experience"));
-app.use("/Gallery", require("./api-routes/userRoutes" + "/gallery"));
-app.use("/Project", require("./api-routes/userRoutes" + "/project"));
-app.use("/search", require("./api-routes/userRoutes" + "/search"));
-app.use("/Skill", require("./api-routes/userRoutes" + "/skill"));
-app.use("/chat-message", require("./api-routes/userRoutes" + "/chat-message"));
-app.use("/account", require("./api-routes" + "/accounts"));
+
 
 app.get('/Resume', function(req, res) {
   res.sendFile(path.resolve('public/docs/ABHISHEK SINGH.pdf'));
 });
-
-app.use(require("./api-routes" + "/error"));
+app.get('/Privacy-policy', function(req, res) {
+  res.render("templates/privacy-policy")
+});
+app.get('/test', function(req, res) {
+  res.render("test");
+});
+app.use(require("./routes" + "/user"));
+app.use("/account",require("./routes" + "/accounts"));
+app.use("/application",require("./routes" + "/application"));
+app.use(require("./routes" + "/error"));
 
 app.listen(config.port, function() {
-  console.log('app Listening on ' + "http://127.0.0.1:" + config.port)
+  console.log('Server Listening on ' + "http://127.0.0.1:" + config.port)
 });

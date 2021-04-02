@@ -17,11 +17,12 @@
       <h1 class="text-center display-1 text-capitalize fw-bold fst-italic text-decoration-underline">Messages received</h1>
       <% listofmessages.slice().reverse().forEach(function(message){ %>
       <div class="d-flex justify-content-center gap-in-between-content">
-        <div class="mx-md-5 my-md-5 mt-5 box border border-5 border-success text-center">
+        <div class="px-md-5 mt-5 box border border-5 border-success text-center">
           <h2><%=message.name%></h2>
-          <h3><%=message.email%></h3>
-          <h4><%=message.telephone%></h4>
-          <p class="mx-md-5 my-md-5"><%=message.message%></p>
+          <p><%=message.timestamp%></p>
+          <a href="mailto:<%=message.email%>"><%=message.email%></a>
+          <h4 class="mt-3"><%=message.telephone%></h4>
+          <p class="mx-md-5"><%=message.message%></p>
         </div>
       </div>
       <% }); %>

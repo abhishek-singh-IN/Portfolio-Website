@@ -21,7 +21,7 @@
         </div>
         <div class="box mt-5 mb-5">
           <% newListItems.forEach(function(item){ %>
-          <form action="/account/todolist/delete" method="post">
+          <form action="/application/todolist/delete" method="post">
             <div class="item">
               <input type="checkbox" name="checkbox" value="<%=item._id %>" onchange="this.form.submit()">
               <p> <%= item.name %> </p>
@@ -31,7 +31,7 @@
           <% }) %>
         </div>
         <div class="box mb-5">
-          <form class="item" action="/account/todolist/" method="post">
+          <form class="item" action="/application/todolist/" method="post">
             <textarea class="form-control" id="contactMessage" name="newItem" rows="1" placeholder="New Item" autocomplete="off"></textarea>
             <button type="submit" name="list" value=<%= ListTitle %>>+</button>
           </form>

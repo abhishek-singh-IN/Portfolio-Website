@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Mail by Abhishek Singh</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark border-bottom border-secondary">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid">
+    <div class="row color-combo-4">
+      <br>
+      <div class="col-md-3 bg-dark text-center d-none d-md-block">
+        <br>
+        <div class="mt-5">
+          <%- include('../templates/mail-navbar'); -%>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <br>
+        <div class=" d-flex justify-content-center" id="inbox-mail-view">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark border-top border-secondary">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

@@ -34,36 +34,33 @@
   </div>
   <div class="container-fluid color-combo-2">
     <br>
-      <div class="row">
-        <img src="/build/img/20180328_184320.jpg" class="col-md-3 d-none d-md-block rounded-pill p-1 bg-dark mx-5" alt="Abhishek Singh">
-        <div class="col-md-8">
-          <div class="col-12 "><br /></div>
-          <div class="container">
-          <div class="details-title display-3 fw-bold fst-italic text-decoration-underline text-center mt-5">
-            Freelancer , Software Developer & Data Analyst<br><br>
-          </div>
-          <div class="text-center mx-md-5">
-            A Future Ready Computer Engineer From NSIT Delhi<br><br><br>
-            Hi!! I am Abhishek Singh. I am a final year B.E. Computer Engineering undergraduate at NSIT, Delhi.<br><br>
-            I have experience of working with Data Structures and Algorithms (C++,Java), Web Development (NodeJs, MySQL), Linux OS (Ubuntu ,Kali)
-            & Machine Learning (Python). What I might lack in skills I make up for with my determination to learn.<br><br>
-            I am open to exploring new things and new opportunities!<br><br><br>
-          </div>
-          <div class="text-center"> <a class="btn btn-secondary btn-lg" href="About">Know More</a></div>
-          </div>
-          <div class="col-12 mb-5"><br /></div>
+    <div class="row">
+      <div class="col-12 mt-5"><br /></div>
+      <img src="/build/img/20180328_184320.jpg" class="col-md-3 d-none d-md-block rounded-pill p-1 bg-dark mx-5" alt="Abhishek Singh">
+      <div class="col-md-7 container-lg px-lg-5">
+        <div class="details-title display-3 fw-bold fst-italic text-decoration-underline text-center">
+          Freelancer , Software Developer & Data Analyst<br><br>
         </div>
+        <div class="text-center">
+          A Future Ready Computer Engineer From NSIT Delhi<br><br><br>
+          Hi!! I am Abhishek Singh. I am a final year B.E. Computer Engineering undergraduate at NSIT, Delhi.<br><br>
+          I have experience of working with Data Structures and Algorithms (C++,Java), Web Development (NodeJs, MySQL), Linux OS (Ubuntu ,Kali)
+          & Machine Learning (Python). What I might lack in skills I make up for with my determination to learn.<br><br>
+          I am open to exploring new things and new opportunities!<br><br><br>
+        </div>
+        <div class="text-center"> <a class="btn btn-secondary btn-lg" href="About">Know More</a></div>
       </div>
-
+      <div class="col-12 mb-5"><br /></div>
+    </div>
     <br>
   </div>
 
   <div class="container-fluid color-combo-3">
-    <div class="container">
+    <div class="container-lg">
       <div class="row">
         <div class="col-12 text-center text-capitalize display-1 mt-5 mb-5 fw-bold fst-italic text-decoration-underline" style="font-family: 'Lobster', cursive;">Technical Skills<br /></div>
         <% listoftools.forEach(function(tool){ %>
-        <div class="px-5 col-lg-4 ">
+        <div class="px-lg-5 col-lg-4 col-md-4">
           <div class="text-center mb-5 text-capitalize <%=tool.color%> card text-white border border-5 border-danger rounded">
             <div class="card-header">
               <h1><%=tool.title%></h1>
@@ -80,21 +77,50 @@
     </div>
   </div>
 
-    <div class="container-fluid color-combo-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-5 mt-5 text-center display-1 fw-bold text-decoration-underline fst-italic">Testimonals<br /></div>
-          <% listoftestimonals.forEach(function(testimonal){ %>
-          <div class="col-md-4 col-lg-5 mb-5 mx-lg-5 text-center">
-            <img class="rounded-circle mb-5 img-thumbnail rounded-sm" style="height:100px" src="<%=testimonal.image%>" alt="logo"/>
-            <p><%=testimonal.data%></p>
-            <h2><%=testimonal.name%></h2>
-            <h3><%=testimonal.designation%></h3>
+  <div class="container-fluid color-combo-10">
+    <div class="container-lg ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 mb-5 mt-5 text-center display-1 fw-bold text-decoration-underline fst-italic text-white">Projects<br /></div>
+        <div class="container-fluid text-center">
+          <div class="row d-flex justify-content-center align-items-center">
+            <% listofprojects.forEach(function(project){ %>
+            <% if(project.projectDiscription1){ %>
+            <div class="col-lg-4 col-md-6 mb-5">
+              <div class="box px-5 border border-danger border-5" style="background-color:#e6dd3b">
+                <br>
+                <h3 class="mt-5 mb-5"><%=project.title%></h3>
+                <p><%=project.projectDiscription1%></p>
+                <a class="mb-5" href="/Project/<%=project.link%>">Know More .....</a>
+                <br><br>
+              </div>
+            </div>
+            <% } %>
+            <% }); %>
           </div>
-          <% }); %>
         </div>
       </div>
+      <div class="text-center">
+        <a class="btn btn-danger btn-lg px-5 py-2" href="/Project">For All Projects Click Here</a>
+      </div>
+      <br>
     </div>
+  </div>
+
+  <div class="container-fluid color-combo-1">
+    <div class="container-lg ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 mb-5 mt-5 text-center display-1 fw-bold text-decoration-underline fst-italic">Testimonals<br /></div>
+        <% listoftestimonals.forEach(function(testimonal){ %>
+        <div class="col-md-6 col-lg-5 mb-5 mx-lg-4 text-center ">
+          <img class="rounded-circle mb-5 img-thumbnail rounded-sm" style="height:100px" src="<%=testimonal.image%>" alt="logo" />
+          <p><%=testimonal.data%></p>
+          <h2><%=testimonal.name%></h2>
+          <h3><%=testimonal.designation%></h3>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
   <div class="bg-dark">
     <%- include('../templates/footer'); -%>
   </div>

@@ -19,6 +19,7 @@
         <% listofmessages.slice().reverse().forEach(function(message){ %>
         <div class="col-md-5 mx-md-5 mt-5 box border border-5 border-success">
           <h3 class="mt-5"><%=message.email%></h3>
+          <p><%=message.timestamp%></p>
           <p><%=message.message%></p>
           <br />
         </div>

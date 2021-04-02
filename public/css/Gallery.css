@@ -1,4 +1,254 @@
-img {
+.selected .cd-full-width h2.tm-figure-title {
+	margin-bottom: 0;
+	color: white;
+	text-shadow: 2px 2px 6px #000;
+}
+.selected .cd-full-width p.tm-figure-description {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 2em;
+    opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+.selected .cd-full-width figure.effect-sadie:hover .tm-figure-title,
+.selected .cd-full-width figure.effect-sadie:hover p.tm-figure-description {
+    opacity: 1;
+    text-shadow:  2px 2px 6px #000;
+}
+.selected .cd-full-width figure.effect-sadie:hover p.tm-figure-description {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.cd-full-width .container-fluid.tm-page-width {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.grid-item {
+	float: left;
+	width: 100%;
+}
+.grid-item:last-child { margin-bottom: 0; }
+.grid-item figure figcaption, .grid-item figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item figure figcaption {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid-item figure {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.grid-item figure img {
+    position: relative;
+    display: block;
     max-width: 100%;
-    max-height: auto;
+    opacity: 0.8;
+}
+.grid-item figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+figure.effect-sadie figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+
+figure.effect-sadie h2 {
+	font-weight: 400;
+	font-size: 3rem;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #484c61;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-sadie p {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+figure.effect-sadie:hover h2 {
+	color: #fff;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.tm-img-gallery {
+	margin: 0 auto 40px;
+	display: inline-block;
+}
+.tm-img {
+	max-width: 320px;
+  	width: 100%;
+  	height: auto;
+  	border: none;
+  	margin: 0 auto;
+}
+/* Media Queries */
+
+@media only screen and (min-width: 400px) {
+	.cd-hero-slider h2 { font-size: 1.4em; }
+	.grid-item figure figcaption { padding: 2em; }
+}
+
+@media only screen and (min-width: 480px) {
+	.cd-hero-slider h2.tm-text-title { font-size: 1.8em; }
+	.tm-textbox-padding { padding: 30px 40px; }
+	.tm-textbox-padding-contact { padding: 30px; }
+	.grid-item { width: 50%; }
+	.grid-item figure figcaption { padding: 1.5em; }
+}
+
+@media only screen and (min-width: 600px) {
+	.tm-footer { padding: 50px 0px 0px 0px; }
+	.tm-copyright-text { width: auto; }
+}
+
+@media only screen and (min-width: 720px) {
+	.tm-footer {
+		-ms-flex-direction: row;
+			flex-direction: row;
+	}
+
+	.tm-copyright-text { margin-top: 0; }
+}
+
+@media only screen and (min-width: 768px) {
+
+	.tm-flex {
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.tm-2-col-textbox-2 {
+		margin-bottom: 0;
+		margin-right: 30px;
+		width: 100%;
+	}
+
+	.tm-2-col-textbox-2:last-child { margin-right: 0; }
+	.cd-full-width .container-fluid.tm-page-width { max-width: 800px; }
+}
+
+@media only screen and (min-width: 992px) {
+	.cd-hero-slider .cd-full-width { padding-top: 80px; }
+
+	.cd-full-width .container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.cd-full-width .container-fluid.tm-page-pad,
+	.cd-full-width .container-fluid.tm-page-pad {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.cd-full-width .container-fluid.tm-page-width {
+		max-width: 1200px;
+	}
+
+	.grid-item { width: 25%; }
+	.grid-item figure figcaption { padding: 1em; }
+}
+
+@media only screen and (min-width: 1063px) {
+	.tm-brand-icon { margin-right: 15px; }
+	.tm-contact-page, .tm-about-page { padding: 20px 20px 0; }
+	.cd-full-width .container-fluid.tm-page-width {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.tm-page-width {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media only screen and (min-width: 1170px) {
+	.cd-hero-slider h2, .cd-hero-slider p { margin-bottom: 20px; }
+	.cd-hero-slider p:last-child { margin-bottom: 0; }
+	.cd-hero-slider .tm-text { font-size: 1em; }
+	.grid-item figure figcaption { padding: 2em; }
+}
+
+@media only screen and (min-width: 1333px) {
+	.cd-hero-slider .cd-full-width { padding-top: 110px; }
+	.cd-full-width .container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.tm-brand-icon {
+		font-size: 4rem;
+    	padding: 10px;
+		margin-right: 15px;
+	}
+}
+
+@media only screen and (min-width: 1340px) {
+	.cd-full-width .container-fluid.tm-page-width {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.tm-2-col-textbox-2 { margin-right: 15px; }
+	#google-map { height: 520px; }
+}
+@media (min-width: 480px) {
+	.tm-img-gallery { margin: 0 auto; }
 }

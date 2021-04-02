@@ -1,5 +1,4 @@
 <button class="open-button" onclick="openForm()"><i class="fas fa-comments fa-3x"><br /><h5>Chat</h5></i></button>
-
 <div class="chat-popup" id="myForm">
   <form action="/chat-message" method="post" class="form-container">
     <h2>Hii!! I am Abhishek</h2>
@@ -14,5 +13,11 @@
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
-
-<script src="/public/js/chat.js"></script>
+<script type="text/javascript">
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
