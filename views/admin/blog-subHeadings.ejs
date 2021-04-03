@@ -14,7 +14,7 @@
   <div class="container-fluid color-combo-8">
     <br>
     <div class="container">
-      <div class="row">
+      <div class="row mb-5">
         <h1 class="mt-5 px-5 display-2 fw-bold fst-italic text-decoration-underline text-center text-capitalize mb-5"><%=title%></h1>
         <p style="white-space: pre-line"><%=content%></p>
       </div>
@@ -26,6 +26,19 @@
         </div>
         <% }); %>
       </div>
+      <form action="/blog/posts/<%=title%>/compose" method="post" class="box px-5 py-5">
+        <div class="form-group">
+          <label>Title</label>
+          <input class="form-control bg-dark text-white" type="text" name="postTitle" placeholder="Sub Heading">
+        </div>
+        <div class="form-group mt-3">
+          <label>Content</label>
+          <textarea class="form-control bg-dark text-white" name="postBody" rows="5" cols="5" placeholder="Content"></textarea>
+        </div>
+        <div class="text-center mt-5">
+          <button class="btn btn-primary text-center" type="submit" name="button">Add</button>
+        </div>
+      </form>
     </div>
     <br>
   </div>
