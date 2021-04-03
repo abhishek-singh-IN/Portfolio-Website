@@ -7,17 +7,15 @@ const _ = require("lodash");
 const userdetailschema = require(path.resolve("src/Schema") + "/User.js");
 const l = require(path.resolve("src/Schema/") + "/Logs.js");
 const Logs = l.Log;
-
-// Importing Schemas
 const User = userdetailschema.User;
 const Contact = require(path.resolve("src/Schema/") + "/Contact.js");
 const Chat = require(path.resolve("src/Schema/") + "/Chat.js");
-const Skill = require(path.resolve("src/Schema/") + "/Skill.js");
-const Experience = require(path.resolve("src/Schema/") + "/Experience.js");
 
 Router.use(bodyParser.urlencoded({
   extended: true
 }));
+
+Router.use("/user-details", require("./user"));
 
 Router.get("/user", async (req, res) => {
   try {
@@ -37,10 +35,11 @@ Router.post("/user", async (req, res) => {
     if (req.isAuthenticated()) {
 
       if (req.body.Button == "profile") {
-        Logs.findOne({
-          name: req.body.username
+        User.findOne({
+          username: req.body.username
         }, function(err, foundList) {
-          // res.redirect("/account/profile/"+foundList._id+"/profile");
+          if (foundList == null) res.redirect("/account/admin/user");
+          else res.redirect("/account/admin/user-details/" + foundList._id + "/profile");
         });
       }
       if (req.body.Button == "delete") {
@@ -73,11 +72,8 @@ Router.post("/user", async (req, res) => {
         Logs.findOne({
           name: req.body.username
         }, function(err, foundList) {
-          if (foundList == null) {
-            res.redirect("/account/admin/user");
-          } else {
-            res.redirect("/account/profile/" + foundList._id + "/log?page=1&limit=15");
-          }
+          if (foundList == null) res.redirect("/account/admin/user");
+          else res.redirect("/account/admin/user-details/" + foundList._id + "/log?page=1&limit=15");
         });
       }
     }
