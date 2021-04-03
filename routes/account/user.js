@@ -2,11 +2,16 @@ const express = require("express");
 const Router = express.Router();
 const path = require('path');
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 const userdetailschema = require(path.resolve("src/Schema") + "/User.js");
 const User = userdetailschema.User;
 const logdetailsschema = require(path.resolve("src/Schema/") + "/Logs.js");
 const Logs = logdetailsschema.Log;
+
+Router.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 Router.get("/:customListName" + "/log", async (req, res) => {
   try {
@@ -40,14 +45,16 @@ Router.get("/:customListName" + "/log", async (req, res) => {
         maxlist: totalPages,
         pageNo: pageNo,
         size: size,
-        linkinitial: "/account/user/" + req.params.customListName + "/log?page="
+        linkinitial: "/account/admin/user-details/" + req.params.customListName + "/log?page="
       });
     })
   } catch (err) {
     res.redirect("/account");
   }
 });
-
+Router.post("/:customListName" + "/log", async (req, res) => {
+  res.redirect("/account/admin/user-details/" + req.params.customListName + "/log?page=1&limit=" + req.body.pages)
+})
 Router.get("/:customListName" + "/profile", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");

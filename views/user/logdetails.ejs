@@ -19,11 +19,27 @@
         <div class="box" id="heading">
           <h1><%= ListTitle%></h1>
         </div>
+        <div class="mt-2">
+          <div class="row">
+            <div class="d-flex justify-content-end">
+              <form action="<%= linkinitial %>1&limit=<%=size%>" method="post">
+                <select class="box px-2 py-2  bg-danger text-white text-center" id="heading" id="pages" name="pages" onchange='this.form.submit();'>
+                  <option value="15">15</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="1000">1000</option>
+                </select>
+                <!-- <input class="box" id="heading" type="submit"> -->
+              </form>
+            </div>
+          </div>
+        </div>
+
         <div class="mt-5"></div>
         <% for(var i=0;i<newListItems.length;i++){ %>
-          <div class="item col-md-1 box d-flex justify-content-center">
-            <p><%= ((pageNo-1)*(size))+i+1 %></p>
-          </div>
+        <div class="item col-md-1 box d-flex justify-content-center">
+          <p><%= ((pageNo-1)*(size))+i+1 %></p>
+        </div>
         <div class="item col-md-2 box d-flex justify-content-center">
           <p> <%= newListItems[i].authtype %> </p>
         </div>
@@ -35,7 +51,7 @@
     </div>
     <div class="container d-md-flex justify-content-center text-center">
       <% for(var i=1;i<=maxlist;i++){ %>
-        <a class="box mx-2 px-2" href="<%= linkinitial %><%= i %>&limit=15"><%= i %></a>
+      <a class="box mx-2 px-2" href="<%= linkinitial %><%= i %>&limit=<%= size %>"><%= i %></a>
       <% } %>
     </div>
     <br>

@@ -2,8 +2,13 @@ const express = require("express")
 var Router = express.Router();
 const mongoose = require("mongoose")
 const path = require('path');
+const bodyParser = require("body-parser");
 const l = require(path.resolve("src/Schema/") + "/Logs.js");
 const Logs = l.Log;
+
+Router.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 Router.get("/", async (req, res) => {
   try {
@@ -17,29 +22,31 @@ Router.get("/", async (req, res) => {
     Logs.findOne({
       name: req.user.username
     }, function(err, foundList) {
-      if(foundList==null){
+      if (foundList == null) {
         res.redirect("/account");
-      }else{
-        if(foundList.__v<size){
-          size=foundList.__v;
+      } else {
+        if (foundList.__v < size) {
+          size = foundList.__v;
         }
-        if(pageNo>Math.ceil((foundList.__v)/size)){
-          pageNo=1;
+        if (pageNo > Math.ceil((foundList.__v) / size)) {
+          pageNo = 1;
         }
-        var totalPages = Math.ceil((foundList.__v)/size);
-        var start=(foundList.__v)-((pageNo-1)*size);
-        let senddata=[];
-        for(var i=0;i<size;i++){
-          senddata.push(foundList.logdetails[start-i]);
-          if (start-i === 0) { break; }
+        var totalPages = Math.ceil((foundList.__v) / size);
+        var start = (foundList.__v) - ((pageNo - 1) * size);
+        let senddata = [];
+        for (var i = 0; i < size; i++) {
+          senddata.push(foundList.logdetails[start - i]);
+          if (start - i === 0) {
+            break;
+          }
         }
         res.render("user/logdetails", {
           ListTitle: foundList.name,
           newListItems: senddata,
-          maxlist:totalPages,
-          pageNo:pageNo,
-          size:size,
-          linkinitial:"/account/logs?page="
+          maxlist: totalPages,
+          pageNo: pageNo,
+          size: size,
+          linkinitial: "/account/logs?page="
         });
       }
     })
@@ -48,4 +55,8 @@ Router.get("/", async (req, res) => {
     res.redirect("/account/login");
   }
 });
+
+Router.post("/", async (req, res) => {
+  res.redirect("/account/logs?page=1&limit=" + req.body.pages)
+})
 module.exports = Router;
