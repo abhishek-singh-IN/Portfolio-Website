@@ -19,7 +19,7 @@ Router.use(bodyParser.urlencoded({
   extended: true
 }));
 
-Router.get("/user", function(req, res) {
+Router.get("/user", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
     User.find({}, function(err, foundUsers) {
@@ -28,11 +28,10 @@ Router.get("/user", function(req, res) {
       });
     });
   } catch (err) {
-    console.log(err);
     res.redirect("/account");
   }
 })
-Router.post("/user", function(req, res) {
+Router.post("/user", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
     if (req.isAuthenticated()) {
@@ -49,6 +48,7 @@ Router.post("/user", function(req, res) {
           username: req.body.username
         }, function(err) {
           if (err) return handleError(err);
+          res.redirect("/account/admin/user");
         });
       }
       if (req.body.Button == "admin") {
@@ -58,6 +58,7 @@ Router.post("/user", function(req, res) {
           foundList.type = "admin";
           foundList.save();
         })
+        res.redirect("/account/admin/user");
       }
       if (req.body.Button == "standard") {
         User.findOne({
@@ -66,22 +67,25 @@ Router.post("/user", function(req, res) {
           foundList.type = "Standard";
           foundList.save();
         })
+        res.redirect("/account/admin/user");
       }
       if (req.body.Button == "log") {
         Logs.findOne({
           name: req.body.username
         }, function(err, foundList) {
-          // res.redirect("/account/profile/"+foundList._id+"/log");
+          if (foundList == null) {
+            res.redirect("/account/admin/user");
+          } else {
+            res.redirect("/account/profile/" + foundList._id + "/log?page=1&limit=15");
+          }
         });
       }
     }
   } catch (err) {
-    console.log(err);
-  } finally {
     res.redirect("/account/admin/user");
   }
 });
-Router.get("/contact", function(req, res) {
+Router.get("/contact", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
     Contact.find({}, function(err, foundContacts) {
@@ -93,7 +97,7 @@ Router.get("/contact", function(req, res) {
     res.redirect("/account/login");
   }
 });
-Router.get("/chat", function(req, res) {
+Router.get("/chat", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised")
     Chat.find({}, function(err, foundChats) {

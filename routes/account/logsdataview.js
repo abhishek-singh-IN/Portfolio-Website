@@ -5,7 +5,7 @@ const path = require('path');
 const l = require(path.resolve("src/Schema/") + "/Logs.js");
 const Logs = l.Log;
 
-Router.get("/", function(req, res) {
+Router.get("/", async (req, res) => {
   try {
     if (!req.isAuthenticated()) throw new Error("User not Authorised");
 
@@ -17,8 +17,8 @@ Router.get("/", function(req, res) {
     Logs.findOne({
       name: req.user.username
     }, function(err, foundList) {
-      if(err){
-        res.send(err);
+      if(foundList==null){
+        res.redirect("/account");
       }else{
         if(foundList.__v<size){
           size=foundList.__v;
@@ -38,7 +38,8 @@ Router.get("/", function(req, res) {
           newListItems: senddata,
           maxlist:totalPages,
           pageNo:pageNo,
-          size:size
+          size:size,
+          linkinitial:"/account/logs?page="
         });
       }
     })
