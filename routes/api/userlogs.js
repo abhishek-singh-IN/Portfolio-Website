@@ -4,7 +4,7 @@ const path = require('path');
 const l = require(path.resolve("src/Schema/") + "/Logs.js");
 const Logs = l.Log;
 
-Router.get('/', (req, res) => {
+Router.get('/', async (req, res) => {
   var pageNo = parseInt(req.query.page)
   var size = parseInt(req.query.limit)
   if (pageNo < 0 || pageNo === 0) {
@@ -23,17 +23,17 @@ Router.get('/', (req, res) => {
         "error": true,
         "message": "Error fetching data"
       };
-    }else if (!req.query.limit) {
+    } else if (!req.query.limit) {
       response = {
         "error": false,
         "message": data[0].logdetails
       };
-    }else {
-      var totalPages = Math.ceil((data[0].__v)/size);
-      var start=(data[0].__v)-((pageNo-1)*size);
-      let senddata=[];
-      for(var i=0;i<size;i++){
-        senddata.push(data[0].logdetails[start-i]);
+    } else {
+      var totalPages = Math.ceil((data[0].__v) / size);
+      var start = (data[0].__v) - ((pageNo - 1) * size);
+      let senddata = [];
+      for (var i = 0; i < size; i++) {
+        senddata.push(data[0].logdetails[start - i]);
       }
       response = {
         "error": false,
