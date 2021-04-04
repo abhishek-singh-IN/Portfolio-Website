@@ -23,7 +23,12 @@ Router.get('/', (req, res) => {
         "error": true,
         "message": "Error fetching data"
       };
-    } else {
+    }else if (!req.query.limit) {
+      response = {
+        "error": false,
+        "message": data[0].logdetails
+      };
+    }else {
       var totalPages = Math.ceil((data[0].__v)/size);
       var start=(data[0].__v)-((pageNo-1)*size);
       let senddata=[];

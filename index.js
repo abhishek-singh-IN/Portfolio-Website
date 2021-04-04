@@ -119,6 +119,7 @@ app.get('/test', function(req, res) {
 app.use(require("./routes" + "/user"));
 app.use("/account",require("./routes" + "/accounts"));
 app.use("/application",require("./routes" + "/application"));
+app.use("/api",require("./routes/api" + "/api-controller"));
 app.use(require("./routes" + "/error"));
 
 app.listen(config.port, function() {
