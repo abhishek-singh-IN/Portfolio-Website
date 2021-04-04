@@ -57,7 +57,7 @@ let mailOptions = {
 Router.get("/", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
-    res.render('admin/mail')
+    res.render('admin/Mail_Compose')
   } catch (err) {
     req.session.redirectTo = "/application/mail";
     res.redirect("/account/login");
@@ -129,11 +129,53 @@ Router.post("/", async (req, res) => {
 Router.get("/inbox", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
-    res.render('admin/inbox')
+    res.render('admin/Mail_Inbox')
   } catch (err) {
     req.session.redirectTo = "/application/inbox";
     res.redirect("/account/login");
   }
 });
+let foundSentMailRecord = [],
+  foundMailtoView = [];
+Router.get("/sentMail", async (req, res) => {
+  try {
+    if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
+    let foundMailRecord = await Mailrecord.find({});
+    res.render('admin/Mail_Sent', {
+      foundMailRecord: foundMailRecord,
+      foundSentMailRecord: foundSentMailRecord,
+      foundMailtoView: foundMailtoView
+    })
+  } catch (err) {
+    req.session.redirectTo = "/application/sentMail";
+    res.redirect("/account/login");
+  }
+});
 
+Router.post("/sentMail/IdSelection", async (req, res) => {
+  try {
+    if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
+    let foundRecord = await Mailrecord.findOne({
+      _id: req.body.userid
+    });
+    foundSentMailRecord = foundRecord.sentMail;
+    res.redirect("/application/mail/sentMail")
+  } catch (err) {
+    req.session.redirectTo = "/application/sentMail";
+    res.redirect("/account/login");
+  }
+});
+
+Router.post("/sentMail/mailSelection", async (req, res) => {
+  try {
+    if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
+    foundSentMailRecord.filter(obj => {
+      if (obj._id == req.body.mailid) foundMailtoView = obj;
+    })
+    res.redirect("/application/mail/sentMail")
+  } catch (err) {
+    req.session.redirectTo = "/application/sentMail";
+    res.redirect("/account/login");
+  }
+});
 module.exports = Router;
