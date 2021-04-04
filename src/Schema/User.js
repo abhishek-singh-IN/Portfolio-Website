@@ -77,6 +77,40 @@ const microsoftdataSchema = {
   preferredLanguage: String
 }
 
+const twitterdataSchema = {
+  timestamp: String,
+  id: String,
+  displayName: String,
+  email: String,
+  emails: Array,
+  photos: Array,
+  screen_name: String,
+  location: String,
+  followers_count: Number,
+  friends_count: Number,
+  created_at: String,
+  favourites_count: Number,
+  verified: Boolean,
+  statuses_count: Number,
+  profile_background_color: String,
+  profile_background_image_url: String,
+  profile_background_image_url_https: String,
+  profile_background_tile: Boolean,
+  profile_image_url: String,
+  profile_image_url_https: String,
+  profile_link_color: String,
+  profile_sidebar_border_color: String,
+  profile_sidebar_fill_color: String,
+  profile_text_color: String,
+  profile_use_background_image: Boolean,
+  has_extended_profile: Boolean,
+  default_profile: Boolean,
+  default_profile_image: Boolean,
+  following: Boolean,
+  follow_request_sent: Boolean,
+  notifications: Boolean
+}
+
 const userSchema = new mongoose.Schema({
 
   //account type
@@ -107,9 +141,7 @@ const userSchema = new mongoose.Schema({
   google: [googledataSchema],
   facebook: [facebookdataSchema],
   microsoft: [microsoftdataSchema],
-  instagramId: String,
-  twitterId: String,
-  telegramId: String,
+  twitter: [twitterdataSchema],
 
   secret: String
 });
@@ -121,5 +153,6 @@ module.exports = {
   Google: mongoose.model("Google", googledataSchema),
   Facebook: mongoose.model("Facebook", facebookdataSchema),
   Microsoft: mongoose.model("Microsoft", microsoftdataSchema),
+  Twitter: mongoose.model("Twitter", twitterdataSchema),
   User: mongoose.model("User", userSchema)
 }

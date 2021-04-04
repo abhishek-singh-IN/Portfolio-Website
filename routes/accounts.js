@@ -13,6 +13,7 @@ Router.use("/auth/google", require("./authentication" + "/google"));
 Router.use("/auth/facebook", require("./authentication" + "/facebook"));
 Router.use("/auth/microsoft", require("./authentication" + "/microsoft"));
 Router.use("/auth/github", require("./authentication" + "/github"));
+Router.use("/auth/twitter", require("./authentication" + "/twitter"));
 // Router.use("/auth/local", require("./authentication" + "/local"));
 
 Router.use("/admin", require("./account" + "/admin"));
