@@ -23,7 +23,13 @@
         <form action="/account/admin/user" method="post">
           <div class="row">
             <div class="item col-md-3">
+              <% if(user.displayName) { %>
+              <p class="px-5"> <%= user.displayName %></p>
+              <% } else if(user.firstName && user.lastName){ %>
               <p class="px-5"> <%= user.firstName %> <%= user.lastName %></p>
+              <% } else if(user.firstName){ %>
+              <p class="px-5"> <%= user.firstName %></p>
+              <% }  %>
             </div>
             <div class="item col-md-3">
               <p> <%= user.username %> </p>

@@ -2,11 +2,16 @@ var mongoose = require('mongoose');
 const passportLocalMongoose = require("passport-local-mongoose");
 const findOrCreate = require('mongoose-findorcreate');
 
-const githubdataSchema = {
+const githubdataSchema = new mongoose.Schema({
   timestamp: String,
   login: String,
   id: String,
   node_id: String,
+  displayName: String,
+  username: String,
+  profileUrl: String,
+  emails: Array,
+  photos: Array,
   avatar_url: String,
   gravatar_id: String,
   url: String,
@@ -36,21 +41,21 @@ const githubdataSchema = {
   following: Number,
   created_at: String,
   updated_at: String,
-  photos: String
-}
+})
 
-const googledataSchema = {
+const googledataSchema = new mongoose.Schema({
   timestamp: String,
   id: String,
+  email:String,
   displayName: String,
   familyName: String,
   givenName: String,
-  email: String,
-  photos: String,
+  emails: Array,
+  photos: Array,
   locale: String,
-}
+})
 
-const facebookdataSchema = {
+const facebookdataSchema = new mongoose.Schema({
   timestamp: String,
   id: String,
   displayName: String,
@@ -58,26 +63,27 @@ const facebookdataSchema = {
   givenName: String,
   middleName: String,
   gender: String,
-  emails: String,
-  photos: String
-}
+  emails: Array,
+  photos: Array
+})
 
-const microsoftdataSchema = {
+const microsoftdataSchema = new mongoose.Schema({
   timestamp: String,
   id: String,
   displayName: String,
+  userPrincipalName:String,
   familyName: String,
   givenName: String,
-  emails: String,
+  emails: Array,
   photos: String,
-  businessPhones: String,
+  businessPhones: Array,
   jobTitle: String,
   mobilePhone: String,
   officeLocation: String,
   preferredLanguage: String
-}
+})
 
-const twitterdataSchema = {
+const twitterdataSchema = new mongoose.Schema({
   timestamp: String,
   id: String,
   displayName: String,
@@ -109,7 +115,7 @@ const twitterdataSchema = {
   following: Boolean,
   follow_request_sent: Boolean,
   notifications: Boolean
-}
+})
 
 const userSchema = new mongoose.Schema({
 
@@ -117,6 +123,7 @@ const userSchema = new mongoose.Schema({
   type: String,
 
   //account basic details
+  displayName:String,
   firstName: String,
   lastName: String,
   birthday: String,

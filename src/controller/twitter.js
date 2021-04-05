@@ -74,6 +74,7 @@ fs.readFile(path.resolve("secrets/twitter.json"), function(err, data) {
         if (founduser == null) {
 
           const record = new User({
+            displayName:profile.displayName,
             username: profile.emails[0].value,
             twitter: tempProfile,
             icon: profile.photos[0].value

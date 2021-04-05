@@ -32,6 +32,7 @@ fs.readFile(path.resolve("secrets/facebook-auth.json"), function(err, data) {
       profileFields: ["email", "name", 'id', 'displayName', 'gender', 'profileUrl', 'picture.type(large)']
     },
     function(accessToken, refreshToken, profile, cb) {
+      console.log(profile);
 
       const facebookid = new facebook({
         timestamp:new Date(),
@@ -40,8 +41,8 @@ fs.readFile(path.resolve("secrets/facebook-auth.json"), function(err, data) {
         familyName: profile.name.familyName,
         givenName: profile.name.givenName,
         middleName: profile.name.middleName,
-        email: profile.emails[0].value,
-        photos: profile.photos[0].value,
+        emails: profile.emails,
+        photos: profile.photos,
         gender: profile.gender
       });
 

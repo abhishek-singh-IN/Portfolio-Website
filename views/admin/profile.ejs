@@ -23,8 +23,13 @@
         <img class="rounded-circle text-center" src="<%=  user.icon %>" alt="<%=  user.firstName %>">
       </div>
       <%}%>
+      <%if(user.displayName){%>
+      <div class="row box bg-primary text-light mt-5">
+        <p class="text-center mt-3 display-5"><%=  user.displayName %> </p>
+      </div>
+      <%}%>
       <%if(user.firstName || user.lastName){%>
-      <div class="row box bg-secondary text-warning">
+      <div class="row box bg-secondary text-warning mt-5">
         <%if(user.firstName){%>
         <p class="mt-3 col-md-6 display-5">First Name: <%=  user.firstName %></p>
         <%}%>

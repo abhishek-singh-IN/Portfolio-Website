@@ -6,7 +6,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 var path = require('path');
 
 const userdetailschema = require(path.resolve("src/Schema") + "/User.js");
-const google = userdetailschema.Google;
+const Google = userdetailschema.Google;
 const User = userdetailschema.User;
 
 passport.serializeUser(function(user, done) {
@@ -33,42 +33,51 @@ fs.readFile(path.resolve("secrets/google-auth.json"), function(err, data) {
     },
     function(accessToken, refreshToken, profile, cb) {
 
-      const googleid = new google({
-        timestamp:new Date(),
+      const tempProfile = new Google({
+        timestamp: new Date(),
         id: profile.id,
+        email: profile._json.email,
         displayName: profile.displayName,
         familyName: profile.name.familyName,
         givenName: profile.name.givenName,
-        email: profile.emails[0].value,
-        photos: profile.photos[0].value,
+        emails: profile.emails,
+        photos: profile.photos,
         locale: profile._json.locale,
       });
 
       User.findOne({
-        username: profile.emails[0].value
+        username: tempProfile.email
       }, function(err, founduser) {
 
         if (founduser == null) {
 
           const record = new User({
-            username: profile.emails[0].value,
-            google: googleid,
-            icon: profile.photos[0].value
+            displayName: tempProfile.displayName,
+            firstName: tempProfile.givenName,
+            lastName: tempProfile.familyName,
+            username: tempProfile.email,
+            google: tempProfile,
+            icon: tempProfile.photos[0].value
           })
           User.insertMany(record, function(err, founduser) {
             return cb(err, founduser)
           });
 
+        } else if (!founduser.google) {
+          founduser.google.push(tempProfile);
         } else {
           const checkuser = founduser.google.slice().reverse();
-          try{
-            if (checkuser[0].id != profile.id || checkuser[0].displayName != profile.displayName ||
-              checkuser[0].familyName != profile.name.familyName || checkuser[0].givenName != profile.name.givenName ||
-              checkuser[0].photos != profile.photos[0].value || checkuser[0].locale != profile._json.locale) {
-              founduser.google.push(googleid);
+          try {
+            if (checkuser[0].id != profile.id ||
+              checkuser[0].email != profile._json.email ||
+              checkuser[0].displayName != profile.displayName ||
+              checkuser[0].familyName != profile.name.familyName ||
+              checkuser[0].givenName != profile.name.givenName ||
+              checkuser[0].locale != profile._json.locale) {
+              founduser.google.push(tempProfile);
             }
-          }catch(err){
-            founduser.google.push(googleid);
+          } catch (err) {
+            founduser.google.push(tempProfile);
           }
 
           if (founduser.firstName == null && profile.name.givenName) {
@@ -77,16 +86,6 @@ fs.readFile(path.resolve("secrets/google-auth.json"), function(err, data) {
           if (founduser.lastName == null && profile.name.familyName) {
             founduser.lastName = profile.name.familyName;
           }
-          try{
-            if ((checkuser[0].photos != profile.photos) || (founduser.icon == null && profile.photos[0].value)) {
-              founduser.icon = profile.photos[0].value;
-            }
-          }catch(err){
-            if (founduser.icon == null && profile.photos[0].value) {
-              founduser.icon = profile.photos[0].value;
-            }
-          }
-
           founduser.save();
           return cb(err, founduser);
         }

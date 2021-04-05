@@ -33,13 +33,14 @@ fs.readFile(path.resolve("secrets/microsoft-auth.json"), function(err, data) {
     },
     function(accessToken, refreshToken, profile, cb) {
 
-      const tempProfileData = new microsoft({
+      const tempProfile = new microsoft({
         timestamp: new Date(),
         id: profile.id,
         displayName: profile.displayName,
+        userPrincipalName: profile._json.userPrincipalName,
         familyName: profile.name.familyName,
         givenName: profile.name.givenName,
-        emails: profile.emails[0].value,
+        emails: profile.emails,
         businessPhones: profile._json.businessPhones,
         jobTitle: profile._json.jobTitle,
         mobilePhone: profile._json.mobilePhone,
@@ -47,30 +48,42 @@ fs.readFile(path.resolve("secrets/microsoft-auth.json"), function(err, data) {
         preferredLanguage: profile._json.preferredLanguage
       });
       User.findOne({
-        username: profile.emails[0].value
+        username: tempProfile.emails[0].value
       }, function(err, founduser) {
-        if (founduser == null) {
-          const record = new User({
-            username: profile.emails[0].value,
-            microsoft: tempProfileData,
-          })
 
+        if (founduser == null) {
+
+          const record = new User({
+            username: tempProfile.emails[0].value,
+            displayName: tempProfile.displayName,
+            firstName: tempProfile.firstName,
+            lastName: tempProfile.lastName,
+            microsoft: tempProfile,
+            occupation: tempProfile.jobTitle,
+            mobile: tempProfile.mobilePhone
+          })
           User.insertMany(record, function(err, founduser) {
             return cb(err, founduser)
           });
 
+        } else if (!founduser.microsoft) {
+          founduser.microsoft.push(tempProfile);
         } else {
           const checkuser = founduser.microsoft.slice().reverse();
           try {
-            if (checkuser[0].id != profile.id || checkuser[0].displayName != profile.displayName ||
-              checkuser[0].familyName != profile.name.familyName || checkuser[0].givenName != profile.name.givenName ||
-              checkuser[0].photos != profile.photos[0].value || checkuser[0].businessPhones != profile._json.businessPhones ||
-              checkuser[0].jobTitle != profile._json.jobTitle || checkuser[0].officeLocation != profile._json.officeLocation ||
+            if (checkuser[0].id != profile.id ||
+              checkuser[0].displayName != profile.displayName ||
+              checkuser[0].userPrincipalName != profile._json.userPrincipalName ||
+              checkuser[0].familyName != profile.name.familyName ||
+              checkuser[0].givenName != profile.name.givenName ||
+              checkuser[0].jobTitle != profile._json.jobTitle ||
+              checkuser[0].mobilePhone != profile._json.mobilePhone ||
+              checkuser[0].officeLocation != profile._json.officeLocation ||
               checkuser[0].preferredLanguage != profile._json.preferredLanguage) {
-              founduser.microsoft.push(tempProfileData);
+              founduser.microsoft.push(tempProfile);
             }
           } catch (err) {
-            founduser.microsoft.push(tempProfileData);
+            founduser.microsoft.push(tempProfile);
           }
           try {
             if (founduser.firstName == null && profile.name.givenName) {
@@ -86,16 +99,9 @@ fs.readFile(path.resolve("secrets/microsoft-auth.json"), function(err, data) {
           } catch (err) {
             console.log(err);
           }
-          try {
-            if (founduser.icon == null && profile.photos[0].value) {
-              founduser.icon = profile.photos[0].value;
-            }
-          } catch (err) {
-            founduser.icon = profile.photos[0].value;
-          }
 
           user.save();
-          return cb(err, user);
+          return cb(err, founduser);
         }
 
       });
