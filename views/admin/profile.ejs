@@ -98,52 +98,666 @@
           <p class="col-md-6 mt-3 display-5"><%=  user.secret %> </p>
         </div>
         <%}%>
-    <%if(user.google){%>
+
+        <%if(user.google){%>
         <%if(user.google.length){%>
         <%if(user.google[user.google.length - 1]){%>
-        <div class="row box px-5 mt-5">
-          <h1 class="px-5 py-5 text-center text-decoration-underline">Google Profile</h1>
-          <p class="mb-5"><%=   Object.values(user.google[user.google.length - 1])[0] %> </p>
+        <div class="row box px-5 mt-5" style="text-align: justify;word-break:break-all;">
+
+          <h1 class="px-md-5 py-5 text-center text-decoration-underline">Google Profile</h1>
+
+          <%if(user.google[user.google.length - 1].timestamp){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold"> Timestamp </p>
+            <p class="col-md-6"><%=  user.google[user.google.length - 1].timestamp %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].id){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">Id </p>
+            <p class="col-md-6"><%=  user.google[user.google.length - 1].id %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].email){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">Email </p>
+            <p class="col-md-6"><%=  user.google[user.google.length - 1].email %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].displayName){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">DisplayName </p>
+            <p class="col-md-6"><%=  user.google[user.google.length - 1].displayName %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].familyName){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">FamilyName </p>
+            <p class="col-md-6"><%=  user.google[user.google.length - 1].familyName %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].givenName){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">GivenName </p>
+            <p class="col-md-6"><%=  user.google[user.google.length - 1].givenName %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].emails[0]){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">Emails </p>
+            <%  user.google[user.google.length - 1].emails.forEach(function(email){ %>
+            <p class="col-md-6"><%=  email.value %><br>( verified : <%=  email.verified %> )</p>
+            <%});%>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].locale){%>
+          <div class="px-md-5 col-md-6 row">
+            <p class="col-md-6 fw-bold">locale </p>
+            <p class="col-md-6"> <%= user.google[user.google.length - 1].locale %></p>
+          </div>
+          <%}%>
+          <%if(user.google[user.google.length - 1].photos){%>
+          <div class="row">
+            <p class="px-md-5 col-md-3 fw-bold">Photos </p>
+            <%  user.google[user.google.length - 1].photos.forEach(function(photo){ %>
+            <a href="<%=  photo.value %>" class="col-md-9 mb-5"><%=  photo.value %></a>
+            <%});%>
+          </div>
+          <%}%>
+
         </div>
+
         <%}}}%>
-        <%if(user.microsoft){%>
-        <%if(user.microsoft.length){%>
-        <%if(user.microsoft[user.microsoft.length - 1]){%>
-        <div class="row box px-5 mt-5">
-          <h1 class="px-5 py-5 text-center text-decoration-underline">Microsoft Profile</h1>
-          <p class="mb-5"><%=   Object.values(user.microsoft[user.microsoft.length - 1])[0] %> </p>
-        </div>
-        <%}}}%>
-        <%if(user.facebook){%>
-        <%if(user.facebook.length){%>
-        <%if(user.facebook[user.facebook.length - 1]){%>
-        <div class="row box px-5 mt-5">
-          <h1 class="px-5 py-5 text-center text-decoration-underline">Facebook Profile</h1>
-          <p class="mb-5"><%=   Object.values(user.facebook[user.facebook.length - 1])[0] %> </p>
-        </div>
-        <%}}}%>
-        <%if(user.twitter){%>
-        <%if(user.twitter.length){%>
-        <%if(user.twitter[user.twitter.length - 1]){%>
-        <div class="row box px-5 mt-5">
-          <h1 class="px-5 py-5 text-center text-decoration-underline">Twitter Profile</h1>
-          <p class="mb-5"><%=   Object.values(user.twitter[user.twitter.length - 1])[0] %> </p>
-        </div>
-        <%}}}%>
-        <%if(user.github){%>
-        <%if(user.github.length){%>
-        <%if(user.github[user.github.length - 1]){%>
-        <div class="row box px-5 mt-5">
-          <h1 class="px-5 py-5 text-center text-decoration-underline">Github Profile</h1>
-          <p class="mb-5"><%=   Object.values(user.github[user.github.length - 1])[0] %> </p>
-        </div>
-        <%}}}%>
-      </div>
-      <br>
-    </div>
-    <div class="bg-dark">
-      <%- include('../templates/footer'); -%>
-    </div>
+
+          <%if(user.microsoft){%>
+          <%if(user.microsoft.length){%>
+          <%if(user.microsoft[user.microsoft.length - 1]){%>
+          <div class="row box px-5 mt-5" style="text-align: justify;word-break:break-all;">
+
+            <h1 class="px-md-5 py-5 text-center text-decoration-underline">Microsoft Profile</h1>
+
+            <%if(user.microsoft[user.microsoft.length - 1].timestamp){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Timestamp</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].timestamp %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].id){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Id</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].id %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].displayName){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">DisplayName</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].displayName %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].userPrincipalName){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">User Principal Name</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].userPrincipalName %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].familyName){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Family Name</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].familyName %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].givenName){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Given Name</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].givenName %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].emails){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Emails</p>
+              <%  user.microsoft[user.microsoft.length - 1].emails.forEach(function(email){ %>
+              <p class="col-md-6"><%=  email.value %> (<%=  email.type %> )</p>
+              <%});%>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].businessPhones[0]){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Business Phones</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].businessPhones %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].jobTitle){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Job Title</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].jobTitle %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].mobilePhone){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Mobile Phone</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].mobilePhone %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].officeLocation){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Office Location</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].officeLocation %></p>
+            </div>
+            <%}%>
+            <%if(user.microsoft[user.microsoft.length - 1].preferredLanguage){%>
+            <div class="px-md-5 col-md-6 row">
+              <p class="col-md-6 fw-bold">Preferred Language</p>
+              <p class="col-md-6"><%=  user.microsoft[user.microsoft.length - 1].preferredLanguage %></p>
+            </div>
+            <%}%>
+
+          </div>
+
+          <%}}}%>
+
+            <%if(user.facebook!=null){%>
+            <%if(user.facebook.length){%>
+            <%if(user.facebook[user.facebook.length - 1]){%>
+            <div class="row box px-5 mt-5" style="text-align: justify;word-break:break-all;">
+
+              <h1 class="px-md-5 py-5 text-center text-decoration-underline">Facebook Profile</h1>
+
+              <%if(user.facebook[user.facebook.length - 1].timestamp){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> Timestamp</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].timestamp %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].id){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> Id</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].id %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].displayName){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> DisplayName</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].displayName %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].gende){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> Gender</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].gender %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].familyName){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> FamilyName</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].familyName %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].givenName){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> GivenName</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].givenName %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].middleName){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> MiddleName</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].middleName %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].emails){%>
+              <div class="px-md-5 col-md-6 row">
+                <p class="col-md-6 fw-bold"> Emails</p>
+                <p class="col-md-6"><%=  user.facebook[user.facebook.length - 1].emails %></p>
+              </div>
+              <%}%>
+            <%if(user.facebook[user.facebook.length - 1].photos){%>
+              <div class="row">
+                <p class="px-md-5 col-md-3 fw-bold"> Photos</p>
+                <a href="<%=  user.facebook[user.facebook.length - 1].photos %>" class="col-md-9 mb-5"><%=  user.facebook[user.facebook.length - 1].photos %></a>
+              </div>
+              <%}%>
+
+          </div>
+
+          <%}}}%>
+
+              <%if(user.twitter){%>
+              <%if(user.twitter.length){%>
+              <%if(user.twitter[user.twitter.length - 1]){%>
+              <div class="row box px-5 mt-5" style="text-align: justify;word-break:break-all;">
+                <h1 class="px-md-5 py-5 text-center text-decoration-underline">Twitter Profile</h1>
+
+                <%if(user.twitter[user.twitter.length - 1].timestamp){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">timestamp</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].timestamp %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].id){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">id</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].id %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].displayName){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">displayName</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].displayName %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].email){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">email</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].email %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].emails){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">emails</p>
+                  <%  user.twitter[user.twitter.length - 1].emails.forEach(function(email){ %>
+                  <p class="col-md-6"><%=  email.value %></p>
+                  <%});%>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].photos){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">photos</p>
+                  <%  user.twitter[user.twitter.length - 1].photos.forEach(function(photo){ %>
+                  <a href="<%=  photo.value %>" class="col-md-6 mb-2"><%=  photo.value %></a>
+                  <%});%>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].screen_name){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">screen_name</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].screen_name %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].location){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">location</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].location %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].followers_count){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">followers_count</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].followers_count %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].friends_count){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">friends_count</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].friends_count %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].favourites_count){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">favourites_count</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].favourites_count %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].verified){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">verified</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].verified %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].statuses_count){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">statuses_count</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].statuses_count %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_background_color){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_background_color</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_background_color %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_background_image_url){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_background_image_url</p>
+                  <a href="<%=user.twitter[user.twitter.length - 1].profile_background_image_url%>" class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_background_image_url %></a>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_background_image_url_https){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_background_image_url_https</p>
+                  <a href="<%=user.twitter[user.twitter.length - 1].profile_background_image_url_https%>" class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_background_image_url_https %></a>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_background_tile){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_background_tile</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_background_tile %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_image_url){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_image_url</p>
+                  <a href="<%=user.twitter[user.twitter.length - 1].profile_image_url%>" class="col-md-6 mb-2"><%=user.twitter[user.twitter.length - 1].profile_image_url%></a>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_image_url_https){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_image_url_https</p>
+                  <a href="<%=user.twitter[user.twitter.length - 1].profile_image_url_https%>" class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_image_url_https %></a>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_link_color){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_link_color</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_link_color %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_sidebar_border_color){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_sidebar_border_color</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_sidebar_border_color %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_sidebar_fill_color){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_sidebar_fill_color</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_sidebar_fill_color %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_text_color){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_text_color</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_text_color %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].profile_use_background_image){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">profile_use_background_image</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].profile_use_background_image %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].has_extended_profile){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">has_extended_profile</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].has_extended_profile %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].id){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">default_profile</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].default_profile %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].default_profile_image){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">default_profile_image</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].default_profile_image %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].following){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">following</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].following %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].follow_request_sent){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">follow_request_sent</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].follow_request_sent %></p>
+                </div>
+                <%}%>
+              <%if(user.twitter[user.twitter.length - 1].notifications){%>
+                <div class="px-md-5 col-md-6 row">
+                  <p class="col-md-6 fw-bold">notifications</p>
+                  <p class="col-md-6"><%=  user.twitter[user.twitter.length - 1].notifications %></p>
+                </div>
+                <%}%>
+              </div>
+              <%}}}%>
+                <%if(user.github){%>
+                <%if(user.github.length){%>
+                <%if(user.github[user.github.length - 1]){%>
+                <div class="row box px-5 mt-5" style="text-align: justify;word-break:break-all;">
+                  <h1 class="px--5 py-5 text-center text-decoration-underline">Github Profile</h1>
+                  <%if(user.github[user.github.length - 1].timestamp){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Timestamp</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].timestamp%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].login){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Login</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].login%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].id){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Id</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].id%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].node_id){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Node_id</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].node_id%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].displayName){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Display Name</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].displayName%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].username){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Username</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].username%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].profileUrl){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Profile Url</p>
+                    <a href="<%=user.github[user.github.length - 1].profileUrl%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].profileUrl%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].emails){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">emails</p>
+                    <%  user.github[user.github.length - 1].emails.forEach(function(email){ %>
+                    <p class="col-md-6"><%=  email.value %></p>
+                    <%});%>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].photos){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">photos</p>
+                    <%  user.github[user.github.length - 1].photos.forEach(function(photo){ %>
+                    <a href="<%=  photo.value %>" class="col-md-6 mb-3"><%=  photo.value %></a>
+                    <%});%>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].avatar_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Avatar Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].avatar_url%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].avatar_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].gravatar_id){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Gravatar Id</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].gravatar_id%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].url%>" class="col-md-6"><%=  user.github[user.github.length - 1].url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].html_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Html Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].html_url%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].html_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].followers_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Followers Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].followers_url%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].followers_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].following_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Following Url</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].following_url%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].gists_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Gists Url</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].gists_url%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].starred_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Starred Url</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].starred_url%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].subscriptions_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Subscriptions Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].subscriptions_url%>" class="col-md-6"><%=  user.github[user.github.length - 1].subscriptions_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].organizations_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Organizations Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].organizations_url%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].organizations_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].repos_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Repos Url</p>
+                    <a href="<%=  user.github[user.github.length - 1].repos_url%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].repos_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].events_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Events Url</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].events_url%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].received_events_url){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Received Events_url</p>
+                    <a href="<%=  user.github[user.github.length - 1].received_events_url%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].received_events_url%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].type){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Type</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].type%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].site_admin){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Site Admin</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].site_admin%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].name){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Name</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].name%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].company){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Company</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].company%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].blog){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Blog</p>
+                    <a href="<%=  user.github[user.github.length - 1].blog%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].blog%></a>
+                  </div>
+                  <%}%>
+                <%if(user.github[user.github.length - 1].location){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Location</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].location%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].email){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Email</p>
+                    <a href="mailto:<%=  user.github[user.github.length - 1].email%>" class="col-md-6 mb-3"><%=  user.github[user.github.length - 1].email%></a>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].hireable){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Hireable</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].hireable%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].bio){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Bio</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].bio%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].twitter_username){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Twitter Username</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].twitter_username%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].public_repos){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Public Repos</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].public_repos%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].public_gists){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Public Gists</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].public_gists%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].followers){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Followers</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].followers%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].following){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Following</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].following%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].created_at){%>
+                  <div class="px-md-5 col-md-6 row">
+                    <p class="col-md-6 fw-bold">Created at</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].created_at%></p>
+                  </div>
+                  <%}%>
+                  <%if(user.github[user.github.length - 1].updated_at){%>
+                  <div class="px-md-5 col-md-6 row mb-5">
+                    <p class="col-md-6 fw-bold">Updated at</p>
+                    <p class="col-md-6"><%=  user.github[user.github.length - 1].updated_at%></p>
+                  </div>
+                  <%}%>
+                </div>
+                <%}}}%>
+                </div>
+                <br>
+              </div>
+              <div class="bg-dark">
+                <%- include('../templates/footer'); -%>
+              </div>
 </body>
 
 </html>
