@@ -10,67 +10,135 @@
   <div class="bg-dark">
     <%- include('../templates/header'); -%>
   </div>
-<div class="designer-main-content">
-  <br>
-  <div class="container-lg mt-5 mb-5">
-    <div class="row px-5">
-      <div class="col-12 text-center">
-        <div class="display-1 fw-bold text-decoration-underline">User Profiles</div>
+  <div class="designer-main-content">
+    <br>
+    <div class="container-lg mt-5 mb-5">
+      <div class="row px-5">
+        <div class="col-12 text-center">
+          <div class="display-1 fw-bold text-decoration-underline">User Profiles</div>
+        </div>
       </div>
+      <%if(user.icon){%>
+      <div class="text-center mt-5 mb-5">
+        <img class="rounded-circle text-center" src="<%=  user.icon %>" alt="<%=  user.firstName %>">
+      </div>
+      <%}%>
+      <%if(user.firstName || user.lastName){%>
+      <div class="row box bg-secondary text-warning">
+        <%if(user.firstName){%>
+        <p class="mt-3 col-md-6 display-5">First Name: <%=  user.firstName %></p>
+        <%}%>
+        <%if(user.lastName){%>
+        <p class="mt-3 col-md-6 display-5">Last Name: <%=  user.lastName %> </p>
+        <%}%>
+      </div>
+      <%}%>
+        <%if(user.username){%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Username</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.username %> </p>
+        </div>
+        <%}%>
+      <%if(user.type){%>
+        <div class="row">
+          <p class="mt-3 display-5 col-md-6">Account Type </p>
+          <p class="mt-3 display-5 col-md-6"><%=  user.type %> </p>
+        </div>
+        <%}%>
+      <% if(user.birthday) {%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Birthday</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.birthday %> </p>
+        </div>
+        <%}%>
+      <%if(user.mobile){%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Mobile No</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.mobile %> </p>
+        </div>
+        <%}%>
+    <%if(user.gender){%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Gender</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.gender %> </p>
+        </div>
+        <%}%>
+    <%if(user.emailId){%>
+        <div class="row">
+          <p class="col-md-6 mt-3 display-5">Email</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.emailId %> </p>
+        </div>
+        <%}%>
+    <%if(user.emailIdAlternate){%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Alternate Email ID</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.emailIdAlternate %> </p>
+        </div>
+        <%}%>
+    <%if(user.mobileNoAlternateNumber){%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Alternate Mobile Number</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.mobileNoAlternateNumber %> </p>
+        </div>
+        <%}%>
+    <%if(user.occupation){%>
+        <div class="row">
+          <p class="col-md-6  mt-3 display-5">Occupation</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.occupation %> </p>
+        </div>
+        <%}%>
+        <%if(user.secret){%>
+        <div class="row box bg-info">
+          <p class="col-md-6  mt-3 display-5">Secret</p>
+          <p class="col-md-6 mt-3 display-5"><%=  user.secret %> </p>
+        </div>
+        <%}%>
+    <%if(user.google){%>
+        <%if(user.google.length){%>
+        <%if(user.google[user.google.length - 1]){%>
+        <div class="row box px-5 mt-5">
+          <h1 class="px-5 py-5 text-center text-decoration-underline">Google Profile</h1>
+          <p class="mb-5"><%=   Object.values(user.google[user.google.length - 1])[0] %> </p>
+        </div>
+        <%}}}%>
+        <%if(user.microsoft){%>
+        <%if(user.microsoft.length){%>
+        <%if(user.microsoft[user.microsoft.length - 1]){%>
+        <div class="row box px-5 mt-5">
+          <h1 class="px-5 py-5 text-center text-decoration-underline">Microsoft Profile</h1>
+          <p class="mb-5"><%=   Object.values(user.microsoft[user.microsoft.length - 1])[0] %> </p>
+        </div>
+        <%}}}%>
+        <%if(user.facebook){%>
+        <%if(user.facebook.length){%>
+        <%if(user.facebook[user.facebook.length - 1]){%>
+        <div class="row box px-5 mt-5">
+          <h1 class="px-5 py-5 text-center text-decoration-underline">Facebook Profile</h1>
+          <p class="mb-5"><%=   Object.values(user.facebook[user.facebook.length - 1])[0] %> </p>
+        </div>
+        <%}}}%>
+        <%if(user.twitter){%>
+        <%if(user.twitter.length){%>
+        <%if(user.twitter[user.twitter.length - 1]){%>
+        <div class="row box px-5 mt-5">
+          <h1 class="px-5 py-5 text-center text-decoration-underline">Twitter Profile</h1>
+          <p class="mb-5"><%=   Object.values(user.twitter[user.twitter.length - 1])[0] %> </p>
+        </div>
+        <%}}}%>
+        <%if(user.github){%>
+        <%if(user.github.length){%>
+        <%if(user.github[user.github.length - 1]){%>
+        <div class="row box px-5 mt-5">
+          <h1 class="px-5 py-5 text-center text-decoration-underline">Github Profile</h1>
+          <p class="mb-5"><%=   Object.values(user.github[user.github.length - 1])[0] %> </p>
+        </div>
+        <%}}}%>
+      </div>
+      <br>
     </div>
-    <div class="text-center mt-5 mb-5">
-      <img class="rounded-circle text-center" src="<%=  user.icon %>" alt="<%=  user.firstName %>">
+    <div class="bg-dark">
+      <%- include('../templates/footer'); -%>
     </div>
-    <div class="row box">
-      <p class="mt-3 col-md-6 display-5">First Name: <%=  user.firstName %></p>
-      <p class="mt-3 col-md-6 display-5">Last Name: <%=  user.lastName %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Username</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.username %> </p>
-    </div>
-    <div class="row">
-      <p class="mt-3 display-5 col-md-6">Account Type </p>
-      <p class="mt-3 display-5 col-md-6"><%=  user.type %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Birthday</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.birthday %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Mobile No</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.mobile %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Gender</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.gender %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6 mt-3 display-5">Email</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.emailId %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Alternate Email ID</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.emailIdAlternate %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Alternate Mobile Number</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.mobileNoAlternateNumber %> </p>
-    </div>
-    <div class="row">
-      <p class="col-md-6  mt-3 display-5">Occupation</p>
-      <p class="col-md-6 mt-3 display-5"><%=  user.occupation %> </p>
-    </div>
-  </div>
-  <br>
-</div>
-
-
-  <div class="bg-dark">
-    <%- include('../templates/footer'); -%>
-  </div>
-
-
 </body>
 
 </html>
