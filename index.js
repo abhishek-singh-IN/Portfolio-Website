@@ -116,6 +116,9 @@ app.get('/Privacy-policy', function(req, res) {
 app.get('/Terms-of-Service', function(req, res) {
   res.render("templates/terms-of-service")
 });
+app.get('/Disclaimer', function(req, res) {
+  res.render("templates/disclaimer")
+});
 app.get('/test', function(req, res) {
   res.render("test");
 });
