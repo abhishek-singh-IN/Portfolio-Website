@@ -113,6 +113,9 @@ app.get('/Resume', function(req, res) {
 app.get('/Privacy-policy', function(req, res) {
   res.render("templates/privacy-policy")
 });
+app.get('/Terms-of-Service', function(req, res) {
+  res.render("templates/terms-of-service")
+});
 app.get('/test', function(req, res) {
   res.render("test");
 });
