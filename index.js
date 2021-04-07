@@ -15,6 +15,8 @@ const Tool = require(path.resolve("src/Schema/") + "/Tool.js");
 const Testimonal = require(path.resolve("src/Schema/") + "/Testimonal.js");
 const Project = require(path.resolve("src/Schema/") + "/Project.js");
 
+require('dotenv').config()
+
 INPUT_path_to_your_images = "public/img/**/*.{jpg,JPG,jpeg,JPEG,png,svg,gif}";
 OUTPUT_path = "build/img/";
 
