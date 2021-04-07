@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 const passport = require("passport");
-const config = require('./config/config.js');
 const compress_images = require("compress-images");
 const path = require('path');
 const mongoose = require("mongoose");
@@ -125,11 +124,12 @@ app.get('/test', function(req, res) {
   res.render("test");
 });
 app.use(require("./routes" + "/user"));
-app.use("/account",require("./routes" + "/accounts"));
-app.use("/application",require("./routes" + "/application"));
-app.use("/api",require("./routes/api" + "/api-controller"));
+app.use("/account", require("./routes" + "/accounts"));
+app.use("/application", require("./routes" + "/application"));
+app.use("/api", require("./routes/api" + "/api-controller"));
 app.use(require("./routes" + "/error"));
 
-app.listen(config.port, function() {
-  console.log('Server Listening on ' + "http://127.0.0.1:" + config.port)
+app.listen(process.env.PORT, function() {
+  console.log('Server Listening on ' + process.env.DOMAIN);
+  console.log("PORT Alloted : " + process.env.PORT);
 });
