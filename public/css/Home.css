@@ -1,0 +1,7 @@
+.Welcome{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/IMG_8881.jpg");
+    background-size: 100% 100%;
+}
+.details-title{
+    font-family: 'Sansita Swashed', cursive;
+}

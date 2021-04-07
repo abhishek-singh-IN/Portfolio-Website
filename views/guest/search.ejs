@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Search | Abhishek Singh</title>
+  <link rel="stylesheet" href="/public/css/search.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <%- include('../templates/header'); -%>
+  <div class="container mt-5 main-content">
+    <h1 class="display-4 fw-bold fst-italic text-decoration-underline text-center">Search</h1>
+    <div id="content" class="text-decoration-none searchresult"></div>
+
+    <script>
+      function hndlr(response) {
+        for (var i = 0; i < response.items.length; i++) {
+          var item = response.items[i];
+          var element =document.getElementById("content");
+          element.innerHTML += "<br>" +"<a href='"+item.link+"'>" + item.title+ "<br>" + item.snippet + "<br>" + item.link + "</a>" + "<br><br />";
+          element.classList.add("text-decoration-none");
+        }
+      }
+    </script>
+    <script src="<%= url %>">
+    </script>
+  </div>
+  <%- include('../templates/footer'); -%>
+
+</body>
+
+</html>

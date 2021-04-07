@@ -1,36 +1,18 @@
   version: '3.2'
   services:
-    db:
-      image: mysql
-      restart: always
-      networks:
-        - docker_101
-      environment:
-        - MYSQL_ROOT_PASSWORD=my-secret-pw
-        - MYSQL_DATABASE=singhabhishek
-        - MYSQL_USER=singhabhishek
-        - MYSQL_PASSWORD=singh@abhishek#123
-      volumes:
-      - /home/abhishek/Data/MySQL-Portfolio/datadir:/var/lib/mysql
-
     node:
       build: ./
-      restart: always
       ports:
-        - "50000:80"
+        - "3000:3000"
       depends_on:
-        - db
-      links:
-        - db
-      networks:
-        - docker_101
+        - mongodb_container
+        - redis_container
       environment:
-        - PORT=3306
-        - DATABASE_HOST=db
-        - DATABASE_PASSWORD=my-secret-pw
-        - EGG_SERVER_ENV=local
-        - NODE_ENV=development
+        MONGODB_HOST: mongodb://mongodb_container:27017
+        REDIS_HOST: redis_container
 
-  networks:
-    docker_101:
-      driver: bridge
+    redis_container:
+      image: "redis"
+
+    mongodb_container:
+      image: mongo:latest

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Projects | Abhishek Singh</title>
+  <link rel="stylesheet" href="/public/css/project.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid Project-Page-Background">
+    <br>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <div class="display-1 fw-bold text-decoration-underline">
+            Projects
+          </div>
+        </div>
+
+        <div class="col-12 mt-5 px-5 project-box border border-5 border-success">
+          <h1 class="mt-3 display-4 fw-bold fst-italic text-decoration-underline">Add New Project</h1>
+          <form class="text-white" action="/account/admin/project" method="post">
+            <div class="form-group">
+              <label for="contactName" class="mt-3">Project Name</label>
+              <input class="form-control" type="text" style="background:#f2a5f1" id="projectName" name="projectName" placeholder="Enter Project Name" required>
+
+              <label for="projectTimeline" class="mt-3">Project Timeline</label>
+              <input class="form-control" type="text" style="background:#58edc3" id="projectTimeline" name="projectTimeline" placeholder="Enter Project Timeline" required>
+
+              <label for="technologyStack" class="mt-3">Technology Stack</label>
+              <input class="form-control" style="background:#f7f065" type="text" id="technologyStack" name="technologyStack" placeholder="Enter Technology Stack" required>
+
+              <label for="description1" class="mt-3">Description 1</label>
+              <textarea class="form-control" style="background:#58edc3" id="description1" name="description1" rows="3" cols="10" placeholder="Enter Description 1"></textarea>
+
+              <label for="description2" class="mt-3">Description 2</label>
+              <textarea class="form-control" style="background:#eb264a" id="description2" name="description2" rows="3" cols="10" placeholder="Enter Description 2"></textarea>
+            </div>
+            <button class="btn btn-primary mt-2 mb-3 text-center" type="submit" name="button">Submit</button>
+          </form>
+        </div>
+
+        <% listofprojects.forEach(function(project){ %>
+        <div class="col-lg-5 mt-5 mx-lg-5 project-box border border-5 border-success">
+          <a href="/Project/<%=project.link%>">
+            <h2><%=project.year%></h2>
+            <h3><%=project.title%></h3>
+            <h4>Technology Used - <%=project.technology%></h4>
+            <p><%=project.projectDiscription1%></p>
+            <p><%=project.projectDiscription2%></p>
+            <br />
+          </a>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do list</title>
+  <link rel="stylesheet" href="/public/css/todolist.css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="todolist ">
+    <br>
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+      <div class="row">
+        <div class="box" id="heading">
+          <h1><%= ListTitle%></h1>
+        </div>
+        <div class="box mt-5 mb-5">
+          <% newListItems.forEach(function(item){ %>
+          <form action="/application/todolist/delete" method="post">
+            <div class="item">
+              <input type="checkbox" name="checkbox" value="<%=item._id %>" onchange="this.form.submit()">
+              <p> <%= item.name %> </p>
+            </div>
+            <input type="hidden" name="listName" value="<%= ListTitle %>"></input>
+          </form>
+          <% }) %>
+        </div>
+        <div class="box mb-5">
+          <form class="item" action="/application/todolist/" method="post">
+            <textarea class="form-control" id="contactMessage" name="newItem" rows="1" placeholder="New Item" autocomplete="off"></textarea>
+            <button type="submit" name="list" value=<%= ListTitle %>>+</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

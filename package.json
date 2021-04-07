@@ -1,33 +1,65 @@
 {
   "name": "singhabhishek",
   "version": "1.0.0",
-  "description": "www.singhabhishek.co.in",
-  "main": "server.js",
+  "description": "www.singhabhishek.tech",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Abhishek Singh",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhishek99singh/Portfolio-Website.git"
+    "url": "git+https://github.com/abhishek-singh-IN/Portfolio-Website.git"
   },
   "bugs": {
-    "url": "https://github.com/abhishek99singh/Portfolio-Website/issues"
+    "url": "https://github.com/abhishek-singh-IN/Portfolio-Website/issues"
   },
-  "homepage": "https://github.com/abhishek99singh/Portfolio-Website#readme",
+  "homepage": "https://github.com/abhishek-singh-IN/Portfolio-Website#readme",
   "dependencies": {
     "@angular/core": "^10.1.6",
+    "add": "^2.0.6",
+    "alert": "^5.0.10",
+    "aws-sdk": "^2.866.0",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
+    "compress-images": "^1.9.8",
     "custom-env": "^2.0.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "gifsicle": "^5.2.0",
+    "http-error-pages": "^3.1.0",
+    "md5": "^2.3.0",
     "mongoose": "^5.11.14",
-    "mysql": "^2.18.1"
+    "mongoose-aggregate-paginate-v2": "^1.0.42",
+    "mongoose-encryption": "^2.0.3",
+    "mongoose-findorcreate": "^3.0.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.5.0",
+    "passport": "^0.4.1",
+    "passport-adobe-oauth2": "^1.0.1",
+    "passport-amazon": "^1.0.0",
+    "passport-facebook": "^3.0.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-instagram": "^1.0.0",
+    "passport-linkedin-oauth2": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "passport-microsoft": "^0.1.0",
+    "passport-twitter": "^1.0.4",
+    "pngquant-bin": "^6.0.0",
+    "popups": "^1.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "redis": "^3.0.2",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",

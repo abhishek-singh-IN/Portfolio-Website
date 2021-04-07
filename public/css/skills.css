@@ -1,0 +1,21 @@
+body {
+  background-color: #eb596e;
+  background-image: -webkit-linear-gradient(35deg, #eb596e 25%, #4d375d 75%);
+}
+.skill-box{
+  background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url("/build/img/skill-bg.jpeg");
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-size: 100% 100%;
+  box-shadow: 10px 10px 5px grey;
+}
+.skill-box:hover{
+    transform: translate(-10px,-10px);
+    transition: 0.8s;
+    box-shadow: 20px 20px 15px grey;
+}
+.skill-box:active{
+    transform: translate(5px,5px);
+    transition: 0.2s;
+    box-shadow: 10px 10px 5px grey;
+}

@@ -1,0 +1,20 @@
+.about-page-background{
+    background-color: #2c061f;
+    background-image: -webkit-linear-gradient(45deg, #2c061f 25%, #374045 75%);
+}
+.formal-pic{
+    width:400px;
+    height:400px;
+    object-fit: scale-down;
+    border-radius:50%;
+    background-color: white;
+}
+.Name{
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.Headline{
+    color: white;
+    font-size: 20px;
+}

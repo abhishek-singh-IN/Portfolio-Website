@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Experience | Abhishek Singh</title>
+  <link rel="stylesheet" href="/public/css/experience.css" type="text/css">
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid experience-page-background">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <div class="Heading text-center display-1 text-decoration-underline fw-bold fst-italic">Add New Experience</div>
+        </div>
+
+        <div class="col-12 text-left">
+          <div class="experience-box Experience1 text-center mt-5 border border-5 border-info px-5">
+            <h1 class="mt-3 display-4 fw-bold fst-italic text-decoration-underline">New Experience</h1>
+            <form class="text-white" action="/account/admin/experience" method="post">
+              <div class="form-group">
+                <label for="contactName" class="mt-3">Company name</label>
+                <input class="form-control" type="text" style="background:#f2a5f1" id="CompanyName" name="CompanyName" placeholder="Enter Company Name" required>
+
+                <label for="projectTimeline" class="mt-3">Experience Profile</label>
+                <input class="form-control" type="text" style="background:#58edc3" id="experienceProfile" name="experienceProfile" placeholder="Enter Experience Profile" required>
+
+                <label for="technologyStack" class="mt-3">Duration</label>
+                <input class="form-control" style="background:#f7f065" type="text" id="experienceDuration" name="experienceDuration" placeholder="Enter Experience Duration" required>
+
+                <label for="description" class="mt-3">Description</label>
+                <textarea class="form-control" style="background:#58edc3" id="description" name="description" rows="3" cols="10" placeholder="Enter Description"></textarea>
+
+              </div>
+              <button class="btn btn-primary mt-2 mb-3 text-center" type="submit" name="button">Submit</button>
+            </form>
+          </div>
+        </div>
+
+
+        <% listofexperiences.forEach(function(experience){ %>
+        <div class="col-md-6 mt-5 mb-5 px-lg-5">
+          <div class="experience-box Experience1 text-center mt-5 border border-5 border-info">
+            <a class="text-decoration-none" href="<%=experience.link%>">
+              <div class=""><br></div>
+              <div class="fs-2 mt-5 text-white"><%=experience.duration%></div>
+              <div class="display-4 mt-2" style="color: #FF6161;"><%=experience.profile%></div>
+              <div class="fs-3 mt-3 text-white"><%=experience.company_name%></div>
+              <div class="fs-5 mt-5 mb-5 mx-lg-5 text-white"><%=experience.description%></div>
+              <div class=""> <br></div>
+            </a>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

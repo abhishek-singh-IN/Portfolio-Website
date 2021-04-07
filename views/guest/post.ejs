@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title><%=title%> | Daily Journal</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid color-combo-8">
+    <br>
+    <div class="container">
+      <div class="row">
+        <h1 class="mt-5 px-5 display-2 fw-bold fst-italic text-decoration-underline text-center text-capitalize mb-5"><%=title%></h1>
+        <p style="white-space: pre-line"><%=content%></p>
+      </div>
+      <div class="mb-5">
+        <% paragraph.forEach(function(para){ %>
+        <div class="row mb-2">
+          <h3 class="fw-bold fst-italic text-capitalize mb-2"><%=para.title%></h3>
+          <p style="white-space: pre-line"><%=para.content%></p>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.experience-page-background{
+    background-color: #30475e;
+    background-image: -webkit-linear-gradient(45deg, #30475e 25%, #f05454 75%);
+}
+.experience-box{
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 5px;
+  object-fit: scale-down;
+  text-align: center;
+  color: white;
+}
+.experience a{
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  border: 10px solid #FF6161;
+  background-color: #FF6161;
+}
+.Experience1{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/office.jpg");
+}
+.Experience2{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/build/img/office.jpg");
+}

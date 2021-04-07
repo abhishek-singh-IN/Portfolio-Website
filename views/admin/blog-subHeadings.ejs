@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title><%=title%> | Daily Journal</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid color-combo-8">
+    <br>
+    <div class="container">
+      <div class="row mb-5">
+        <h1 class="mt-5 px-5 display-2 fw-bold fst-italic text-decoration-underline text-center text-capitalize mb-5"><%=title%></h1>
+        <p style="white-space: pre-line"><%=content%></p>
+      </div>
+      <div class="mb-5">
+        <% paragraph.forEach(function(para){ %>
+        <div class="row mb-2">
+          <h3 class="fw-bold fst-italic text-capitalize mb-2"><%=para.title%></h3>
+          <p style="white-space: pre-line"><%=para.content%></p>
+        </div>
+        <% }); %>
+      </div>
+      <form action="/blog/posts/<%=title%>/compose" method="post" class="box px-5 py-5">
+        <div class="form-group">
+          <label>Title</label>
+          <input class="form-control bg-dark text-white" type="text" name="postTitle" placeholder="Sub Heading">
+        </div>
+        <div class="form-group mt-3">
+          <label>Content</label>
+          <textarea class="form-control bg-dark text-white" name="postBody" rows="5" cols="5" placeholder="Content"></textarea>
+        </div>
+        <div class="text-center mt-5">
+          <button class="btn btn-primary text-center" type="submit" name="button">Add</button>
+        </div>
+      </form>
+    </div>
+    <br>
+  </div>
+  <div class="bg-dark">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>

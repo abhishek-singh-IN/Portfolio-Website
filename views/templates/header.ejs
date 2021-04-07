@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="/">
+      <img src="/logo" alt="" width="85" height="85" class="d-inline-block align-center">
+    </a>
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ml-auto text-center" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-home"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Skill">Skills</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active" href="Project" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu bg-dark text-center" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item bg-dark fs-3 text-white text-center text-decoration-underline fw-bold" href="/Project">
+                All Projects
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item bg-light" href="/Project/AI-Voice-Assistant"> Voice Assistant</a></li>
+            <li><a class="dropdown-item bg-light" href="/Project/Image-Captioning-bot">Image Recognition</a></li>
+            <li><a class="dropdown-item bg-light" href="/Project/Football-Management-System">Football Management System</a></li>
+            <li><a class="dropdown-item bg-light" href="/Project/Shopping-Mall-Management-System">Shopping Mall Management System</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Contact">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <div class="nav-link active" id="ApplicationDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Application
+          </div>
+          <ul class="dropdown-menu text-center bg-light" aria-labelledby="ApplicationDropDown">
+            <li><a class="dropdown-item bg-light" href="/application/secrets"><i class="fas fa-user-secret"></i> Secrets</a></li>
+            <li><a class="dropdown-item bg-light" href="/application/todolist"><i class="fas fa-list-alt"></i> To Do List</a></li>
+            <li><a class="dropdown-item bg-light" href="/blog/compose"><i class="fab fa-blogger"></i> Compose Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form action="\search" method="post" class="d-flex">
+        <input id="search" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <a href="/account" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user-circle px-2 fa-2x"></i></a>
+        <ul class="dropdown-menu dropdown-menu-end text-center bg-light">
+          <li><a class="dropdown-item bg-light" href="/account"><i class="fas fa-user"></i> Account</a></li>
+          <li><a class="dropdown-item bg-light" href="/account/logout"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Mail by Abhishek Singh</title>
+  <%- include('../templates/head'); -%>
+</head>
+
+<body onload="startTime()">
+  <div class="bg-dark border-bottom border-secondary">
+    <%- include('../templates/header'); -%>
+  </div>
+  <div class="container-fluid">
+    <div class="row color-combo-4">
+      <br>
+      <div class="col-md-2 bg-dark text-center d-none d-md-block">
+        <br>
+        <div class="mt-5">
+          <%- include('../templates/mail-navbar'); -%>
+        </div>
+      </div>
+
+
+      <div class="col-md-7">
+        <br>
+        <div class=" d-flex justify-content-center" id="sent-mail-view">
+          <div class="text-center text-decoration-underline fw-bold fst-italic mb-5">
+            <h1 class="display-1 fw-bold">Sent Mails</h1>
+          </div>
+        </div>
+        <div class="box mb-5 px-5 py-2">
+          <p class="fw-bold text-decoration-underline fs-1">Subject: </p>
+          <p><%= foundMailtoView.subject%></p>
+        </div>
+        <div class="box mb-5 px-5 py-5">
+          <p class="fw-bold text-decoration-underline fs-1">Message: </p>
+          <p style="white-space: pre-line"><%= foundMailtoView.message%></p>
+        </div>
+        <% if(foundMailtoView.to){ %>
+        <div class="box mb-5 px-5 py-2">
+          <p class="fw-bold text-decoration-underline fs-1">To: </p>
+          <% foundMailtoView.to.forEach(function(to){ %>
+            <p><%= to.email%></p>
+          <% }) %>
+        </div>
+        <% } %>
+        <div class="box mt-5 px-5 py-2">
+          <p class="fw-bold text-decoration-underline fs-3">Time Stamp: </p>
+          <p><%= foundMailtoView.timestamp%></p>
+          <p class="fw-bold text-decoration-underline fs-3">LOG: </p>
+          <p><%= foundMailtoView.log%></p>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-3 bg-primary">
+        <div class="text-center text-white mt-5" id="test">
+          <ul class="navbar-nav me-auto mb-lg-0 text-white">
+            <% foundSentMailRecord.forEach(function(mail){ %>
+            <form action="/application/mail/sentMail/mailSelection" method="post">
+              <button type="submit" class="box nav-item my-2 py-3 btn btn-warning">
+                <p class="text-dark fw-bold text-wraps"> <%= mail.to[0].email%> </p>
+                <p class="text-dark"> <%= mail.subject%> </p>
+                <input type="hidden" name="mailid" value="<%=mail._id%>"></input>
+              </button>
+            </form>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-success">
+          <ul class="d-flex justify-content-center mt-3">
+            <% foundMailRecord.forEach(function(mail){ %>
+            <form action="/application/mail/sentMail/IdSelection" method="post">
+              <div class="px-2">
+                <button type="submit" class="box nav-item my-2 py-3 btn btn-warning ">
+                  <h4 class="text-dark"> <%= mail.email%> </h4>
+                  <p class="text-dark"> <%= mail.domain%> </p>
+                  <input type="hidden" name="userid" value="<%=mail._id%>"></input>
+                </button>
+              </div>
+            </form>
+            <% }) %>
+          </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="bg-dark border-top border-secondary">
+    <%- include('../templates/footer'); -%>
+  </div>
+</body>
+
+</html>
