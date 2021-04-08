@@ -1,58 +1,28 @@
-const aws = require('../../secrets/aws_smtp.js');
-const nodemailer = require("nodemailer");
-const express = require("express");
-const Router = express.Router();
-const path = require('path');
-const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer"),
+  express = require("express"),
+  Router = express.Router(),
+  path = require('path'),
+  bodyParser = require("body-parser");
 
-const Mail = require(path.resolve("src/Schema") + "/Mail.js");
-const MailId = Mail.MailId;
-const Mailrecord = Mail.Mailrecord;
-const MailSent = Mail.MailSent;
-const MailReceived = Mail.MailReceived;
+const Mail = require(path.resolve("src/Schema") + "/Mail.js"),
+  MailId = Mail.MailId,
+  Mailrecord = Mail.Mailrecord,
+  MailSent = Mail.MailSent,
+  MailReceived = Mail.MailReceived;
 
 Router.use(bodyParser.urlencoded({
   extended: true
 }));
 
 let transporter = nodemailer.createTransport({
-  host: aws.smtpEndpoint,
-  port: aws.port,
-  secure: false, // true for 465, false for other ports
+  host: process.env.AWS_SMTP_ENDPOINT,
+  port: process.env.AWS_SMTP_PORT,
+  secure: false,
   auth: {
-    user: aws.username,
-    pass: aws.password
+    user: process.env.AWS_SMTP_USERNAME,
+    pass: process.env.AWS_SMTP_PASSWORD
   }
 });
-
-var senderAddress = "Abhishek Singh <noreply@singhabhishek.tech>";
-var toAddresses = "abhisheksingh.nsut@gmail.com";
-var ccAddresses = "";
-var bccAddresses = "";
-
-var subject = "Amazon SES test (Nodemailer)";
-var body_text = `Amazon SES Test (Nodemailer)
----------------------------------
-This email was sent through the Amazon SES SMTP interface using Nodemailer.
-`;
-var body_html = `<html>
-<head></head>
-<body>
-  <h1>Amazon SES Test (Nodemailer)</h1>
-  <p>This email was sent with <a href='https://aws.amazon.com/ses/'>Amazon SES</a>
-        using <a href='https://nodemailer.com'>Nodemailer</a> for Node.js.</p>
-</body>
-</html>`;
-
-let mailOptions = {
-  from: senderAddress,
-  to: toAddresses,
-  subject: subject,
-  cc: ccAddresses,
-  bcc: bccAddresses,
-  text: body_text,
-  html: body_html,
-};
 
 Router.get("/", async (req, res) => {
   try {
@@ -67,17 +37,8 @@ Router.post("/", async (req, res) => {
   try {
     if (!req.isAuthenticated() || req.user.type != 'admin') throw new Error("User not Authorised");
 
-    var senderAddressInitial, senderAddressName;
-    if (!req.body.senderMailId) {
-      senderAddressInitial = "noreply"
-    } else {
-      senderAddressInitial = req.body.senderMailId;
-    }
-    if (!req.body.senderName) {
-      senderAddressName = "Abhishek Singh"
-    } else {
-      senderAddressName = req.body.senderName;
-    }
+    const senderAddressInitial = req.body.senderMailId || "noreply"
+    const senderAddressName = req.body.senderName || "Abhishek Singh"
 
     const tempSentRecord = new MailSent({
       name: senderAddressName,

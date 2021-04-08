@@ -19,74 +19,66 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-var fs = require("fs");
+passport.use(new FacebookStrategy({
+    clientID: process.env.FACEBOOK_OAUTH_APP_ID,
+    clientSecret: process.env.FACEBOOK_OAUTH_APP_SECRET,
+    callbackURL: process.env.OAUTH_SUB_DOMAIN + process.env.FACEBOOK_OAUTH_APP_CALLBACK,
+    profileFields: ["email", "name", 'id', 'displayName', 'gender', 'profileUrl', 'picture.type(large)']
+  },
+  function(accessToken, refreshToken, profile, cb) {
 
-fs.readFile(path.resolve("secrets/facebook-auth.json"), function(err, data) {
-  if (err) throw err;
-  var details = JSON.parse(data);
+    const facebookid = new facebook({
+      timestamp: new Date(),
+      id: profile.id,
+      displayName: profile.displayName,
+      familyName: profile.name.familyName,
+      givenName: profile.name.givenName,
+      middleName: profile.name.middleName,
+      emails: profile.emails,
+      photos: profile.photos,
+      gender: profile.gender
+    });
 
-  passport.use(new FacebookStrategy({
-      clientID: details.app_id,
-      clientSecret: details.app_secret,
-      callbackURL: details.call_back,
-      profileFields: ["email", "name", 'id', 'displayName', 'gender', 'profileUrl', 'picture.type(large)']
-    },
-    function(accessToken, refreshToken, profile, cb) {
-      console.log(profile);
+    User.findOne({
+      username: profile.emails[0].value
+    }, function(err, founduser) {
 
-      const facebookid = new facebook({
-        timestamp:new Date(),
-        id: profile.id,
-        displayName: profile.displayName,
-        familyName: profile.name.familyName,
-        givenName: profile.name.givenName,
-        middleName: profile.name.middleName,
-        emails: profile.emails,
-        photos: profile.photos,
-        gender: profile.gender
-      });
+      if (founduser == null) {
 
-      User.findOne({
-        username: profile.emails[0].value
-      }, function(err, founduser) {
+        const record = new User({
+          username: profile.emails[0].value,
+          facebook: facebookid,
+          icon: profile.photos[0].value
+        });
 
-        if (founduser == null) {
+        User.insertMany(record, function(err, founduser) {
+          return cb(err, founduser)
+        });
 
-          const record = new User({
-            username: profile.emails[0].value,
-            facebook: facebookid,
-            icon: profile.photos[0].value
-          });
-
-          User.insertMany(record, function(err, founduser) {
-            return cb(err, founduser)
-          });
-
-        } else {
-          const checkuser = founduser.facebook.slice().reverse();
-          try{
-            if (checkuser[0].id != profile.id || checkuser[0].displayName != profile.displayName ||
-              checkuser[0].familyName != profile.name.familyName || checkuser[0].givenName != profile.name.givenName) {
-              founduser.facebook.push(facebookid);
-            }
-          }catch(err){
+      } else {
+        const checkuser = founduser.facebook.slice().reverse();
+        try {
+          if (checkuser[0].id != profile.id || checkuser[0].displayName != profile.displayName ||
+            checkuser[0].familyName != profile.name.familyName || checkuser[0].givenName != profile.name.givenName) {
             founduser.facebook.push(facebookid);
           }
-          if (founduser.icon == null && profile.photos[0].value) {
-            founduser.icon = profile.photos[0].value;
-          }
-          if (founduser.firstName == null && profile.name.givenName) {
-            founduser.firstName = profile.name.givenName;
-          }
-          if (founduser.lastName == null && profile.name.familyName) {
-            founduser.lastName = profile.name.familyName;
-          }
-          founduser.save();
-          return cb(err, founduser);
+        } catch (err) {
+          founduser.facebook.push(facebookid);
         }
-      });
+        if (founduser.icon == null && profile.photos[0].value) {
+          founduser.icon = profile.photos[0].value;
+        }
+        if (founduser.firstName == null && profile.name.givenName) {
+          founduser.firstName = profile.name.givenName;
+        }
+        if (founduser.lastName == null && profile.name.familyName) {
+          founduser.lastName = profile.name.familyName;
+        }
+        founduser.save();
+        return cb(err, founduser);
+      }
+    });
 
-    }
+  }
 
-  ));
-});
+));
