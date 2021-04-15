@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+const findOrCreate = require('mongoose-findorcreate');
 
 var emailIdSchema = {
   email: String
@@ -26,12 +27,13 @@ var MailReceiveSchema = {
   log: String
 }
 
-var MailSchema = {
+var MailSchema = new mongoose.Schema({
   email: String,
   domain: String,
   sentMail: [MailSentSchema],
   receivedMail: [MailReceiveSchema]
-}
+})
+MailSchema.plugin(findOrCreate);
 
 module.exports = {
   MailId: mongoose.model("MailId", emailIdSchema),

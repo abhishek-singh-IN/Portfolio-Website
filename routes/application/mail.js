@@ -1,5 +1,4 @@
-const nodemailer = require("nodemailer"),
-  express = require("express"),
+const express = require("express"),
   Router = express.Router(),
   path = require('path'),
   bodyParser = require("body-parser");
@@ -10,19 +9,13 @@ const Mail = require(path.resolve("src/Schema") + "/Mail.js"),
   MailSent = Mail.MailSent,
   MailReceived = Mail.MailReceived;
 
+const aws_smtp_connection = require(path.resolve("src/") + "/aws_smtp_connection.js"),
+  mail_send = require(path.resolve("src/") + "/mail_send.js"),
+  mailing = require(path.resolve("src/") + "/mail.js");
+
 Router.use(bodyParser.urlencoded({
   extended: true
 }));
-
-let transporter = nodemailer.createTransport({
-  host: process.env.AWS_SMTP_ENDPOINT,
-  port: process.env.AWS_SMTP_PORT,
-  secure: false,
-  auth: {
-    user: process.env.AWS_SMTP_USERNAME,
-    pass: process.env.AWS_SMTP_PASSWORD
-  }
-});
 
 Router.get("/", async (req, res) => {
   try {
@@ -39,49 +32,20 @@ Router.post("/", async (req, res) => {
 
     const senderAddressInitial = req.body.senderMailId || "noreply"
     const senderAddressName = req.body.senderName || "Abhishek Singh"
-
-    const tempSentRecord = new MailSent({
-      name: senderAddressName,
-      subject: req.body.subject,
-      message: req.body.mailBody,
-    });
-
-    const tempEmailId = new MailId({
-      email: req.body.receiverMailId
-    })
-    tempSentRecord.to.push(tempEmailId);
-
-    transporter.sendMail({
+    const mail_details = {
       from: senderAddressName + "<" + senderAddressInitial + "@" + req.body.domain + ">",
       to: req.body.receiverMailId,
       subject: req.body.subject,
       text: req.body.mailBody,
-    }, function(error, info) {
-      tempSentRecord.timestamp = new Date();
-      if (error) {
-        tempSentRecord.log = error;
-      } else {
-        tempSentRecord.log = 'Email sent: ' + info.response;
-      }
+    }
 
-      Mailrecord.findOne({
-        email: senderAddressInitial,
-        domain: req.body.domain
-      }, function(err, foundmails) {
-        if (foundmails == null) {
-          const tempMail = new Mailrecord({
-            email: senderAddressInitial,
-            domain: req.body.domain,
-          })
-          tempMail.sentMail.push(tempSentRecord);
-          Mailrecord.create(tempMail);
-        } else {
-          foundmails.sentMail.push(tempSentRecord);
-          foundmails.save();
-        }
-      });
-      res.redirect("/application/mail");
-    });
+    mail_send(mail_details, aws_smtp_connection, function(result) {
+      mailing.insert(senderAddressName, req.body.subject, req.body.mailBody,
+        req.body.receiverMailId, result[0], result[1], senderAddressInitial, req.body.domain)
+    })
+
+    res.redirect("/application/mail");
+
   } catch (err) {
     res.redirect("/account/login");
   }
@@ -108,7 +72,7 @@ Router.get("/sentMail", async (req, res) => {
       foundMailtoView: foundMailtoView
     })
   } catch (err) {
-    req.session.redirectTo = "/application/sentMail";
+    req.session.redirectTo = "/application/mail/sentMail";
     res.redirect("/account/login");
   }
 });
