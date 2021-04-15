@@ -1,11 +1,47 @@
-const express = require("express");
-var Router = express.Router();
-var path = require('path');
-const passport = require("passport");
-const bodyParser = require("body-parser");
-const logs = require(path.resolve("src/") + "/logs.js");
+const express = require("express"),
+  Router = express.Router(),
+  path = require('path'),
+  passport = require("passport"),
+  bodyParser = require("body-parser"),
+  mongoose = require("mongoose"),
+  findOrCreate = require('mongoose-findorcreate');
+
 const User = require(path.resolve("src/Schema/") + "/User.js");
 passport.use(User.createStrategy());
+
+const log_update = require(path.resolve("src/") + "/log_update.js"),
+  profile_update = require(path.resolve("src/") + "/profile_update.js");
+
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({
+      username: username
+    }, function(err, user) {
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false);
+      }
+      if (!user.verifyPassword(password)) {
+        return done(null, false);
+      }
+      return done(null, user);
+    });
+  }
+));
+
 
 Router.post("/login", function(req, res) {
 

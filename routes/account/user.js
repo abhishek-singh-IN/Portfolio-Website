@@ -25,7 +25,7 @@ Router.get("/:customListName" + "/log", async (req, res) => {
       _id: req.params.customListName
     }, function(err, foundList) {
       if (foundList.__v < size) {
-        size = foundList.__v;
+        size = (foundList.__v) + 1;
       }
       if (pageNo > Math.ceil((foundList.__v) / size)) {
         pageNo = 1;
@@ -40,7 +40,7 @@ Router.get("/:customListName" + "/log", async (req, res) => {
         }
       }
       res.render("user/logdetails", {
-        ListTitle: foundList.name,
+        ListTitle: foundList._id,
         newListItems: senddata,
         maxlist: totalPages,
         pageNo: pageNo,

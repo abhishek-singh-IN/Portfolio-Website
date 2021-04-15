@@ -20,13 +20,13 @@ Router.get("/", async (req, res) => {
       pageNo = 1;
     };
     Logs.findOne({
-      name: req.user.username
+      _id: req.user._id
     }, function(err, foundList) {
       if (foundList == null) {
         res.redirect("/account");
       } else {
         if (foundList.__v < size) {
-          size = foundList.__v;
+          size = (foundList.__v) + 1;
         }
         if (pageNo > Math.ceil((foundList.__v) / size)) {
           pageNo = 1;
@@ -41,7 +41,7 @@ Router.get("/", async (req, res) => {
           }
         }
         res.render("user/logdetails", {
-          ListTitle: foundList.name,
+          ListTitle: foundList._id,
           newListItems: senddata,
           maxlist: totalPages,
           pageNo: pageNo,

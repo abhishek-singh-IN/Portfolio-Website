@@ -36,7 +36,7 @@ Router.post("/user", async (req, res) => {
 
       if (req.body.Button == "profile") {
         User.findOne({
-          username: req.body.username
+          _id: req.body.username
         }, function(err, foundList) {
           if (foundList == null) res.redirect("/account/admin/user");
           else res.redirect("/account/admin/user-details/" + foundList._id + "/profile");
@@ -44,7 +44,7 @@ Router.post("/user", async (req, res) => {
       }
       if (req.body.Button == "delete") {
         User.deleteOne({
-          username: req.body.username
+          _id: req.body.username
         }, function(err) {
           if (err) return handleError(err);
           res.redirect("/account/admin/user");
@@ -52,7 +52,7 @@ Router.post("/user", async (req, res) => {
       }
       if (req.body.Button == "admin") {
         User.findOne({
-          username: req.body.username
+          _id: req.body.username
         }, function(err, foundList) {
           foundList.type = "admin";
           foundList.save();
@@ -61,7 +61,7 @@ Router.post("/user", async (req, res) => {
       }
       if (req.body.Button == "standard") {
         User.findOne({
-          username: req.body.username
+          _id: req.body.username
         }, function(err, foundList) {
           foundList.type = "Standard";
           foundList.save();
@@ -70,7 +70,7 @@ Router.post("/user", async (req, res) => {
       }
       if (req.body.Button == "log") {
         Logs.findOne({
-          name: req.body.username
+          _id: req.body.username
         }, function(err, foundList) {
           if (foundList == null) res.redirect("/account/admin/user");
           else res.redirect("/account/admin/user-details/" + foundList._id + "/log?page=1&limit=15");

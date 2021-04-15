@@ -37,7 +37,7 @@
             <div class="item col-md-1">
               <p> <%= user.type %> </p>
             </div>
-            <input type="hidden" name="username" value="<%=user.username %>"></input>
+            <input type="hidden" name="username" value="<%=user._id %>"></input>
             <div class="item col-md-5">
               <button class="mx-2 btn btn-warning" type="submit" name="Button" id="Button" value="profile">Profile</button>
               <% if(user.type!="admin"){ %>

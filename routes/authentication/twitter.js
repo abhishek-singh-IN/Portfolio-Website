@@ -1,14 +1,120 @@
-const express = require("express");
-var Router = express.Router();
-var path = require('path');
-const passport = require("passport");
-const logs = require(path.resolve("src/") + "/logs.js");
-const twitter =require(path.resolve("src/controller/twitter.js"));
+const express = require("express"),
+  Router = express.Router(),
+  mongoose = require("mongoose"),
+  findOrCreate = require('mongoose-findorcreate'),
+  passport = require("passport"),
+  TwitterStrategy = require('passport-twitter').Strategy,
+  path = require('path');
+
+const userdetailschema = require(path.resolve("src/Schema") + "/User.js"),
+  twitter = userdetailschema.Twitter,
+  User = userdetailschema.User;
+
+const log_update = require(path.resolve("src/") + "/log_update.js"),
+  profile_update = require(path.resolve("src/") + "/profile_update.js");
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+passport.use(new TwitterStrategy({
+    consumerKey: process.env.TWITTER_OAUTH_API_KEY,
+    consumerSecret: process.env.TWITTER_OAUTH_APP_SECRET,
+    callbackURL: process.env.OAUTH_SUB_DOMAIN + process.env.TWITTER_OAUTH_CALLBACK,
+    userProfileURL: 'https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true'
+  },
+  async (accessToken, refreshToken, profile, cb) => {
+
+    const tempProfile = new twitter({
+      timestamp: new Date(),
+      id: profile.id,
+      displayName: profile.displayName,
+      email: profile._json.email,
+      emails: profile.emails,
+      photos: profile.photos,
+      screen_name: profile._json.screen_name,
+      location: profile._json.location,
+      followers_count: profile._json.followers_count,
+      friends_count: profile._json.friends_count,
+      created_at: profile._json.created_at,
+      favourites_count: profile._json.favourites_count,
+      verified: profile._json.verified,
+      statuses_count: profile._json.statuses_count,
+      profile_background_color: profile._json.profile_background_color,
+      profile_background_image_url: profile._json.profile_background_image_url,
+      profile_background_image_url_https: profile._json.profile_background_image_url_https,
+      profile_background_tile: profile._json.profile_background_tile,
+      profile_image_url: profile._json.profile_image_url,
+      profile_image_url_https: profile._json.profile_image_url_https,
+      profile_link_color: profile._json.profile_link_color,
+      profile_sidebar_border_color: profile._json.profile_sidebar_border_color,
+      profile_sidebar_fill_color: profile._json.profile_sidebar_fill_color,
+      profile_text_color: profile._json.profile_text_color,
+      profile_use_background_image: profile._json.profile_use_background_image,
+      has_extended_profile: profile._json.has_extended_profile,
+      default_profile: profile._json.default_profile,
+      default_profile_image: profile._json.default_profile_image,
+      following: profile._json.following,
+      follow_request_sent: profile._json.follow_request_sent,
+      notifications: profile._json.notifications
+    });
+
+    await User.findOrCreate({
+      username: profile.emails[0].value
+    }, async (err, founduser) => {
+      log_update(founduser._id, "twitter");
+      try {
+        const checkuser = founduser.twitter.slice().reverse();
+        if (checkuser[0].id != profile.id ||
+          checkuser[0].displayName != profile.displayName ||
+          checkuser[0].email != profile._json.email ||
+          checkuser[0].screen_name != profile._json.screen_name ||
+          checkuser[0].location != profile._json.location ||
+          checkuser[0].followers_count != profile._json.followers_count ||
+          checkuser[0].friends_count != profile._json.friends_count ||
+          checkuser[0].created_at != profile._json.created_at ||
+          checkuser[0].favourites_count != profile._json.favourites_count ||
+          checkuser[0].verified != profile._json.verified ||
+          checkuser[0].statuses_count != profile._json.statuses_count ||
+          checkuser[0].profile_background_color != profile._json.profile_background_color ||
+          checkuser[0].profile_background_image_url != profile._json.profile_background_image_url ||
+          checkuser[0].profile_background_image_url_https != profile._json.profile_background_image_url_https ||
+          checkuser[0].profile_background_tile != profile._json.profile_background_tile ||
+          checkuser[0].profile_image_url != profile._json.profile_image_url ||
+          checkuser[0].profile_image_url_https != profile._json.profile_image_url_https ||
+          checkuser[0].profile_link_color != profile._json.profile_link_color ||
+          checkuser[0].profile_sidebar_border_color != profile._json.profile_sidebar_border_color ||
+          checkuser[0].profile_sidebar_fill_color != profile._json.profile_sidebar_fill_color ||
+          checkuser[0].profile_text_color != profile._json.profile_text_color ||
+          checkuser[0].profile_use_background_image != profile._json.profile_use_background_image ||
+          checkuser[0].has_extended_profile != profile._json.has_extended_profile ||
+          checkuser[0].default_profile != profile._json.default_profile ||
+          checkuser[0].default_profile_image != profile._json.default_profile_image ||
+          checkuser[0].following != profile._json.following ||
+          checkuser[0].follow_request_sent != profile._json.follow_request_sent ||
+          checkuser[0].notifications != profile._json.notifications) {
+          founduser.twitter.push(tempProfile);
+        }
+      } catch (Error) {
+        founduser.twitter.push(tempProfile);
+      }
+      profile_update(founduser, profile);
+      return cb(err, founduser);
+    });
+  }));
+
 
 Router.get("/",
-  passport.authenticate('twitter', { scope: ['email']})
+  passport.authenticate('twitter', {
+    scope: ['email']
+  })
 );
-
 
 Router.get(
   "/secrets",
@@ -16,7 +122,6 @@ Router.get(
     failureRedirect: "/login"
   }),
   function(req, res) {
-    logs.insertlog(req.user.username,"twitter");
     var redirectTo = req.session.redirectTo || '/account';
     delete req.session.redirectTo;
     res.redirect(redirectTo);
